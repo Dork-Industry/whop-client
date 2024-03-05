@@ -153,10 +153,10 @@ const Header = () => {
                     </div>
                 </div>
             </header> */}
-            <div className="h-[115px]">
+            <div className="h-[115px] ">
                 <div className="border-whop-stroke fixed left-0 right-0 top-0 z-40 border-0 border-b border-solid bg-white shadow-md transition duration-300 sm:translate-y-0">
                     <div className="hidden sm:block border-b">
-                        <div className="padded-container">
+                        <div className="padded-container px-10">
                             <div className="flex items-center justify-between gap-8 py-3.5">
                                 <div className="r flex flex-1 items-center gap-8">
                                     <a href="/"><img alt="Whop" draggable="false" loading="lazy" width="137" height="28" decoding="async" data-nimg="1" className="pointer-events-none" src="/assets/img/logo/whop.svg" /></a>
@@ -227,7 +227,7 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="border-whop-stroke border-0 border-solid sm:border-t">
-                        <div className="padded-container flex gap-8 overflow-x-auto">
+                        <div className="padded-container px-10 flex gap-8 overflow-x-auto">
                             {CatList?.map((valz, keyz) => {
                                 return (
 

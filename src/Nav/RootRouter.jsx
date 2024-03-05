@@ -23,10 +23,14 @@ import Trancomplete from '../Pages/Trancomplete';
 import P404 from '../Pages/P404';
 import Header from '../Pages/inc/Header';
 import Footer from '../Pages/inc/Footer';
+import Footer2 from '../Pages/inc/Footer2';
 
 export default function RootRouter() {
     return (
         <>
+        <div className='px-10'>
+
+      
             <Header />
             <main>
                 <Routes>
@@ -53,11 +57,12 @@ export default function RootRouter() {
                     <Route exact path="/*" element={<P404 />} />
                 </Routes>
             </main>
-            <Footer />
-
+            {/* <Footer /> */}
+<Footer2 />
             {/* <Helmet>
                     <script src="/assets/js/backToTop.js"></script>  
                   </Helmet> */}
+                    </div>
         </>
     );
 }

@@ -74,5 +74,65 @@ code {
 }
 
 .font-display {
-  font-family: var(--whopkit-font-display),ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+  font-family: ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+}
+
+.display2 {
+  font-style:normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0;
+  font-family: sans-serif
+}
+.display3 {
+  font-size: 24px;
+  line-height: 29px
+}
+
+.display3,.display4 {
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-family: sans-serif
+}
+
+.subtitle1 {
+  font-size: 16px;
+  line-height: 19px
+}
+
+.subtitle1,.subtitle2 {
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -.01em;
+  font-family: sans-serif
+}
+
+.subtitle2 {
+  font-size: 15px;
+  line-height: 18px
+}
+.paragraph2 {
+  font-size: 16px;
+  line-height: 24px
+}
+
+.paragraph2,.paragraph3 {
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -.015em;
+  font-family: sans-serif
+}
+
+.button3 {
+  font-size: 15px;
+  line-height: 18px
+}
+
+.button3,.button4 {
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -.005em;
+  font-family:sans-serif
 }
