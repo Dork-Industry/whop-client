@@ -4,27 +4,27 @@ import { AuthContext } from '../AuthProvider';
 const About = () => {
     return (
         <>
-            <div class="bg-shape newbgmin" style={{ backgroundImage: 'url(/assets/bgmg.jpg)' }}>
+            <div className="bg-shape newbgmin" style={{ backgroundImage: 'url(/assets/bgmg.jpg)' }}>
                 <img src="/assets/img/shape/shape-1.png" alt="" />
             </div>
 
-            <section class="about__area pt-100 ">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xxl-10 offset-xxl-1 col-xl-10 offset-xl-1">
-                            <div class="about__wrapper mt-80">
-                                <h3 class="about__title">
+            <section className="about__area pt-100 ">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xxl-10 offset-xxl-1 col-xl-10 offset-xl-1">
+                            <div className="about__wrapper mt-80">
+                                <h3 className="about__title">
                                     Our
                                     <br /> Terms & conditions.
                                 </h3>
 
-                                <div class="about__count pt-50 pb-15 wow fadeInUp" data-wow-delay=".5s"></div>
-                                <div class="about__content">
-                                    <p class="about__text">
+                                <div className="about__count pt-50 pb-15 wow fadeInUp" data-wow-delay=".5s"></div>
+                                <div className="about__content">
+                                    <p className="about__text">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt
                                         ultricies dignissim. Phasellus sit amet purus condimentum.
                                     </p>
-                                    <p class="about__sub-text">
+                                    <p className="about__sub-text">
                                         Suscipit felis non, posuere mauris. Morbi iaculis, arcu quis varius fermentum,
                                         velit lectus dignissim enim, eget vulputate sapien erat eget mauris. Aenean
                                         tortor odio, faucibus a enim sed, porttitor luctus lacus. Interdum et malesuada

@@ -11,7 +11,7 @@ const Sidebar = () => {
                             <button
                                 type="button"
                                 className="hamburger close-sidebar-btn hamburger--elastic"
-                                data-class="closed-sidebar"
+                                data-className="closed-sidebar"
                             >
                                 <span className="hamburger-box">
                                     <span className="hamburger-inner"></span>
@@ -57,18 +57,18 @@ const Sidebar = () => {
 
                             <li>
                                 <a href="#">
-                                    <i class="metismenu-icon pe-7s-display2"></i>Product
-                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    <i className="metismenu-icon pe-7s-display2"></i>Product
+                                    <i className="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
                                 <ul>
                                     <li>
                                         <a href="/seller/product">
-                                            <i class="metismenu-icon"></i>Product List
+                                            <i className="metismenu-icon"></i>Product List
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/seller/product/add">
-                                            <i class="metismenu-icon"></i>Product Add
+                                            <i className="metismenu-icon"></i>Product Add
                                         </a>
                                     </li>
                                 </ul>
@@ -76,18 +76,18 @@ const Sidebar = () => {
 
                             <li>
                                 <a href="#">
-                                    <i class="metismenu-icon pe-7s-display2"></i>Sales
-                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    <i className="metismenu-icon pe-7s-display2"></i>Sales
+                                    <i className="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
                                 <ul>
                                     <li>
                                         <a href="/seller/">
-                                            <i class="metismenu-icon"></i>Order List
+                                            <i className="metismenu-icon"></i>Order List
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/seller/">
-                                            <i class="metismenu-icon"></i>Pending Orders
+                                            <i className="metismenu-icon"></i>Pending Orders
                                         </a>
                                     </li>
                                 </ul>
@@ -95,18 +95,18 @@ const Sidebar = () => {
 
                             <li>
                                 <a href="#">
-                                    <i class="metismenu-icon pe-7s-display2"></i>Customers
-                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    <i className="metismenu-icon pe-7s-display2"></i>Customers
+                                    <i className="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
                                 <ul>
                                     <li>
                                         <a href="/seller/">
-                                            <i class="metismenu-icon"></i>Customer List
+                                            <i className="metismenu-icon"></i>Customer List
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/seller/">
-                                            <i class="metismenu-icon"></i>Booking History
+                                            <i className="metismenu-icon"></i>Booking History
                                         </a>
                                     </li>
                                 </ul>
@@ -114,13 +114,13 @@ const Sidebar = () => {
 
                             <li>
                                 <a href="#">
-                                    <i class="metismenu-icon pe-7s-display2"></i>Support Requests
-                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    <i className="metismenu-icon pe-7s-display2"></i>Support Requests
+                                    <i className="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
                                 <ul>
                                     <li>
                                         <a href="/seller/">
-                                            <i class="metismenu-icon"></i>Query List
+                                            <i className="metismenu-icon"></i>Query List
                                         </a>
                                     </li>
                                 </ul>

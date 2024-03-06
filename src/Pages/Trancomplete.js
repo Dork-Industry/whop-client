@@ -4,15 +4,15 @@ import { AuthContext } from '../AuthProvider';
 const P404 = () => {
     return (
         <>
-            <div class="bg-shape newbgmin" style={{ backgroundImage: 'url(/assets/bgmg.jpg)' }}>
+            <div className="bg-shape newbgmin" style={{ backgroundImage: 'url(/assets/bgmg.jpg)' }}>
                 <img src="/assets/img/shape/shape-1.png" alt="" />
             </div>
 
-            <section class="about__area pt-100 ">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xxl-10 offset-xxl-1 col-xl-10 offset-xl-1">
-                            <div class="about__wrapper  ">
+            <section className="about__area pt-100 ">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xxl-10 offset-xxl-1 col-xl-10 offset-xl-1">
+                            <div className="about__wrapper  ">
                                 <h1> Congrats! </h1>
                                 <p>Your transaction is complete. Our Support team will be in touch with you soon. </p>
                                 <br />
@@ -21,7 +21,7 @@ const P404 = () => {
                                 <br />
                                 <br />
 
-                                <div class="about__content"></div>
+                                <div className="about__content"></div>
                             </div>
                         </div>
                     </div>

@@ -24,16 +24,17 @@ import P404 from '../Pages/P404';
 import Header from '../Pages/inc/Header';
 import Footer from '../Pages/inc/Footer';
 import Footer2 from '../Pages/inc/Footer2';
+import SellerHeader from '../Components/SellerHeader';
+import MainLayout from '../Components/Layout/MainLayout';
+import SellerLayout from '../Components/Layout/SellerLayout';
 
 export default function RootRouter() {
     return (
         <>
-        <div className='px-10'>
-
+       
       
-            <Header />
-            <main>
                 <Routes>
+                    <Route element={<MainLayout/>}>   
                     <Route exact path="/" element={<Home />}></Route>
                     <Route exact path="/index" element={<Home />}></Route>
                     <Route exact path="/about" element={<About />} />
@@ -51,18 +52,25 @@ export default function RootRouter() {
 
                     <Route exact path="/login" element={<Login />} />
                     <Route exact path="/register" element={<Register />} />
-                    <Route exact path="/seller_register" element={<Sregister />} />
                     <Route exact path="/Srthanks" element={<Srthanks />} />
 
                     <Route exact path="/*" element={<P404 />} />
+                    </Route>
+                    <Route element={<SellerLayout/>}>   
+            <Route exact path="/seller_register" element={<Sregister />} />  
+            </Route>
                 </Routes>
-            </main>
-            {/* <Footer /> */}
-<Footer2 />
+       
+   
+     
+          
+        
+          
+        
             {/* <Helmet>
                     <script src="/assets/js/backToTop.js"></script>  
                   </Helmet> */}
-                    </div>
+            
         </>
     );
 }

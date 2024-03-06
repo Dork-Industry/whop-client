@@ -40,7 +40,7 @@ const Cart = () => {
                                 <div className="row">
                                     <div className="col-md-7">
                                         <div className="card" style={{ marginBottom: 50 }}>
-                                            <div class="card-body">
+                                            <div className="card-body">
                                                 <h5>List of Items in cart</h5>
                                                 <table className="table table-hover table-bordered">
                                                     <thead>
@@ -72,31 +72,31 @@ const Cart = () => {
 
                                     <div className="col-md-5">
                                         <div className="card" style={{ marginBottom: 50 }}>
-                                            <div class="card-body">
+                                            <div className="card-body">
                                                 <h5>Proceed to checkout</h5>
 
-                                                <div class="form-check">
+                                                <div className="form-check">
                                                     <input
-                                                        class="form-check-input"
+                                                        className="form-check-input"
                                                         type="checkbox"
                                                         id="check1"
                                                         name="option1"
                                                         value="something"
                                                         checked
                                                     />
-                                                    <label class="form-check-label">Cash On Delivery</label>
+                                                    <label className="form-check-label">Cash On Delivery</label>
                                                 </div>
 
-                                                <div class="form-check">
+                                                <div className="form-check">
                                                     <input
-                                                        class="form-check-input"
+                                                        className="form-check-input"
                                                         type="checkbox"
                                                         id="check1"
                                                         name="option1"
                                                         value="something"
                                                         disabled
                                                     />
-                                                    <label class="form-check-label">Pay with PhonePay</label>
+                                                    <label className="form-check-label">Pay with PhonePay</label>
                                                 </div>
 
                                                 <br />

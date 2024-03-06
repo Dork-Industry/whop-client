@@ -73,7 +73,7 @@ const MyComponent = (props) => {
                                     return (
                                         <div className="d-flex trending_card_topic">
                                             &nbsp;<div>•</div>&nbsp;
-                                            <div class="whitespace-nowrap">Trading</div>
+                                            <div className="whitespace-nowrap">Trading</div>
                                         </div>
                                     );
                                 })}

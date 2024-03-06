@@ -58,16 +58,16 @@ const Home = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-4">
-                            <h4 class="text-center">$0123456789</h4>
-                            <p class="text-center">Total Purchased on Whop</p>
+                            <h4 className="text-center">$0123456789</h4>
+                            <p className="text-center">Total Purchased on Whop</p>
                         </div>
                         <div className="col-md-4">
-                            <h4 class="text-center">4589032</h4>
-                            <p class="text-center">Total Members</p>
+                            <h4 className="text-center">4589032</h4>
+                            <p className="text-center">Total Members</p>
                         </div>
                         <div className="col-md-4">
-                            <h4 class="text-center">4589</h4>
-                            <p class="text-center">Total Available Products</p>
+                            <h4 className="text-center">4589</h4>
+                            <p className="text-center">Total Available Products</p>
                         </div>
                     </div>
                 </div>

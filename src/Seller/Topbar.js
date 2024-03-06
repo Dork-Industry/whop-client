@@ -11,7 +11,7 @@ const Topbar = () => {
                             <button
                                 type="button"
                                 className="hamburger close-sidebar-btn hamburger--elastic"
-                                data-class="closed-sidebar"
+                                data-className="closed-sidebar"
                             >
                                 <span className="hamburger-box">
                                     <span className="hamburger-inner"></span>

@@ -27,7 +27,7 @@ const Sidebar = () => {
                             <button
                                 type="button"
                                 className="hamburger close-sidebar-btn hamburger--elastic"
-                                data-class="closed-sidebar"
+                                data-className="closed-sidebar"
                             >
                                 <span className="hamburger-box">
                                     <span className="hamburger-inner"></span>
@@ -72,28 +72,28 @@ const Sidebar = () => {
 
                             <li>
                                 <a href="#">
-                                    <i class="metismenu-icon pe-7s-display2"></i>Seller Management
-                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    <i className="metismenu-icon pe-7s-display2"></i>Seller Management
+                                    <i className="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
                                 <ul>
                                     <li>
                                         <a href="/admin/seller">
-                                            <i class="metismenu-icon"></i>Seller
+                                            <i className="metismenu-icon"></i>Seller
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/admin/">
-                                            <i class="metismenu-icon"></i>Product Report
+                                            <i className="metismenu-icon"></i>Product Report
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/admin/">
-                                            <i class="metismenu-icon"></i>Payouts
+                                            <i className="metismenu-icon"></i>Payouts
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/admin/">
-                                            <i class="metismenu-icon"></i>Support Tickets
+                                            <i className="metismenu-icon"></i>Support Tickets
                                         </a>
                                     </li>
                                 </ul>
@@ -101,24 +101,24 @@ const Sidebar = () => {
 
                             <li>
                                 <a href="#">
-                                    <i class="metismenu-icon pe-7s-display2"></i>Customer Management
-                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    <i className="metismenu-icon pe-7s-display2"></i>Customer Management
+                                    <i className="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
                                 <ul>
                                     <li>
                                         <a href="/admin/user">
-                                            <i class="metismenu-icon"></i>Customers
+                                            <i className="metismenu-icon"></i>Customers
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/admin/">
-                                            <i class="metismenu-icon"></i>Booking History
+                                            <i className="metismenu-icon"></i>Booking History
                                         </a>
                                     </li>
 
                                     <li>
                                         <a href="/admin/">
-                                            <i class="metismenu-icon"></i>Support Tickets
+                                            <i className="metismenu-icon"></i>Support Tickets
                                         </a>
                                     </li>
                                 </ul>
@@ -126,18 +126,18 @@ const Sidebar = () => {
 
                             <li>
                                 <a href="#">
-                                    <i class="metismenu-icon pe-7s-display2"></i>Team Management
-                                    <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                                    <i className="metismenu-icon pe-7s-display2"></i>Team Management
+                                    <i className="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                 </a>
                                 <ul>
                                     <li>
                                         <a href="/admin/team">
-                                            <i class="metismenu-icon"></i>Team List
+                                            <i className="metismenu-icon"></i>Team List
                                         </a>
                                     </li>
                                     <li>
                                         <a href="/admin/">
-                                            <i class="metismenu-icon"></i>User Role
+                                            <i className="metismenu-icon"></i>User Role
                                         </a>
                                     </li>
                                 </ul>

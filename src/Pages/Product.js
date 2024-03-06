@@ -196,7 +196,7 @@ const Product = () => {
                                                 aria-labelledby="overview-tab"
                                             >
                                                 <div className="product__overview">
-                                                    <h4 style={{ fontSize: 24 }} class="card-title h5 h4-sm">
+                                                    <h4 style={{ fontSize: 24 }} className="card-title h5 h4-sm">
                                                         {inf.thumbnail && (
                                                             <img
                                                                 style={{ marginRight: 5 }}
@@ -208,7 +208,7 @@ const Product = () => {
                                                             />
                                                         )}
                                                         {inf.name}{' '}
-                                                        <i style={{ color: '#625bf6' }} class="fa fa-circle-check"></i>
+                                                        <i style={{ color: '#625bf6' }} className="fa fa-circle-check"></i>
                                                     </h4>
 
                                                     <a
@@ -227,27 +227,27 @@ const Product = () => {
                                                     </a>
                                                     <p
                                                         style={{ marginBottom: 0, fontSize: 14, color: '#e0a008' }}
-                                                        class="card-text"
+                                                        className="card-text"
                                                     >
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i style={{ color: '#ccc' }} class="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i style={{ color: '#ccc' }} className="fa fa-star"></i>
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <span style={{ color: '#999' }}> 4.8 (345) </span>
                                                     </p>
                                                     <br />
                                                     <p
                                                         style={{ marginBottom: 0, color: '#000', marginBottom: 20 }}
-                                                        class="card-text"
+                                                        className="card-text"
                                                     >
                                                         {inf.prod_tagline}
                                                     </p>
 
                                                     <div className="row">
                                                         {priceplan.map((rcn, index) => (
-                                                            <div class="col-md-6">
+                                                            <div className="col-md-6">
                                                                 <div
                                                                     onClick={(e) => changepriceplan(rcn.id)}
                                                                     className={`card ${selprice == rcn.id ? 'activeprice' : ''}`}
@@ -258,12 +258,12 @@ const Product = () => {
                                                                     }}
                                                                 >
                                                                     <div
-                                                                        class="card-body"
+                                                                        className="card-body"
                                                                         style={{ padding: 4, paddingLeft: 8 }}
                                                                     >
-                                                                        <div class="row">
+                                                                        <div className="row">
                                                                             <div
-                                                                                class="col-md-10"
+                                                                                className="col-md-10"
                                                                                 style={{ paddingLeft: 30 }}
                                                                             >
                                                                                 <h5 style={{ marginBottom: 0 }}>
@@ -287,7 +287,7 @@ const Product = () => {
 
                                                         {incld.map((rcn, index) => (
                                                             <div
-                                                                class="card"
+                                                                className="card"
                                                                 style={{
                                                                     marginBottom: 5,
                                                                     boxShadow: 'none',
@@ -296,15 +296,15 @@ const Product = () => {
                                                                 }}
                                                             >
                                                                 <div
-                                                                    class="card-body"
+                                                                    className="card-body"
                                                                     style={{
                                                                         padding: 4,
                                                                         boxShadow: 'none',
                                                                         paddingLeft: 8,
                                                                     }}
                                                                 >
-                                                                    <div class="row">
-                                                                        <div class="col-md-1">
+                                                                    <div className="row">
+                                                                        <div className="col-md-1">
                                                                             <img
                                                                                 width="42"
                                                                                 style={{ borderRadius: 12 }}
@@ -313,7 +313,7 @@ const Product = () => {
                                                                             />
                                                                         </div>
                                                                         <div
-                                                                            class="col-md-10"
+                                                                            className="col-md-10"
                                                                             style={{ paddingLeft: 30 }}
                                                                         >
                                                                             <h6 style={{ marginBottom: 0 }}>
@@ -334,7 +334,7 @@ const Product = () => {
 
                                                         {featurz.map((rcn, index) => (
                                                             <div
-                                                                class="card"
+                                                                className="card"
                                                                 style={{
                                                                     marginBottom: 5,
                                                                     boxShadow: 'none',
@@ -343,15 +343,15 @@ const Product = () => {
                                                                 }}
                                                             >
                                                                 <div
-                                                                    class="card-body"
+                                                                    className="card-body"
                                                                     style={{
                                                                         padding: 4,
                                                                         boxShadow: 'none',
                                                                         paddingLeft: 8,
                                                                     }}
                                                                 >
-                                                                    <div class="row">
-                                                                        <div class="col-md-1">
+                                                                    <div className="row">
+                                                                        <div className="col-md-1">
                                                                             {/* <img width="42" style={{borderRadius:12}} src={rcn.thumb} alt="" /> */}
                                                                             <div
                                                                                 style={{
@@ -369,7 +369,7 @@ const Product = () => {
                                                                             </div>
                                                                         </div>
                                                                         <div
-                                                                            class="col-md-10"
+                                                                            className="col-md-10"
                                                                             style={{ paddingLeft: 30 }}
                                                                         >
                                                                             <h5 style={{ marginBottom: 0 }}>
@@ -392,7 +392,7 @@ const Product = () => {
 
                                                         {qna.map((rcn, index) => (
                                                             <div
-                                                                class="card"
+                                                                className="card"
                                                                 style={{
                                                                     marginBottom: 5,
                                                                     boxShadow: 'none',
@@ -401,16 +401,16 @@ const Product = () => {
                                                                 }}
                                                             >
                                                                 <div
-                                                                    class="card-body"
+                                                                    className="card-body"
                                                                     style={{
                                                                         padding: 4,
                                                                         boxShadow: 'none',
                                                                         paddingLeft: 8,
                                                                     }}
                                                                 >
-                                                                    <div class="row">
+                                                                    <div className="row">
                                                                         <div
-                                                                            class="col-md-10"
+                                                                            className="col-md-10"
                                                                             style={{ paddingLeft: 30 }}
                                                                         >
                                                                             <h5 style={{ marginBottom: 0 }}>
@@ -424,7 +424,7 @@ const Product = () => {
                                                                             <br />
                                                                             <p style={{ marginBottom: 0 }}>
                                                                                 <b>
-                                                                                    <i class="fa fa-calendar"></i>
+                                                                                    <i className="fa fa-calendar"></i>
                                                                                 </b>{' '}
                                                                                 Answered {rcn.timeline}
                                                                             </p>
@@ -510,16 +510,16 @@ const Product = () => {
                                         </ul>
                                         <div className="row">
                                             {priceplan.map((rcn, index) => (
-                                                <div class="col-md-12">
+                                                <div className="col-md-12">
                                                     <div
                                                         onClick={(e) => changepriceplan(rcn.id)}
                                                         className={`card ${selprice == rcn.id ? 'activeprice' : ''}`}
                                                         style={{ marginBottom: 5, cursor: 'pointer', marginBottom: 10 }}
                                                     >
-                                                        <div class="card-body" style={{ padding: 4, paddingLeft: 8 }}>
-                                                            <div class="row">
+                                                        <div className="card-body" style={{ padding: 4, paddingLeft: 8 }}>
+                                                            <div className="row">
                                                                 <div
-                                                                    class="col-md-10"
+                                                                    className="col-md-10"
                                                                     style={{ padding: 12, paddingLeft: 25 }}
                                                                 >
                                                                     <h5 style={{ marginBottom: 0 }}>{rcn.info}</h5>
@@ -540,16 +540,16 @@ const Product = () => {
                                     </div>
 
                                     <div className="product__proprietor-body fix">
-                                        <div class="card">
-                                            <div class="card-header">
+                                        <div className="card">
+                                            <div className="card-header">
                                                 <h5>Recent activity</h5>
                                             </div>
-                                            <div class="card-body" style={{ maxHeight: 450, overflowY: 'scroll' }}>
+                                            <div className="card-body" style={{ maxHeight: 450, overflowY: 'scroll' }}>
                                                 {recentz.map((rcn, index) => (
-                                                    <div class="card" style={{ marginBottom: 5 }}>
-                                                        <div class="card-body" style={{ padding: 4, paddingLeft: 8 }}>
-                                                            <div class="row">
-                                                                <div class="col-md-1">
+                                                    <div className="card" style={{ marginBottom: 5 }}>
+                                                        <div className="card-body" style={{ padding: 4, paddingLeft: 8 }}>
+                                                            <div className="row">
+                                                                <div className="col-md-1">
                                                                     <img
                                                                         width="42"
                                                                         className="rounded-circle"
@@ -557,7 +557,7 @@ const Product = () => {
                                                                         alt=""
                                                                     />
                                                                 </div>
-                                                                <div class="col-md-10" style={{ paddingLeft: 30 }}>
+                                                                <div className="col-md-10" style={{ paddingLeft: 30 }}>
                                                                     <h6 style={{ marginBottom: 0, fontSize: 12 }}>
                                                                         {rcn.name}
                                                                     </h6>

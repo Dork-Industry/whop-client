@@ -11,7 +11,7 @@ const Sidebar = () => {
                             <button
                                 type="button"
                                 className="hamburger close-sidebar-btn hamburger--elastic"
-                                data-class="closed-sidebar"
+                                data-className="closed-sidebar"
                             >
                                 <span className="hamburger-box">
                                     <span className="hamburger-inner"></span>
@@ -56,10 +56,10 @@ const Sidebar = () => {
 
                             <li>
                                 <a href="/users/">
-                                    <i class="metismenu-icon pe-7s-display2"></i>Order History{' '}
+                                    <i className="metismenu-icon pe-7s-display2"></i>Order History{' '}
                                 </a>
                                 <a href="/users/">
-                                    <i class="metismenu-icon pe-7s-display2"></i>Recent Orders{' '}
+                                    <i className="metismenu-icon pe-7s-display2"></i>Recent Orders{' '}
                                 </a>
                             </li>
 

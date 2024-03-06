@@ -258,7 +258,7 @@ const Category = () => {
                                     return (
                                         <>
                                             <div
-                                                class="card flex-row"
+                                                className="card flex-row"
                                                 style={{
                                                     paddingLeft: 0,
                                                     marginBottom: 20,
@@ -278,7 +278,7 @@ const Category = () => {
                                                 )}
 
                                                 <div
-                                                    class="card-body"
+                                                    className="card-body"
                                                     style={{
                                                         borderColor: '#ededed',
                                                         backgroundColor: '#ededed',
@@ -286,7 +286,7 @@ const Category = () => {
                                                         boxShadow: 'none',
                                                     }}
                                                 >
-                                                    <h4 style={{ fontSize: 16 }} class="card-title h5 h4-sm">
+                                                    <h4 style={{ fontSize: 16 }} className="card-title h5 h4-sm">
                                                         <a href={'/product/' + val.prod_code}>
                                                             {val.thumbnail && (
                                                                 <img
@@ -301,26 +301,26 @@ const Category = () => {
                                                             {val.name}{' '}
                                                             <i
                                                                 style={{ color: '#625bf6' }}
-                                                                class="fa fa-circle-check"
+                                                                className="fa fa-circle-check"
                                                             ></i>
                                                         </a>{' '}
                                                     </h4>
                                                     <p
                                                         style={{ marginBottom: 0, fontSize: 11, color: '#e0a008' }}
-                                                        class="card-text"
+                                                        className="card-text"
                                                     >
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i style={{ color: '#ccc' }} class="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i className="fa fa-star"></i>
+                                                        <i style={{ color: '#ccc' }} className="fa fa-star"></i>
                                                         &nbsp;&nbsp;&nbsp;&nbsp;
                                                         <span style={{ color: '#999' }}> 4.8 (345) </span>
                                                     </p>
-                                                    <p style={{ marginBottom: 0 }} class="card-text">
+                                                    <p style={{ marginBottom: 0 }} className="card-text">
                                                         {val.prod_tagline}
                                                     </p>
-                                                    <p class="card-text">{val.short_info}</p>
+                                                    <p className="card-text">{val.short_info}</p>
 
                                                     <div style={{ position: 'absolute', top: 10, right: 10 }}>
                                                         <b>${val.base_price}</b>/month
