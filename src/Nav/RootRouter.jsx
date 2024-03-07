@@ -27,6 +27,7 @@ import Footer2 from '../Pages/inc/Footer2';
 import SellerHeader from '../Components/SellerHeader';
 import MainLayout from '../Components/Layout/MainLayout';
 import SellerLayout from '../Components/Layout/SellerLayout';
+import ProductCategory from '../Pages/inc/ProductCategory';
 
 export default function RootRouter() {
     return (
@@ -42,9 +43,9 @@ export default function RootRouter() {
                     <Route exact path="/privacy" element={<Privacy />} />
                     <Route exact path="/blog" element={<Blog />} />
                     <Route exact path="/contact" element={<Contact />} />
-                    <Route exact path="/category" element={<Category />} />
+                    <Route exact path="/category" element={<ProductCategory />} />
                     <Route exact path="/size" element={<Size />} />
-                    <Route exact path="/category/:slug" element={<Category />} />
+                    <Route exact path="/category/:slug" element={<ProductCategory />} />
                     <Route exact path="/product" element={<Product />} />
                     <Route exact path="/product/:id" element={<Product />} />
                     <Route exact path="/cart" element={<Cart />} />
