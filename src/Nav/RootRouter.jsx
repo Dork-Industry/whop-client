@@ -10,7 +10,7 @@ import Srthanks from '../Pages/Srthanks';
 
 import Home from '../Pages/Home';
 import About from '../Pages/About';
-import Tnc from '../Pages/Tnc';
+import Tos from '../Pages/Tos.jsx';
 import Privacy from '../Pages/Privacy';
 import Blog from '../Pages/Blog';
 import Contact from '../Pages/Contact';
@@ -28,6 +28,7 @@ import SellerHeader from '../Components/SellerHeader';
 import MainLayout from '../Components/Layout/MainLayout';
 import SellerLayout from '../Components/Layout/SellerLayout';
 import ProductCategory from '../Pages/inc/ProductCategory';
+import TosLayout from '../Components/Layout/TosLayout.jsx';
 
 export default function RootRouter() {
     return (
@@ -35,11 +36,19 @@ export default function RootRouter() {
        
       
                 <Routes>
+                <Route exact path="/login" element={<Login />} />
+                    <Route exact path="/register" element={<Register />} />
+
+                    <Route element={<TosLayout />}>
+                    <Route exact path="/tos" element={<Tos />} />
+                    <Route exact path="/privacy" element={<Privacy />} />
+
+                    </Route>
+
                     <Route element={<MainLayout/>}>   
                     <Route exact path="/" element={<Home />}></Route>
                     <Route exact path="/index" element={<Home />}></Route>
                     <Route exact path="/about" element={<About />} />
-                    <Route exact path="/tnc" element={<Tnc />} />
                     <Route exact path="/privacy" element={<Privacy />} />
                     <Route exact path="/blog" element={<Blog />} />
                     <Route exact path="/contact" element={<Contact />} />
@@ -51,8 +60,7 @@ export default function RootRouter() {
                     <Route exact path="/cart" element={<Cart />} />
                     <Route exact path="/trancomplete" element={<Trancomplete />} />
 
-                    <Route exact path="/login" element={<Login />} />
-                    <Route exact path="/register" element={<Register />} />
+                  
                     <Route exact path="/Srthanks" element={<Srthanks />} />
 
                     <Route exact path="/*" element={<P404 />} />

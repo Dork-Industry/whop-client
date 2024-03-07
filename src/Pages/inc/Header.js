@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Apiconnect from '../../services/Apiconnect.js';
 import { useData } from '../../Context/Pagecontxt.js';
 
-const Header = () => {
+const Header = ({basic}) => {
     const { cartItmCount } = useData();
 
     const user_typ = localStorage.getItem('user_typ');
@@ -160,7 +160,7 @@ const Header = () => {
                             <div className="flex items-center justify-between gap-8 py-3.5">
                                 <div className="r flex flex-1 items-center gap-8">
                                     <a href="/"><img alt="Whop" draggable="false" loading="lazy" width="137" height="28" decoding="async" data-nimg="1" className="pointer-events-none" src="/assets/img/logo/whop.svg" /></a>
-                                    <div className="hidden flex-1 sm:block ">
+                                    { !basic &&  <div className="hidden flex-1 sm:block ">
                                         <div className="border-whop-stroke relative flex w-full max-w-[500px] items-stretch rounded-md border border-solid outline-2 transition " data-headlessui-state="">
                                             <input placeholder="Search 'investing tools'" className="text2 placeholder:text-whop-gray flex-1 rounded-l-md border-r px-3 py-[11px] outline-none" id="headlessui-combobox-input-:R6ibfcqlfala:" role="combobox" type="text" aria-expanded="false" aria-autocomplete="list" data-headlessui-state="" />
                                             <button className="border-whop-stroke text-whop-darkGray hover:bg-whop-hover active:bg-whop-hoverPress flex items-center rounded-r-md  border-0  border-l   bg-white px-6 transition">
@@ -169,12 +169,16 @@ const Header = () => {
                                                 </svg>
                                             </button>
                                         </div>
-                                    </div>
+                                    </div>}
                                 </div>
                                 <div className="flex items-center gap-6 font-semibold">
+                                  {!basic && <>
                                     <a className="text-button4 font-semibold text-whop-darkGray hidden whitespace-nowrap lg:block" href="/">Become an Affiliate</a>
                                     <a href="/seller_register" className="text-button4 text-whop-darkGray hidden whitespace-nowrap lg:block">Start Selling</a>
                                     <a className="text-button4 text-whop-darkGray hidden whitespace-nowrap lg:block" target="_blank" href="/blog">Blog</a>
+                                 
+                                    </>
+                                    } 
                                     <div className="text-button4 text-whop-darkGray hidden cursor-pointer whitespace-nowrap sm:block" id="nav-sign-in">{utyp === 'User' ? (
                                         <a href="/users/">
                                             <i className=""></i>User Dashboard
@@ -226,7 +230,7 @@ const Header = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="border-whop-stroke border-0 border-solid sm:border-t">
+                { !basic &&   <div className="border-whop-stroke border-0 border-solid sm:border-t">
                         <div className="padded-container px-10 flex gap-8 overflow-x-auto">
                             {CatList?.map((valz, keyz) => {
                                 return (
@@ -236,7 +240,7 @@ const Header = () => {
                                 );
                             })}
                         </div>
-                    </div>
+                    </div>}
                 </div>
             </div>
         </>
