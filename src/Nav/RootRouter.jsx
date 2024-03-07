@@ -29,6 +29,9 @@ import MainLayout from '../Components/Layout/MainLayout';
 import SellerLayout from '../Components/Layout/SellerLayout';
 import ProductCategory from '../Pages/inc/ProductCategory';
 import TosLayout from '../Components/Layout/TosLayout.jsx';
+import Affiliates from '../Pages/Affiliates.jsx';
+import CustomerAffiliates from '../Pages/CustomerAffiliates.jsx';
+import MyReferrals from '../Pages/MyReferrals.jsx';
 
 export default function RootRouter() {
     return (
@@ -59,6 +62,9 @@ export default function RootRouter() {
                     <Route exact path="/product/:id" element={<Product />} />
                     <Route exact path="/cart" element={<Cart />} />
                     <Route exact path="/trancomplete" element={<Trancomplete />} />
+                    <Route exact path="/affiliate" element={<Affiliates />} />
+                    <Route exact path="/affiliate/customer" element={<CustomerAffiliates  />} />
+                    <Route exact path="/affiliate/customer/my-referrals" element={<MyReferrals  />} />
 
                   
                     <Route exact path="/Srthanks" element={<Srthanks />} />

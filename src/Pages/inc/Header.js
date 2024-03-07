@@ -173,7 +173,7 @@ const Header = ({basic}) => {
                                 </div>
                                 <div className="flex items-center gap-6 font-semibold">
                                   {!basic && <>
-                                    <a className="text-button4 font-semibold text-whop-darkGray hidden whitespace-nowrap lg:block" href="/">Become an Affiliate</a>
+                                    <a className="text-button4 font-semibold text-whop-darkGray hidden whitespace-nowrap lg:block" href="/affiliate">Become an Affiliate</a>
                                     <a href="/seller_register" className="text-button4 text-whop-darkGray hidden whitespace-nowrap lg:block">Start Selling</a>
                                     <a className="text-button4 text-whop-darkGray hidden whitespace-nowrap lg:block" target="_blank" href="/blog">Blog</a>
                                  
