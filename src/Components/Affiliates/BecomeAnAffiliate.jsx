@@ -56,7 +56,7 @@ const BecomeAnAffiliate = () => {
          <p class="paragraph2 text-whop-dark-gray">Please be aware that running ads against Whop breaches our <a class="text-whop-fieldHighlight" href="/tos">Terms of Service (ToS)</a>, disqualifying you from receiving payments. Refer to our ToS for a full understanding of Whop's policies.</p>
       </div>
       <div class="flex flex-col gap-4">
-         <a class="border-whop-stroke flex items-center gap-[29px] rounded-[10px] border px-6 py-3 shadow-md" href="/affiliates/customer/">
+         <a class="border-whop-stroke flex items-center gap-[29px] rounded-[10px] border px-6 py-3 shadow-md" href="/affiliate/customer/">
             <div class="text-whop-black w-full">
                <div class="display3 mb-2">Refer customers</div>
                <p class="paragraph2">Get paid to refer customers to products on Whop</p>
