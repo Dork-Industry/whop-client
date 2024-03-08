@@ -10,25 +10,25 @@ const CustomerAffiliates = () => {
     };
 
     return (
-        <div class="px-5 pb-20 pt-10">
-            <div class="text-whop-gray overline3 mb-10 flex flex-row items-center gap-2 uppercase">
+        <div className="px-5 pb-20 pt-10">
+            <div className="text-whop-gray overline3 mb-10 flex flex-row items-center gap-2 uppercase">
                 <a href="/affiliates/">Become an affiliate</a>
-                <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-right" class="svg-inline--fa fa-chevron-right fa-fw w-[7px]" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-right" className="svg-inline--fa fa-chevron-right fa-fw w-[7px]" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                     <path fill="currentColor" d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z"></path>
                 </svg>
-                <span class="text-whop-dark-gray">Customer Affiliates</span>
+                <span className="text-whop-dark-gray">Customer Affiliates</span>
             </div>
-            <div class="mb-10 flex flex-col justify-start gap-6 lg:flex-row lg:justify-between lg:gap-0">
+            <div className="mb-10 flex flex-col justify-start gap-6 lg:flex-row lg:justify-between lg:gap-0">
                 <div>
-                    <h1 class="font-display text-display2 text-whop-black mb-2">Customer Affiliates</h1>
-                    <p class="paragraph2 text-whop-dark-gray">Get rewarded whenever someone buys a product with your affiliate link. <a href="https://whop.com/blog/consumer-affiliates/" target="_blank" rel="noopener noreferrer" class="underline">Learn more</a></p>
+                    <h1 className="font-display text-display2 text-whop-black mb-2">Customer Affiliates</h1>
+                    <p className="paragraph2 text-whop-dark-gray">Get rewarded whenever someone buys a product with your affiliate link. <a href="https://whop.com/blog/consumer-affiliates/" target="_blank" rel="noopener noreferrer" className="underline">Learn more</a></p>
                 </div>
                 <a href="/affiliate/customer/my-referrals/">
-                    <button type="button" class="group/button relative flex shrink-0 items-center justify-center overflow-hidden rounded-md focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring w-fit bg-whop-black text-whop-background text-button4 h-10 px-[15px]">
-                        <div class="absolute inset-0 transition group-hover/button:bg-black/[12%] group-active/button:bg-black/[18%]"></div>
-                        <div class="z-10 flex items-center justify-center">
-                            <div class="">Your Referrals (0)</div>
-                            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-right" class="svg-inline--fa fa-arrow-right fa-fw ml-[7px] text-[12px]" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <button type="button" className="group/button relative flex shrink-0 items-center justify-center overflow-hidden rounded-md focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring w-fit bg-whop-black text-whop-background text-button4 h-10 px-[15px]">
+                        <div className="absolute inset-0 transition group-hover/button:bg-black/[12%] group-active/button:bg-black/[18%]"></div>
+                        <div className="z-10 flex items-center justify-center">
+                            <div className="">Your Referrals (0)</div>
+                            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-right" className="svg-inline--fa fa-arrow-right fa-fw ml-[7px] text-[12px]" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                 <path fill="currentColor" d="M440.6 273.4c4.7-4.5 7.4-10.8 7.4-17.4s-2.7-12.8-7.4-17.4l-176-168c-9.6-9.2-24.8-8.8-33.9 .8s-8.8 24.8 .8 33.9L364.1 232 24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l340.1 0L231.4 406.6c-9.6 9.2-9.9 24.3-.8 33.9s24.3 9.9 33.9 .8l176-168z"></path>
                             </svg>
                         </div>

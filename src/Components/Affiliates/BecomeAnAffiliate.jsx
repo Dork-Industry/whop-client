@@ -49,28 +49,28 @@ const BecomeAnAffiliate = () => {
         },
     ];
   return (
-<div class="padded-container flex justify-between gap-x-20 py-10 lg:py-[60px]">
-   <div class="flex max-w-[700px] flex-1 flex-col">
-      <div class="mb-10 space-y-2">
-         <h1 class="font-display text-whop-black font-bold text-display2 lg:text-display1 ">Become an Affiliate</h1>
-         <p class="paragraph2 text-whop-dark-gray">Please be aware that running ads against Whop breaches our <a class="text-whop-fieldHighlight" href="/tos">Terms of Service (ToS)</a>, disqualifying you from receiving payments. Refer to our ToS for a full understanding of Whop's policies.</p>
+<div className="padded-container flex justify-between gap-x-20 py-10 lg:py-[60px]">
+   <div className="flex max-w-[700px] flex-1 flex-col">
+      <div className="mb-10 space-y-2">
+         <h1 className="font-display text-whop-black font-bold text-display2 lg:text-display1 ">Become an Affiliate</h1>
+         <p className="paragraph2 text-whop-dark-gray">Please be aware that running ads against Whop breaches our <a className="text-whop-fieldHighlight" href="/tos">Terms of Service (ToS)</a>, disqualifying you from receiving payments. Refer to our ToS for a full understanding of Whop's policies.</p>
       </div>
-      <div class="flex flex-col gap-4">
-         <a class="border-whop-stroke flex items-center gap-[29px] rounded-[10px] border px-6 py-3 shadow-md" href="/affiliate/customer/">
-            <div class="text-whop-black w-full">
-               <div class="display3 mb-2">Refer customers</div>
-               <p class="paragraph2">Get paid to refer customers to products on Whop</p>
+      <div className="flex flex-col gap-4">
+         <a className="border-whop-stroke flex items-center gap-[29px] rounded-[10px] border px-6 py-3 shadow-md" href="/affiliate/customer/">
+            <div className="text-whop-black w-full">
+               <div className="display3 mb-2">Refer customers</div>
+               <p className="paragraph2">Get paid to refer customers to products on Whop</p>
             </div>
-            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-right" class="w-6 h-6 text-whop-black  text-2xl" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-right" className="w-6 h-6 text-whop-black  text-2xl" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                <path fill="currentColor" d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z"></path>
             </svg>
          </a>
-         <a class="border-whop-stroke flex items-center gap-[29px] rounded-[10px] border px-6 py-3 shadow-md" href="/affiliates/business/">
-            <div class="text-whop-black w-full">
-               <div class="display3 mb-2">Refer businesses</div>
-               <p class="paragraph2">Get paid to refer businesses to start selling on Whop</p>
+         <a className="border-whop-stroke flex items-center gap-[29px] rounded-[10px] border px-6 py-3 shadow-md" href="/affiliates/business/">
+            <div className="text-whop-black w-full">
+               <div className="display3 mb-2">Refer businesses</div>
+               <p className="paragraph2">Get paid to refer businesses to start selling on Whop</p>
             </div>
-            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-right" class="w-6 h-6 text-whop-black text-2xl" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-right" className="w-6 h-6 text-whop-black text-2xl" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                <path fill="currentColor" d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z"></path>
             </svg>
          </a>

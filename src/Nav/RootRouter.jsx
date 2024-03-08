@@ -32,6 +32,7 @@ import TosLayout from '../Components/Layout/TosLayout.jsx';
 import Affiliates from '../Pages/Affiliates.jsx';
 import CustomerAffiliates from '../Pages/CustomerAffiliates.jsx';
 import MyReferrals from '../Pages/MyReferrals.jsx';
+import Account from '../Pages/Account.jsx';
 
 export default function RootRouter() {
     return (
@@ -65,6 +66,7 @@ export default function RootRouter() {
                     <Route exact path="/affiliate" element={<Affiliates />} />
                     <Route exact path="/affiliate/customer" element={<CustomerAffiliates  />} />
                     <Route exact path="/affiliate/customer/my-referrals" element={<MyReferrals  />} />
+                    <Route exact path="/account" element={<Account  />} />
 
                   
                     <Route exact path="/Srthanks" element={<Srthanks />} />

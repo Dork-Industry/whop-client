@@ -39,12 +39,12 @@ const FaqItem = ({ question, answer }) => {
   };
 const Faq = () => {
   return (
-<div class="border-t-whop-stroke flex flex-col gap-6 border-t py-10 md:py-16 lg:flex-row lg:gap-6">
-   <div class="flex-1">
-      <div class="font-display text-whop-black font-semibold text-display3">FAQs</div>
+<div className="border-t-whop-stroke flex flex-col gap-6 border-t py-10 md:py-16 lg:flex-row lg:gap-6">
+   <div className="flex-1">
+      <div className="font-display text-whop-black font-semibold text-display3">FAQs</div>
    </div>
-   <div class="lg:flex-1 lg:basis-[360px]">
-      <div class="space-y-4">
+   <div className="lg:flex-1 lg:basis-[360px]">
+      <div className="space-y-4">
 
         <FaqItem 
         question='Do I get charged when I sign up for the waitlist?'
