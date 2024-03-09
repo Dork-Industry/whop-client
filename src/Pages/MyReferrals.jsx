@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const MyReferrals = () => {
   return (
 <div className="px-5 flex flex-col gap-10 pb-20 pt-10 sm:gap-[64px]">
@@ -20,8 +20,9 @@ const MyReferrals = () => {
             <div className="display2 text-whop-black">Your Referrals</div>
             <p className="paragraph2 text-whop-dark-gray">Please be aware that running ads against Whop breaches our <a className="text-whop-field-highlight" href="/terms/">Terms of Service (ToS)</a>, disqualifying you from receiving payments. Refer to our ToS for a full understanding of Whop's policies.</p>
          </div>
-         <div className="flex w-full justify-end">
-            <a className="w-full lg:w-auto" href="/account/balance/">
+         <div className="flex w-full justify-end"> 
+            <Link className="w-full lg:w-auto" to="/account" state={{tab:'balance'}}
+         >
                <button type="button" className="group/button relative flex shrink-0 items-center justify-center overflow-hidden rounded-md focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring w-full lg:w-auto bg-whop-background text-whop-black border-whop-stroke border text-button4 h-10 px-[15px]">
                   <div className="absolute inset-0 transition group-hover/button:bg-black/[4%] group-active/button:bg-black/[8%] biz-dark-1:group-hover/button:bg-white/[8%] biz-dark-1:group-active/button:bg-white/[16%] biz-dark-2:group-hover/button:bg-white/[8%] biz-dark-2:group-active/button:bg-white/[16%]"></div>
                   <div className="z-10 flex items-center justify-center">
@@ -31,7 +32,7 @@ const MyReferrals = () => {
                      </svg>
                   </div>
                </button>
-            </a>
+            </Link>
          </div>
       </div>
       <div className="flex flex-wrap gap-2 sm:gap-4">

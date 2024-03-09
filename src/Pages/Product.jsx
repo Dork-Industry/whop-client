@@ -6,7 +6,7 @@ import YouMightLike from '../Components/Product/YouMightLike'
 const Product = () => {
   return (
     <div>
-        <div className="padded-container hidden py-10 md:block">
+        <div className="px-5 hidden py-10 md:block">
    <div className="flex items-center justify-between">
       <nav>
          <ul className="flex gap-px overflow-x-auto whitespace-nowrap">
@@ -75,7 +75,7 @@ const Product = () => {
         
         <div className="padded-container">
     <div className="mb-10 flex flex-col gap-0 gap-y-6 md:mb-16 md:flex-row md:gap-x-10 lg:gap-x-[60px]">
-       <div className="flex flex-1 flex-col gap-x-0 gap-y-[60px] xl:flex-row xl:gap-x-[60px] xl:gap-y-0">
+       <div className="flex flex-1 flex-col gap-x-0 gap-y-[60px] px-4 xl:flex-row xl:gap-x-[60px] xl:gap-y-0">
           <div className="relative hidden basis-0 md:block xl:flex-1">
              <div>
                 <div className="embla">
@@ -87,7 +87,7 @@ const Product = () => {
                                   1 / 1
                                </span>
                             </div>
-                            <video className="embla__slide__img border-whop-stroke block aspect-[2/1] w-full min-w-0 cursor-pointer border-[0.5px] object-cover md:rounded-[10px]" src="https://img.whop.com/HnOXUVEzgECCDq0Rb2QNGsWkJIFbjo-7YNlMwd-9yhw/rs:fill:500:250/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vaW1hZ2VzL2ltYWdlcy81NDEyNS5vcmlnaW5hbC5naWY.mp4" autoPlay="" playsInline="" loop="" muted="" width="500" height="250" ></video>
+                            <video className="embla__slide__img border-whop-stroke block aspect-[2/1] w-full min-w-0 cursor-pointer border-[0.5px] object-cover md:rounded-[10px]" src="https://img.whop.com/HnOXUVEzgECCDq0Rb2QNGsWkJIFbjo-7YNlMwd-9yhw/rs:fill:500:250/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vaW1hZ2VzL2ltYWdlcy81NDEyNS5vcmlnaW5hbC5naWY.mp4" autoplay="" playsinline="" loop="" muted="" width="500" height="250" ></video>
                          </div>
                       </div>
                    </div>
@@ -181,23 +181,23 @@ const Product = () => {
              </div>
              <p className="paragraph1 text-whop-black mb-6">#1 EXCLUSIVE RESELLING COMMUNITY</p>
              <div className="mb-6 grid grid-cols-2 gap-2">
-                <a href="/marketplace/profitlounge/?" className="border-whop-primary border-[2px] px-[15px] py-[11px] shadow-sm hover:bg-whop-hover cursor-pointer rounded-[6px] transition-colors">
-                   <div className="subtitle1 text-whop-black line-clamp-2">Profit Lounge Membership</div>
-                   <div className="text-whop-dark-gray text5 line-clamp-1">$90.00 / month</div>
-                </a>
-                <a href="/marketplace/profitlounge/?pass=prod_87vPzg1DrZMf1" className="border-whop-stroke border px-4 py-3 hover:bg-whop-hover cursor-pointer rounded-[6px] transition-colors">
-                   <div className="subtitle1 text-whop-black line-clamp-2">Quarterly Membership (INSTANT ACCESS - Saves $20)&nbsp;</div>
-                   <div className="text-whop-dark-gray text5 line-clamp-1">$250.00 / 3-months</div>
-                </a>
+                <div className="border-whop-primary border-2 px-[15px] py-[11px] shadow-sm hover:bg-whop-hover cursor-pointer rounded-[6px] ">
+                   <div className="font-semibold text-whop-black line-clamp-2">Profit Lounge Membership</div>
+                   <div className="text-whop-darkGray text5 line-clamp-1">$90.00 / month</div>
+                </div>
+                <div className="border-whop-stroke border px-4 py-3 hover:bg-whop-hover cursor-pointer rounded-[6px] transition-colors">
+                   <div className="font-semibold text-whop-black line-clamp-2">Quarterly Membership (INSTANT ACCESS - Saves $20)&nbsp;</div>
+                   <div className="text-whop-darkGray text5 line-clamp-1">$250.00 / 3-months</div>
+                </div>
              </div>
              <div className="mb-6 space-y-2">
-                <div className="gradient-mask-b-60 max-h-32">
-                   <div className="[&amp;_a]:text-whop-field-highlight [&amp;>p]:text-paragraph2 [&amp;>*]:text-whop-dark-gray overflow-hidden [&amp;>*:last-child]:pb-0 [&amp;>*]:pb-2 [&amp;_ol]:list-decimal [&amp;_ol]:pl-8 [&amp;_pre]:whitespace-pre-wrap [&amp;_ul]:list-disc [&amp;_ul]:pl-4">
+                <div className=" ">
+                   <div className="[&amp;_a]:text-whop-fieldHighlight [&amp;>p]:text-paragraph2 [&amp;>*]:text-whop-darkGray  [&amp;>*:last-child]:pb-0 [&amp;>*]:pb-2 [&amp;_ol]:list-decimal [&amp;_ol]:pl-8 [&amp;_pre]:whitespace-pre-wrap [&amp;_ul]:list-disc [&amp;_ul]:pl-4">
                       <p>At <strong>Profit Lounge</strong>, we offer the key to a successful reselling business. Discover the best flips, take advantage of retailer pricing errors and uncover hidden clearance deals. Enjoy <em>exclusive food deals</em>, <em>Amazon freebies</em> with automated checkouts and make the most out of collaborations and special promotions. Explore best travel deals and learn how to maximize credit card rewards. A supportive and thriving community - we're dedicated to your reselling success.</p>
                    </div>
                 </div>
-                <button type="button" className="group/button relative flex shrink-0 items-center justify-center overflow-hidden rounded-md w-fit focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring bg-whop-white text-whop-field-highlight text-subtitle4 h-6 px-[7px]">
-                   <div className="absolute inset-0 transition group-hover/button:bg-black/[4%] group-active/button:bg-black/[8%] biz-dark-1:group-hover/button:bg-white/[8%] biz-dark-1:group-active/button:bg-white/[16%] biz-dark-2:group-hover/button:bg-white/[8%] biz-dark-2:group-active/button:bg-white/[16%]"></div>
+                <button type="button" className="group/button  flex shrink-0 items-center justify-center overflow-hidden rounded-md w-fit focus-visible:border-whop-fieldHighlight focus-visible:ring-whop-fieldHighlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring bg-whop-white text-whop-field-highlight text-subtitle4 h-6 px-[7px]">
+                   <div className=" inset-0 transition group-hover/button:bg-black/[4%] group-active/button:bg-black/[8%] biz-dark-1:group-hover/button:bg-white/[8%] biz-dark-1:group-active/button:bg-white/[16%] biz-dark-2:group-hover/button:bg-white/[8%] biz-dark-2:group-active/button:bg-white/[16%]"></div>
                    <div className="z-10 flex items-center justify-center">
                       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-down" className="svg-inline--fa fa-chevron-down fa-fw mr-[5px] text-[12px] transition rotate-0" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                          <path fill="currentColor" d="M239 401c9.4 9.4 24.6 9.4 33.9 0L465 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-175 175L81 175c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L239 401z"></path>
@@ -211,7 +211,7 @@ const Product = () => {
              <div className="space-y-3">
                 <div className="overline3 text-whop-dark-gray uppercase">includes</div>
                 <div className="flex items-center gap-3">
-                   <img className="border-whop-stroke border-[0.5px] rounded-[10px] object-cover w-10 h-10"   src="https://img.whop.com/B0aa6LKbtYtxQoF7JwUiv5M5MnB6pjCRzW0upl9W0dQ/rs:fill:40:40/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYXBwcy9pbWFnZXMvNS5vcmlnaW5hbC5zdmc" alt="Discord access icon" width="40" height="40" loading="lazy" fetchpriority="auto" srcSet="https://img.whop.com/B0aa6LKbtYtxQoF7JwUiv5M5MnB6pjCRzW0upl9W0dQ/rs:fill:40:40/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYXBwcy9pbWFnZXMvNS5vcmlnaW5hbC5zdmc 1x, https://img.whop.com/g_rE-nNCetIxPTOqk8DBjkPnFegRb84No2RLcGwgfqE/rs:fill:40:40/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYXBwcy9pbWFnZXMvNS5vcmlnaW5hbC5zdmc 2x"/>
+                   <img className="border-whop-stroke border-[0.5px] rounded-[10px] object-cover w-10 h-10"   src="https://img.whop.com/B0aa6LKbtYtxQoF7JwUiv5M5MnB6pjCRzW0upl9W0dQ/rs:fill:40:40/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYXBwcy9pbWFnZXMvNS5vcmlnaW5hbC5zdmc" alt="Discord access icon" width="40" height="40" loading="lazy" fetchpriority="auto" srcset="https://img.whop.com/B0aa6LKbtYtxQoF7JwUiv5M5MnB6pjCRzW0upl9W0dQ/rs:fill:40:40/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYXBwcy9pbWFnZXMvNS5vcmlnaW5hbC5zdmc 1x, https://img.whop.com/g_rE-nNCetIxPTOqk8DBjkPnFegRb84No2RLcGwgfqE/rs:fill:40:40/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYXBwcy9pbWFnZXMvNS5vcmlnaW5hbC5zdmc 2x"/>
                    <div>
                       <p className="text-subtitle3 text-whop-black">Discord access</p>
                       <div data-state="closed" className="text-whop-gray focus:outline-none cursor-default inline-block">
@@ -220,7 +220,7 @@ const Product = () => {
                    </div>
                 </div>
                 <div className="flex items-center gap-3">
-                   <img className="border-whop-stroke border-[0.5px] rounded-[10px] object-cover w-10 h-10"   src="https://img.whop.com/TtEszLnviBaZITfRa0vlKH7uvsIjDIPT-fXqpMyyYzk/rs:fill:40:40/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vdXBsb2Fkcy8yMDI0LTAyLTA2L3VzZXJfMTA1NzkwMF8wYWRlZWQyYy04NjIzLTQwOTMtOGIwMS0zODFiNjJhMTNiZTAuc3Zn" alt="Giveaways icon" width="40" height="40" loading="lazy" fetchpriority="auto" srcSet="https://img.whop.com/TtEszLnviBaZITfRa0vlKH7uvsIjDIPT-fXqpMyyYzk/rs:fill:40:40/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vdXBsb2Fkcy8yMDI0LTAyLTA2L3VzZXJfMTA1NzkwMF8wYWRlZWQyYy04NjIzLTQwOTMtOGIwMS0zODFiNjJhMTNiZTAuc3Zn 1x, https://img.whop.com/yOOhT6Rvs4O08Z9EjqkZ8oGHUetXeew791lkEzqqE0s/rs:fill:40:40/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vdXBsb2Fkcy8yMDI0LTAyLTA2L3VzZXJfMTA1NzkwMF8wYWRlZWQyYy04NjIzLTQwOTMtOGIwMS0zODFiNjJhMTNiZTAuc3Zn 2x" />
+                   <img className="border-whop-stroke border-[0.5px] rounded-[10px] object-cover w-10 h-10"   src="https://img.whop.com/TtEszLnviBaZITfRa0vlKH7uvsIjDIPT-fXqpMyyYzk/rs:fill:40:40/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vdXBsb2Fkcy8yMDI0LTAyLTA2L3VzZXJfMTA1NzkwMF8wYWRlZWQyYy04NjIzLTQwOTMtOGIwMS0zODFiNjJhMTNiZTAuc3Zn" alt="Giveaways icon" width="40" height="40" loading="lazy" fetchpriority="auto" srcset="https://img.whop.com/TtEszLnviBaZITfRa0vlKH7uvsIjDIPT-fXqpMyyYzk/rs:fill:40:40/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vdXBsb2Fkcy8yMDI0LTAyLTA2L3VzZXJfMTA1NzkwMF8wYWRlZWQyYy04NjIzLTQwOTMtOGIwMS0zODFiNjJhMTNiZTAuc3Zn 1x, https://img.whop.com/yOOhT6Rvs4O08Z9EjqkZ8oGHUetXeew791lkEzqqE0s/rs:fill:40:40/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vdXBsb2Fkcy8yMDI0LTAyLTA2L3VzZXJfMTA1NzkwMF8wYWRlZWQyYy04NjIzLTQwOTMtOGIwMS0zODFiNjJhMTNiZTAuc3Zn 2x" />
                    <div>
                       <p className="text-subtitle3 text-whop-black">Giveaways</p>
                       <div data-state="closed" className="text-whop-gray focus:outline-none cursor-default inline-block">
@@ -229,7 +229,7 @@ const Product = () => {
                    </div>
                 </div>
                 <div className="flex items-center gap-3">
-                   <img className="border-whop-stroke border-[0.5px] rounded-[10px] object-cover w-10 h-10"  src="https://img.whop.com/SVL_EhmHz12DI_YFBs0V6lxnyfDQ5RlpcQ1yVRpDWEE/rs:fill:40:40/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vdXBsb2Fkcy8yMDIzLTEyLTA4L3VzZXJfMjM0NDMwN180N2M5ZTViMi01M2NkLTRmMDctODJlYy1lOWM4ZDkxZTBlNzAuc3Zn" alt="Merch icon" width="40" height="40" loading="lazy" fetchpriority="auto" srcSet="https://img.whop.com/SVL_EhmHz12DI_YFBs0V6lxnyfDQ5RlpcQ1yVRpDWEE/rs:fill:40:40/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vdXBsb2Fkcy8yMDIzLTEyLTA4L3VzZXJfMjM0NDMwN180N2M5ZTViMi01M2NkLTRmMDctODJlYy1lOWM4ZDkxZTBlNzAuc3Zn 1x, https://img.whop.com/XQypM6o2vOwnQQqEL03U7Kj795q0fKk-a4pARkcqp2w/rs:fill:40:40/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vdXBsb2Fkcy8yMDIzLTEyLTA4L3VzZXJfMjM0NDMwN180N2M5ZTViMi01M2NkLTRmMDctODJlYy1lOWM4ZDkxZTBlNzAuc3Zn 2x"/>
+                   <img className="border-whop-stroke border-[0.5px] rounded-[10px] object-cover w-10 h-10"  src="https://img.whop.com/SVL_EhmHz12DI_YFBs0V6lxnyfDQ5RlpcQ1yVRpDWEE/rs:fill:40:40/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vdXBsb2Fkcy8yMDIzLTEyLTA4L3VzZXJfMjM0NDMwN180N2M5ZTViMi01M2NkLTRmMDctODJlYy1lOWM4ZDkxZTBlNzAuc3Zn" alt="Merch icon" width="40" height="40" loading="lazy" fetchpriority="auto" srcset="https://img.whop.com/SVL_EhmHz12DI_YFBs0V6lxnyfDQ5RlpcQ1yVRpDWEE/rs:fill:40:40/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vdXBsb2Fkcy8yMDIzLTEyLTA4L3VzZXJfMjM0NDMwN180N2M5ZTViMi01M2NkLTRmMDctODJlYy1lOWM4ZDkxZTBlNzAuc3Zn 1x, https://img.whop.com/XQypM6o2vOwnQQqEL03U7Kj795q0fKk-a4pARkcqp2w/rs:fill:40:40/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vdXBsb2Fkcy8yMDIzLTEyLTA4L3VzZXJfMjM0NDMwN180N2M5ZTViMi01M2NkLTRmMDctODJlYy1lOWM4ZDkxZTBlNzAuc3Zn 2x"/>
                    <div>
                       <p className="text-subtitle3 text-whop-black">Merch</p>
                       <div data-state="closed" className="text-whop-gray focus:outline-none cursor-default inline-block">
@@ -245,7 +245,7 @@ const Product = () => {
              <iframe aria-hidden="true" width="0" height="0" src="/auth/iframe/init/" ></iframe>
              <div className="border-whop-stroke hidden h-fit w-[340px] flex-col gap-5 rounded-[10px] border px-6 pb-[30px] pt-6 shadow-xl md:flex">
                 <div>
-                   <h4 className="text-whop-black">Profit Lounge Membership</h4>
+                   <h4 className="text-whop-black font-semibold">Profit Lounge Membership</h4>
                 </div>
                 <div className="space-y-6 transition">
                    <div className="space-y-2">
@@ -256,20 +256,20 @@ const Product = () => {
                                <button type="button" className="group/button relative flex shrink-0 items-center justify-center overflow-hidden rounded-md focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring w-full bg-whop-primary text-whop-fixed-white text-button2 h-12 px-[19px]">
                                   <div className="absolute inset-0 transition group-hover/button:bg-black/[12%] group-active/button:bg-black/[18%]"></div>
                                   <div className="z-10 flex items-center justify-center">
-                                     <div className="">Get Access</div>
+                                     <div className="text-white font-semibold">Get Access</div>
                                   </div>
                                </button>
                             </div>
                          </div>
                       </div>
-                      <div role="alert" aria-live="polite" className="relative flex items-start justify-between rounded-md border py-3 pl-3.5 pr-[46px] bg-whop-field-highlight/[10%] border-whop-field-highlight">
+                      <div role="alert" aria-live="polite" className="relative flex items-start justify-between rounded-md border py-3 pl-3.5 pr-[46px] bg-whop-fieldHighlight/[10%] border-whop-fieldHighlight">
                          <div className="flex items-start">
                             <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="clipboard-user" className="svg-inline--fa fa-clipboard-user fa-fw mr-2 h-[18px] w-[18px] text-whop-field-highlight" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                                <path fill="currentColor" d="M320 64H280h-9.6C263 27.5 230.7 0 192 0s-71 27.5-78.4 64H104 64C28.7 64 0 92.7 0 128V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64zM80 112v24c0 13.3 10.7 24 24 24h88 88c13.3 0 24-10.7 24-24V112h16c8.8 0 16 7.2 16 16V448c0 8.8-7.2 16-16 16H304c0-44.2-35.8-80-80-80H160c-44.2 0-80 35.8-80 80H64c-8.8 0-16-7.2-16-16V128c0-8.8 7.2-16 16-16H80zm88-32a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zm88 208a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"></path>
                             </svg>
                             <div className="space-y-1">
-                               <p className="text-subtitle2 text-whop-field-highlight">Join this waitlist!</p>
-                               <p className="text-paragraph3 text-whop-field-highlight">You’ll only be charged if you’re accepted.</p>
+                               <p className="text-subtitle2 text-whop-fieldHighlight">Join this waitlist!</p>
+                               <p className="text-paragraph3 text-whop-fieldHighlight">You’ll only be charged if you’re accepted.</p>
                             </div>
                          </div>
                       </div>
@@ -277,7 +277,7 @@ const Product = () => {
                    <div className="mt-6">
                       <div className="space-y-1">
                          <div className="flex gap-1.5">
-                            <p className="text-subtitle1 text-whop-black">$90.00</p>
+                            <p className="text-subtitle1 font-semibold text-whop-black">$90.00</p>
                             <p className="text-text1 text-whop-dark-gray">/ month</p>
                          </div>
                          <div className="flex gap-1"></div>
@@ -314,7 +314,7 @@ const Product = () => {
                       <div className="absolute bottom-0 left-0 right-0 z-10 h-14 bg-gradient-to-b from-transparent to-white"></div>
                       <a className="transition-all" href="/marketplace/profitlounge/?pass=pass_Ux1I2iNOAAyCO">
                          <div className="border-whop-stroke flex items-center gap-2 rounded-[20px] border border-solid p-2 shadow-md transition duration-300 hover:scale-[101%] hover:shadow-lg">
-                            <img className="border-whop-stroke border-[0.5px] rounded-lg object-cover w-8 h-8" src="https://img.whop.com/tI8l7KseMpyOYnMxvxNTJKrnOS8rW8XHPDSWZ8sdJ9M/rs:fill:32:32/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw" srcSet="https://img.whop.com/tI8l7KseMpyOYnMxvxNTJKrnOS8rW8XHPDSWZ8sdJ9M/rs:fill:32:32/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 1x, https://img.whop.com/Kyz3qjg1bt7ws0c1I1iAWHbTUj8xkzgHcdqFk0N1t9Y/rs:fill:32:32/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 2x" alt="Event image" width="32" height="32" loading="eager" fetchpriority="high" />
+                            <img className="border-whop-stroke border-[0.5px] rounded-lg object-cover w-8 h-8" src="https://img.whop.com/tI8l7KseMpyOYnMxvxNTJKrnOS8rW8XHPDSWZ8sdJ9M/rs:fill:32:32/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw" srcset="https://img.whop.com/tI8l7KseMpyOYnMxvxNTJKrnOS8rW8XHPDSWZ8sdJ9M/rs:fill:32:32/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 1x, https://img.whop.com/Kyz3qjg1bt7ws0c1I1iAWHbTUj8xkzgHcdqFk0N1t9Y/rs:fill:32:32/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 2x" alt="Event image" width="32" height="32" loading="eager" fetchpriority="high" />
                             <div className="flex-1 overflow-hidden">
                                <div className="mr-2 flex items-center justify-between">
                                   <div className="subtitle1 overflow-hidden text-ellipsis whitespace-nowrap text-subtitle5">Someone just bought Affiliate Plan</div>
@@ -326,7 +326,7 @@ const Product = () => {
                       </a>
                       <a className="transition-all" href="/marketplace/profitlounge/?pass=pass_RDO9nrcMwI7L9">
                          <div className="border-whop-stroke flex items-center gap-2 rounded-[20px] border border-solid p-2 shadow-md transition duration-300 hover:scale-[101%] hover:shadow-lg">
-                            <img className="border-whop-stroke border-[0.5px] rounded-lg w-8 h-8 object-cover" src="https://img.whop.com/tI8l7KseMpyOYnMxvxNTJKrnOS8rW8XHPDSWZ8sdJ9M/rs:fill:32:32/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw" srcSet="https://img.whop.com/tI8l7KseMpyOYnMxvxNTJKrnOS8rW8XHPDSWZ8sdJ9M/rs:fill:32:32/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 1x, https://img.whop.com/Kyz3qjg1bt7ws0c1I1iAWHbTUj8xkzgHcdqFk0N1t9Y/rs:fill:32:32/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 2x" alt="Event image" width="32" height="32" loading="eager" fetchpriority="high" />
+                            <img className="border-whop-stroke border-[0.5px] rounded-lg w-8 h-8 object-cover" src="https://img.whop.com/tI8l7KseMpyOYnMxvxNTJKrnOS8rW8XHPDSWZ8sdJ9M/rs:fill:32:32/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw" srcset="https://img.whop.com/tI8l7KseMpyOYnMxvxNTJKrnOS8rW8XHPDSWZ8sdJ9M/rs:fill:32:32/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 1x, https://img.whop.com/Kyz3qjg1bt7ws0c1I1iAWHbTUj8xkzgHcdqFk0N1t9Y/rs:fill:32:32/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 2x" alt="Event image" width="32" height="32" loading="eager" fetchpriority="high" />
                             <div className="flex-1 overflow-hidden">
                                <div className="mr-2 flex items-center justify-between">
                                   <div className="subtitle1 overflow-hidden text-ellipsis whitespace-nowrap text-subtitle5">Someone just bought Profit Lounge Membership</div>
@@ -338,7 +338,7 @@ const Product = () => {
                       </a>
                       <a className="transition-all" href="/marketplace/profitlounge/?pass=pass_RDO9nrcMwI7L9">
                          <div className="border-whop-stroke flex items-center gap-2 rounded-[20px] border border-solid p-2 shadow-md transition duration-300 hover:scale-[101%] hover:shadow-lg">
-                            <img className="border-whop-stroke border-[0.5px] rounded-lg object-cover w-8 h-8" src="https://img.whop.com/tI8l7KseMpyOYnMxvxNTJKrnOS8rW8XHPDSWZ8sdJ9M/rs:fill:32:32/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw" srcSet="https://img.whop.com/tI8l7KseMpyOYnMxvxNTJKrnOS8rW8XHPDSWZ8sdJ9M/rs:fill:32:32/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 1x, https://img.whop.com/Kyz3qjg1bt7ws0c1I1iAWHbTUj8xkzgHcdqFk0N1t9Y/rs:fill:32:32/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 2x" alt="Event image" width="32" height="32" loading="eager" fetchpriority="high" />
+                            <img className="border-whop-stroke border-[0.5px] rounded-lg object-cover w-8 h-8" src="https://img.whop.com/tI8l7KseMpyOYnMxvxNTJKrnOS8rW8XHPDSWZ8sdJ9M/rs:fill:32:32/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw" srcset="https://img.whop.com/tI8l7KseMpyOYnMxvxNTJKrnOS8rW8XHPDSWZ8sdJ9M/rs:fill:32:32/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 1x, https://img.whop.com/Kyz3qjg1bt7ws0c1I1iAWHbTUj8xkzgHcdqFk0N1t9Y/rs:fill:32:32/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 2x" alt="Event image" width="32" height="32" loading="eager" fetchpriority="high" />
                             <div className="flex-1 overflow-hidden">
                                <div className="mr-2 flex items-center justify-between">
                                   <div className="subtitle1 overflow-hidden text-ellipsis whitespace-nowrap text-subtitle5">Someone just bought Profit Lounge Membership</div>

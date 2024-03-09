@@ -16,6 +16,7 @@ import MakeMoneyAsAffiliate from '../Components/home/MakeMoneyAsAffiliate.jsx';
 import WhopBlog from '../Components/home/WhopBlog.jsx';
 import Faq from '../Components/home/Faq.jsx';
 import SellOnWhop from '../Components/home/SellOnWhop.jsx';
+import TopCharts from '../Components/home/TopCharts.jsx';
 const Home = () => {
     // const [List, setList] = useState([]);
     // const [CatList, setCatList] = useState([]);
@@ -90,7 +91,7 @@ const Home = () => {
     // };
 
     return (
-        <>
+        <div className='px-5'>
 
             <Banner />
             <div className="bg-whop-hover flex items-center justify-center gap-16 p-8 [content-visibility:auto] lg:gap-32">
@@ -133,7 +134,7 @@ const Home = () => {
             <Categories />
 
             <NewlyAddedProducts />
-
+            <TopCharts />
             <FreeTrialProducts />
             <RecentReviews />
             <WhopPicksProducts />
@@ -146,7 +147,7 @@ const Home = () => {
 
             <Faq />
             <SellOnWhop />
-        </>
+        </div>
     );
 };
 

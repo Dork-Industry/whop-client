@@ -8,7 +8,7 @@ const ProductCard = ({product}) => {
           <div className="embla w-full">
              <div className="embla__container flex h-full flex-row " >
                 <div className="embla__slide aspect-[2/1] h-full w-full object-cover transition-all duration-200">
-                   <video className="h-full w-full" src="https://img.whop.com/mrnyB4nUs5RJEvIX0IdBTeMQIZ4Zl9rB77f79mLCJ7s/rs:fill:440:220/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vaW1hZ2VzL2ltYWdlcy81NDEyNS5vcmlnaW5hbC5naWY.mp4" playsInline="" loop="" muted="" width="440" height="220" ></video>
+                   <video className="h-full w-full" src="https://img.whop.com/mrnyB4nUs5RJEvIX0IdBTeMQIZ4Zl9rB77f79mLCJ7s/rs:fill:440:220/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vaW1hZ2VzL2ltYWdlcy81NDEyNS5vcmlnaW5hbC5naWY.mp4" playsinline="" loop="" muted="" width="440" height="220" ></video>
                 </div>
              </div>
           </div>
@@ -18,7 +18,7 @@ const ProductCard = ({product}) => {
        <div className="flex gap-6 overflow-hidden">
           <div className="flex-1 overflow-hidden">
              <div className="mb-2 flex items-center gap-2.5 overflow-x-hidden">
-                <img className="border-whop-stroke border-[0.5px] rounded-md object-cover w-6 h-6"  src="https://img.whop.com/3crg4YaMsnev7zm6nlgIwidGhp9U7dVFVqNq1QqiJKg/rs:fill:24:24/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw" alt="Company image" width="24" height="24" loading="lazy" fetchpriority="auto" srcSet="https://img.whop.com/3crg4YaMsnev7zm6nlgIwidGhp9U7dVFVqNq1QqiJKg/rs:fill:24:24/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 1x, https://img.whop.com/Fvqx27U_YrnIzo3UIWSVOSp27uguIMGHhPhGSgoaGhI/rs:fill:24:24/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 2x"/>
+                <img className="border-whop-stroke border-[0.5px] rounded-md object-cover w-6 h-6"  src="https://img.whop.com/3crg4YaMsnev7zm6nlgIwidGhp9U7dVFVqNq1QqiJKg/rs:fill:24:24/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw" alt="Company image" width="24" height="24" loading="lazy" fetchpriority="auto" srcset="https://img.whop.com/3crg4YaMsnev7zm6nlgIwidGhp9U7dVFVqNq1QqiJKg/rs:fill:24:24/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 1x, https://img.whop.com/Fvqx27U_YrnIzo3UIWSVOSp27uguIMGHhPhGSgoaGhI/rs:fill:24:24/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 2x"/>
                 <div className="subtitle1 overflow-x-hidden text-ellipsis whitespace-nowrap">
                    {product?.name} 
                    <div data-state="closed" className="text-whop-gray focus:outline-none cursor-default inline-block">

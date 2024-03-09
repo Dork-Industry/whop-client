@@ -59,22 +59,10 @@ const Login = () => {
                     <div className="flex flex-col">
                         <div className="flex flex-col px-6">
                             <div className="display2 text-whop-black my-6 text-center" id="auth-title">Sign in to Whop</div>
-                            <form onSubmit={handleSubmit} className=''>
+                            <form action="#" className=''>
                                 <div className="h-fit w-full">
                                     <div className="relative flex items-center w-full text-base" >
-                                        <input data-hj-allow="true" 
-                                                id="email" 
-                                                placeholder="Your email" 
-                                                autoComplete="off" 
-                                                spellcheck="false" 
-                                                autocorrect="off" 
-                                                className="block appearance-none pl-3 pr-3 border-whop-stroke-dark shadow-sm focus-within:border-whop-field-highlight focus-within:ring-whop-field-highlight/30 border transition focus-within:outline-none focus-within:ring placeholder:text-whop-dark-gray/[50%] text-whop-black text-text1 bg-whop-background outline-none h-10 rounded-md w-full" 
-                                                type="email" 
-                                                name="email" 
-                                                value={email} 
-                                                onChange={(e) => setEmail(e.target.value)} 
-                                                required/>
-                                        
+                                        <input data-hj-allow="true" id="email" placeholder="Your email" autocomplete="off" spellcheck="false" autocorrect="off" className="block appearance-none pl-3 pr-3 border-whop-stroke-dark shadow-sm focus-within:border-whop-field-highlight focus-within:ring-whop-field-highlight/30 border transition focus-within:outline-none focus-within:ring placeholder:text-whop-dark-gray/[50%] text-whop-black text-text1 bg-whop-background outline-none h-10 rounded-md w-full" type="text" value="" name="email" />
                                     </div>
                                 </div>
                                 <button type="submit" className="group/button relative flex shrink-0 items-center justify-center overflow-hidden rounded-md focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring mt-5 w-full bg-whop-primary text-whop-fixed-white text-button4 h-10 px-[15px]">
@@ -137,79 +125,7 @@ const Login = () => {
             </div>
 
 
-            {/* <div className="bg-shape">
-                <img src="/assets/img/shape/shape-1.png" alt="" />
-            </div>
-
-            <section className="signup__area po-rel-z1 pt-100 pb-145">
-                <div className="sign__shape">
-                    <img className="man-1" src="assets/img/icon/sign/man-1.png" alt="" />
-                    <img className="man-2" src="assets/img/icon/sign/man-2.png" alt="" />
-                    <img className="circle" src="assets/img/icon/sign/circle.png" alt="" />
-                    <img className="zigzag" src="assets/img/icon/sign/zigzag.png" alt="" />
-                    <img className="dot" src="assets/img/icon/sign/dot.png" alt="" />
-                    <img className="bg" src="assets/img/icon/sign/sign-up.png" alt="" />
-                </div>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-xxl-8 offset-xxl-2 col-xl-8 offset-xl-2">
-                            <div className="page__title-wrapper text-center mb-55">
-                                <h2 className="page__title-2">Login </h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-xxl-6 offset-xxl-3 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
-                            <div className="sign__wrapper white-bg">
-                                <div className="sign__form">
-                                    <form onSubmit={handleSubmit}>
-                                        <div className="sign__input-wrapper mb-25">
-                                            <h5>Your email</h5>
-                                            <div className="sign__input">
-                                                <input
-                                                    type="email"
-                                                    value={email}
-                                                    onChange={(e) => setEmail(e.target.value)}
-                                                    required
-                                                    placeholder="e-mail address"
-                                                />
-                                                <i className="fal fa-envelope"></i>
-                                            </div>
-                                        </div>
-                                        <div className="sign__input-wrapper mb-10">
-                                            <h5>Password</h5>
-                                            <div className="sign__input">
-                                                <input
-                                                    type="password"
-                                                    value={password}
-                                                    onChange={(e) => setPassword(e.target.value)}
-                                                    required
-                                                    placeholder="Password"
-                                                />
-                                                <i className="fal fa-lock"></i>
-                                            </div>
-                                        </div>
-                                        <div className="sign__action d-sm-flex justify-content-between mb-30">
-                                            <div className="sign__forgot">
-                                                <a href="/">Forgot your password?</a>
-                                            </div>
-                                        </div>
-                                        <button type="submit" className="m-btn m-btn-4 w-100">
-                                            {' '}
-                                            <span></span> Sign In
-                                        </button>
-                                        <div className="sign__new text-center mt-20">
-                                            <p>
-                                                New to our website? <a href="/register">Sign Up</a>
-                                            </p>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
+          
         </>
     );
 };

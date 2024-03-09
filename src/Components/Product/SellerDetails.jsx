@@ -9,7 +9,7 @@ const SellerDetails = () => {
    <div className="lg:flex-1 lg:basis-[360px]">
       <div className="space-y-6">
          <div className="flex items-center gap-6">
-            <img className="border-whop-stroke border-[0.5px] rounded-2xl object-cover w-16 h-16" src="https://img.whop.com/tVjPaYTPvFlvpxifDtv0cZKdyNaLZtEBTY_f0ckuXe0/rs:fill:64:64/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw" alt="Company image" width="64" height="64" loading="lazy" fetchpriority="auto" srcSet="https://img.whop.com/tVjPaYTPvFlvpxifDtv0cZKdyNaLZtEBTY_f0ckuXe0/rs:fill:64:64/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 1x, https://img.whop.com/rrBNaF15drpPZMXyRGpLD_lgfyfOv10NwrP-i22gbiE/rs:fill:64:64/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 2x" />
+            <img className="border-whop-stroke border-[0.5px] rounded-2xl object-cover w-16 h-16" src="https://img.whop.com/tVjPaYTPvFlvpxifDtv0cZKdyNaLZtEBTY_f0ckuXe0/rs:fill:64:64/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw" alt="Company image" width="64" height="64" loading="lazy" fetchpriority="auto" srcset="https://img.whop.com/tVjPaYTPvFlvpxifDtv0cZKdyNaLZtEBTY_f0ckuXe0/rs:fill:64:64/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 1x, https://img.whop.com/rrBNaF15drpPZMXyRGpLD_lgfyfOv10NwrP-i22gbiE/rs:fill:64:64/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vYm90cy9pbWFnZXMvMzY2Lm9yaWdpbmFsLnBuZw 2x" />
             <div className="flex flex-col">
                <div className="mb-1 flex items-center gap-1.5">
                   <div className="display3 text-whop-black">Profit Lounge</div>
