@@ -41,7 +41,7 @@ const Account = () => {
       }
     };
   return (
-    <div className="w-full max-w-[1300px] items-center mt-10 px-5 sm:px-0">
+    <div className="w-full max-w-[1300px] items-center mt-10 px-3 lg:px-5 sm:px-0">
     <h1 className="text-display3 sm:text-display2">Your Account Settings</h1>
     <div className="h-6"></div>
     <div className="border-whop-stroke flex appearance-none items-center space-x-3 overflow-auto border-b" role="tablist" aria-orientation="horizontal">

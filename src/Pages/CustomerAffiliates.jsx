@@ -10,7 +10,7 @@ const CustomerAffiliates = () => {
     };
 
     return (
-        <div className="px-5 pb-20 pt-10">
+        <div className="px-3 lg:px-5 pb-20 pt-10">
             <div className="text-whop-gray overline3 mb-10 flex flex-row items-center gap-2 uppercase">
                 <a href="/affiliates/">Become an affiliate</a>
                 <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-right" className="svg-inline--fa fa-chevron-right fa-fw w-[7px]" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">

@@ -5,8 +5,8 @@ import SellerDetails from '../Components/Product/SellerDetails'
 import YouMightLike from '../Components/Product/YouMightLike'
 const Product = () => {
   return (
-    <div>
-        <div className="px-5 hidden py-10 md:block">
+    <div className='px-2 lg:px-5'>
+        <div className=" hidden py-10 md:block">
    <div className="flex items-center justify-between">
       <nav>
          <ul className="flex gap-px overflow-x-auto whitespace-nowrap">
@@ -73,7 +73,7 @@ const Product = () => {
    </div>
 </div>
         
-        <div className="padded-container">
+        <div className="mt-10">
     <div className="mb-10 flex flex-col gap-0 gap-y-6 md:mb-16 md:flex-row md:gap-x-10 lg:gap-x-[60px]">
        <div className="flex flex-1 flex-col gap-x-0 gap-y-[60px] px-4 xl:flex-row xl:gap-x-[60px] xl:gap-y-0">
           <div className="relative hidden basis-0 md:block xl:flex-1">

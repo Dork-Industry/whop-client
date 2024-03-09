@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 const MyReferrals = () => {
   return (
-<div className="px-5 flex flex-col gap-10 pb-20 pt-10 sm:gap-[64px]">
+<div className="px-2 lg:px-5 flex flex-col gap-10 pb-20 pt-10 sm:gap-[64px]">
    <div>
       <div className="text-whop-gray overline3 mb-10 flex flex-row items-center gap-2 overflow-x-scroll whitespace-nowrap uppercase">
          <a href="/affiliate/">Become an affiliate</a>
