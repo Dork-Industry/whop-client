@@ -1,53 +1,81 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import Apiconnect from '../../services/Apiconnect'
+import { Image } from 'react-bootstrap';
 
 const Banner = () => {
-    const recentz = [
-        {
-            name: 'Praveen Dagga',
-            event: 'Purchased 2 min ago',
-            thumb: '/assets/img/testimonial/testi-1.jpg',
-        },
-        {
-            name: 'Pratik Mishra',
-            event: 'Added a comment 5 min ago',
-            thumb: '/assets/img/testimonial/testi-2.jpg',
-        },
-        {
-            name: 'Binod Patel',
-            event: 'Added a comment 15 min ago',
-            thumb: '/assets/img/testimonial/testi-3.jpg',
-        },
-        {
-            name: 'Mathew Das',
-            event: 'Purchased 22 min ago',
-            thumb: '/assets/img/testimonial/testi-4.jpg',
-        },
-        {
-            name: 'Jane Smith',
-            event: 'Added a comment 25 min ago',
-            thumb: '/assets/img/testimonial/testi-2.jpg',
-        },
-        {
-            name: 'Bob Johnson',
-            event: 'Added a comment 40 min ago',
-            thumb: '/assets/img/testimonial/testi-3.jpg',
-        },
-        {
-            name: 'John Doe',
-            event: 'Purchased 42 min ago',
-            thumb: '/assets/img/testimonial/testi-1.jpg',
-        },
-        {
-            name: 'Jane Smith',
-            event: 'Added a comment 1 hr ago',
-            thumb: '/assets/img/testimonial/testi-2.jpg',
-        },
-        {
-            name: 'Bob Johnson',
-            event: 'Added a comment 3 hr ago',
-            thumb: '/assets/img/testimonial/testi-3.jpg',
-        },
-    ];
+    // const recentz = [
+    //     {
+    //         name: 'Praveen Dagga',
+    //         event: 'Purchased 2 min ago',
+    //         thumb: '/assets/img/testimonial/testi-1.jpg',
+    //     },
+    //     {
+    //         name: 'Pratik Mishra',
+    //         event: 'Added a comment 5 min ago',
+    //         thumb: '/assets/img/testimonial/testi-2.jpg',
+    //     },
+    //     {
+    //         name: 'Binod Patel',
+    //         event: 'Added a comment 15 min ago',
+    //         thumb: '/assets/img/testimonial/testi-3.jpg',
+    //     },
+    //     {
+    //         name: 'Mathew Das',
+    //         event: 'Purchased 22 min ago',
+    //         thumb: '/assets/img/testimonial/testi-4.jpg',
+    //     },
+    //     {
+    //         name: 'Jane Smith',
+    //         event: 'Added a comment 25 min ago',
+    //         thumb: '/assets/img/testimonial/testi-2.jpg',
+    //     },
+    //     {
+    //         name: 'Bob Johnson',
+    //         event: 'Added a comment 40 min ago',
+    //         thumb: '/assets/img/testimonial/testi-3.jpg',
+    //     },
+    //     {
+    //         name: 'John Doe',
+    //         event: 'Purchased 42 min ago',
+    //         thumb: '/assets/img/testimonial/testi-1.jpg',
+    //     },
+    //     {
+    //         name: 'Jane Smith',
+    //         event: 'Added a comment 1 hr ago',
+    //         thumb: '/assets/img/testimonial/testi-2.jpg',
+    //     },
+    //     {
+    //         name: 'Bob Johnson',
+    //         event: 'Added a comment 3 hr ago',
+    //         thumb: '/assets/img/testimonial/testi-3.jpg',
+    //     },
+    // ];
+
+    const [recentz, setRecentz] = useState([])
+    let [delay, setDelay] = useState(1000*60*60);
+   
+
+    useEffect(() => {
+        // setInterval(getLatestUser, delay);
+        getLatestUser()
+    }, [])
+    
+
+    const getLatestUser = () =>{
+        const data = Apiconnect.getData('users/getlatestuser').then((response) => {
+           
+            if(response.data && response.data.data)
+            {
+                let _xtract = Apiconnect.decrypt_obj(response.data.data);
+                setRecentz(...recentz,_xtract);
+            }
+            else{
+                setRecentz(recentz);
+            }
+        })
+    }
+
+
     return (
         <div className="padded-container pb-6 pt-8 md:pb-[60px] md:pt-[100px]">
             <div className="align-start flex flex-col justify-between gap-8 md:flex-row">
@@ -56,7 +84,7 @@ const Banner = () => {
                     <p className="paragraph1 text-whop-black mb-10 hidden md:block">Entrepreneurial communities and software to help you earn online.</p>
                     <form action="/search" method="get">
                         <div className="bg-whop-hover focus-within:border-whop-field-highlight group flex items-center gap-2 overflow-hidden rounded-full border-[3px] border-solid border-black pr-4 transition">
-                            <input data-hj-allow="true" placeholder="Search 'trading'" autocomplete="off" className="text1 flex w-full border-none bg-transparent px-5 py-3 outline-none" type="search" name="query" />
+                            <input data-hj-allow="true" placeholder="Search 'trading'" autoComplete="off" className="text1 flex w-full border-none bg-transparent px-5 py-3 outline-none" type="search" name="query" />
                             <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="magnifying-glass" className="w-4 " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                 <path fill="currentColor" d="M368 208A160 160 0 1 0 48 208a160 160 0 1 0 320 0zM337.1 371.1C301.7 399.2 256.8 416 208 416C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208c0 48.8-16.8 93.7-44.9 129.1L505 471c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L337.1 371.1z"></path>
                             </svg>
@@ -82,13 +110,14 @@ const Banner = () => {
                             {recentz.map((rcn, index) => (
                                 <a className="HomeHero_appear__v0PA3 transition-all text-whop-black" href="#">
                                     <div className="border-whop-stroke flex items-center gap-2 rounded-[20px] border border-solid p-2 shadow-md transition duration-300 hover:scale-[101%] hover:shadow-lg">
-                                        <img className="border-whop-stroke border-[0.5px] rounded-xl object-cover w-12 h-12" src={rcn.thumb} alt="Event image" width="48" height="48" loading="eager" fetchpriority="high" />
+                                        {/* <img className="border-whop-stroke border-[0.5px] rounded-xl object-cover w-12 h-12" src={rcn.thumb} alt="Event image" width="48" height="48" loading="eager" fetchpriority="high" /> */}
+                                        <Image className="border-whop-stroke border-[0.5px] rounded-xl object-cover w-12 h-12" src={rcn.thumbnail} alt="Event image" width="48" height="48" loading="eager" fetchpriority="high" />
                                         <div className="flex-1 overflow-hidden">
                                             <div className="mr-2 flex items-center justify-between">
-                                                <div className="text-subtitle1 overflow-hidden text-ellipsis whitespace-nowrap">{rcn.name}</div>
-                                                <div className="text5 text-whop-gray shrink-0 whitespace-nowrap">just now</div>
+                                                <div className="text-subtitle1 overflow-hidden text-ellipsis whitespace-nowrap">{rcn.user_name}</div>
+                                                <div className="text5 text-whop-gray shrink-0 whitespace-nowrap">{rcn.insert_date}</div>
                                             </div>
-                                            <p className="text3 text-whop-dark-gray mt-1 mb-0 text-ellipsis whitespace-nowrap p-0">{rcn.event}</p>
+                                            <p className="text3 text-whop-dark-gray mt-1 mb-0 text-ellipsis whitespace-nowrap p-0">{`New ${rcn.user_typ} Loggen in`}</p>
                                         </div>
                                     </div>
                                 </a>

@@ -35,7 +35,7 @@ const Size = () => {
                                                                     type="checkbox"
                                                                     id="m-wp"
                                                                 />
-                                                                <label className="m-check-label" for="m-wp">
+                                                                <label className="m-check-label" htmlFor="m-wp">
                                                                     WordPress
                                                                 </label>
                                                             </div>
@@ -48,7 +48,7 @@ const Size = () => {
                                                                     type="checkbox"
                                                                     id="m-marketing"
                                                                 />
-                                                                <label className="m-check-label" for="m-marketing">
+                                                                <label className="m-check-label" htmlFor="m-marketing">
                                                                     Marketing
                                                                 </label>
                                                             </div>
@@ -61,7 +61,7 @@ const Size = () => {
                                                                     type="checkbox"
                                                                     id="m-kit"
                                                                 />
-                                                                <label className="m-check-label" for="m-kit">
+                                                                <label className="m-check-label" htmlFor="m-kit">
                                                                     Interface Kit
                                                                 </label>
                                                             </div>
@@ -74,7 +74,7 @@ const Size = () => {
                                                                     type="checkbox"
                                                                     id="m-templates"
                                                                 />
-                                                                <label className="m-check-label" for="m-templates">
+                                                                <label className="m-check-label" htmlFor="m-templates">
                                                                     Templates
                                                                 </label>
                                                             </div>
@@ -87,7 +87,7 @@ const Size = () => {
                                                                     type="checkbox"
                                                                     id="m-ecommerce"
                                                                 />
-                                                                <label className="m-check-label" for="m-ecommerce">
+                                                                <label className="m-check-label" htmlFor="m-ecommerce">
                                                                     eCommerce
                                                                 </label>
                                                             </div>
@@ -100,7 +100,7 @@ const Size = () => {
                                                                     type="checkbox"
                                                                     id="m-component"
                                                                 />
-                                                                <label className="m-check-label" for="m-component">
+                                                                <label className="m-check-label" htmlFor="m-component">
                                                                     Component
                                                                 </label>
                                                             </div>
@@ -129,7 +129,7 @@ const Size = () => {
                                                                     type="checkbox"
                                                                     id="m-marketplace"
                                                                 />
-                                                                <label className="m-check-label" for="m-marketplace">
+                                                                <label className="m-check-label" htmlFor="m-marketplace">
                                                                     Marketplace
                                                                 </label>
                                                             </div>
@@ -142,7 +142,7 @@ const Size = () => {
                                                                     type="checkbox"
                                                                     id="m-fashion"
                                                                 />
-                                                                <label className="m-check-label" for="m-fashion">
+                                                                <label className="m-check-label" htmlFor="m-fashion">
                                                                     Fashion
                                                                 </label>
                                                             </div>
@@ -155,7 +155,7 @@ const Size = () => {
                                                                     type="checkbox"
                                                                     id="m-responsive"
                                                                 />
-                                                                <label className="m-check-label" for="m-responsive">
+                                                                <label className="m-check-label" htmlFor="m-responsive">
                                                                     Responsive
                                                                 </label>
                                                             </div>
@@ -168,7 +168,7 @@ const Size = () => {
                                                                     type="checkbox"
                                                                     id="m-education"
                                                                 />
-                                                                <label className="m-check-label" for="m-education">
+                                                                <label className="m-check-label" htmlFor="m-education">
                                                                     Education
                                                                 </label>
                                                             </div>
@@ -181,7 +181,7 @@ const Size = () => {
                                                                     type="checkbox"
                                                                     id="m-shop"
                                                                 />
-                                                                <label className="m-check-label" for="m-shop">
+                                                                <label className="m-check-label" htmlFor="m-shop">
                                                                     Shop
                                                                 </label>
                                                             </div>
@@ -194,7 +194,7 @@ const Size = () => {
                                                                     type="checkbox"
                                                                     id="m-furniture"
                                                                 />
-                                                                <label className="m-check-label" for="m-furniture">
+                                                                <label className="m-check-label" htmlFor="m-furniture">
                                                                     Furniture
                                                                 </label>
                                                             </div>
@@ -207,7 +207,7 @@ const Size = () => {
                                                                     type="checkbox"
                                                                     id="m-multipurpose"
                                                                 />
-                                                                <label className="m-check-label" for="m-multipurpose">
+                                                                <label className="m-check-label" htmlFor="m-multipurpose">
                                                                     Multipurpose
                                                                 </label>
                                                             </div>
@@ -220,7 +220,7 @@ const Size = () => {
                                                                     type="checkbox"
                                                                     id="m-store"
                                                                 />
-                                                                <label className="m-check-label" for="m-store">
+                                                                <label className="m-check-label" htmlFor="m-store">
                                                                     Store
                                                                 </label>
                                                             </div>
@@ -233,7 +233,7 @@ const Size = () => {
                                                                     type="checkbox"
                                                                     id="m-agency"
                                                                 />
-                                                                <label className="m-check-label" for="m-agency">
+                                                                <label className="m-check-label" htmlFor="m-agency">
                                                                     Agency
                                                                 </label>
                                                             </div>
@@ -246,7 +246,7 @@ const Size = () => {
                                                                     type="checkbox"
                                                                     id="m-portfolio"
                                                                 />
-                                                                <label className="m-check-label" for="m-portfolio">
+                                                                <label className="m-check-label" htmlFor="m-portfolio">
                                                                     Portfolio
                                                                 </label>
                                                             </div>
@@ -259,7 +259,7 @@ const Size = () => {
                                                                     type="checkbox"
                                                                     id="m-construction"
                                                                 />
-                                                                <label className="m-check-label" for="m-construction">
+                                                                <label className="m-check-label" htmlFor="m-construction">
                                                                     Construction
                                                                 </label>
                                                             </div>

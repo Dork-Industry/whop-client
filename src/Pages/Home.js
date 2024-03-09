@@ -17,77 +17,77 @@ import WhopBlog from '../Components/home/WhopBlog.jsx';
 import Faq from '../Components/home/Faq.jsx';
 import SellOnWhop from '../Components/home/SellOnWhop.jsx';
 const Home = () => {
-    const [List, setList] = useState([]);
-    const [CatList, setCatList] = useState([]);
+    // const [List, setList] = useState([]);
+    // const [CatList, setCatList] = useState([]);
 
-    const recentz = [
-        {
-            name: 'Praveen Dagga',
-            event: 'Purchased 2 min ago',
-            thumb: 'http://localhost:3000/assets/img/testimonial/testi-1.jpg',
-        },
-        {
-            name: 'Pratik Mishra',
-            event: 'Added a comment 5 min ago',
-            thumb: 'http://localhost:3000/assets/img/testimonial/testi-2.jpg',
-        },
-        {
-            name: 'Binod Patel',
-            event: 'Added a comment 15 min ago',
-            thumb: 'http://localhost:3000/assets/img/testimonial/testi-3.jpg',
-        },
-        {
-            name: 'Mathew Das',
-            event: 'Purchased 22 min ago',
-            thumb: 'http://localhost:3000/assets/img/testimonial/testi-4.jpg',
-        },
-        {
-            name: 'Jane Smith',
-            event: 'Added a comment 25 min ago',
-            thumb: 'http://localhost:3000/assets/img/testimonial/testi-2.jpg',
-        },
-        {
-            name: 'Bob Johnson',
-            event: 'Added a comment 40 min ago',
-            thumb: 'http://localhost:3000/assets/img/testimonial/testi-3.jpg',
-        },
-        {
-            name: 'John Doe',
-            event: 'Purchased 42 min ago',
-            thumb: 'http://localhost:3000/assets/img/testimonial/testi-1.jpg',
-        },
-        {
-            name: 'Jane Smith',
-            event: 'Added a comment 1 hr ago',
-            thumb: 'http://localhost:3000/assets/img/testimonial/testi-2.jpg',
-        },
-        {
-            name: 'Bob Johnson',
-            event: 'Added a comment 3 hr ago',
-            thumb: 'http://localhost:3000/assets/img/testimonial/testi-3.jpg',
-        },
-    ];
+    // const recentz = [
+    //     {
+    //         name: 'Praveen Dagga',
+    //         event: 'Purchased 2 min ago',
+    //         thumb: 'http://localhost:3000/assets/img/testimonial/testi-1.jpg',
+    //     },
+    //     {
+    //         name: 'Pratik Mishra',
+    //         event: 'Added a comment 5 min ago',
+    //         thumb: 'http://localhost:3000/assets/img/testimonial/testi-2.jpg',
+    //     },
+    //     {
+    //         name: 'Binod Patel',
+    //         event: 'Added a comment 15 min ago',
+    //         thumb: 'http://localhost:3000/assets/img/testimonial/testi-3.jpg',
+    //     },
+    //     {
+    //         name: 'Mathew Das',
+    //         event: 'Purchased 22 min ago',
+    //         thumb: 'http://localhost:3000/assets/img/testimonial/testi-4.jpg',
+    //     },
+    //     {
+    //         name: 'Jane Smith',
+    //         event: 'Added a comment 25 min ago',
+    //         thumb: 'http://localhost:3000/assets/img/testimonial/testi-2.jpg',
+    //     },
+    //     {
+    //         name: 'Bob Johnson',
+    //         event: 'Added a comment 40 min ago',
+    //         thumb: 'http://localhost:3000/assets/img/testimonial/testi-3.jpg',
+    //     },
+    //     {
+    //         name: 'John Doe',
+    //         event: 'Purchased 42 min ago',
+    //         thumb: 'http://localhost:3000/assets/img/testimonial/testi-1.jpg',
+    //     },
+    //     {
+    //         name: 'Jane Smith',
+    //         event: 'Added a comment 1 hr ago',
+    //         thumb: 'http://localhost:3000/assets/img/testimonial/testi-2.jpg',
+    //     },
+    //     {
+    //         name: 'Bob Johnson',
+    //         event: 'Added a comment 3 hr ago',
+    //         thumb: 'http://localhost:3000/assets/img/testimonial/testi-3.jpg',
+    //     },
+    // ];
 
-    useEffect(() => {
-        getInfoList();
-        getCatList();
-    }, []);
+    // useEffect(() => {
+    //     getInfoList();
+    //     getCatList();
+    // }, []);
 
-    const getInfoList = () => {
-        // console.log('---XXXX--->>call start 11');
-        Apiconnect.getData('product/getAll?limit=3').then((response) => {
-            console.log(response);
-            let _xtract = Apiconnect.decrypt_obj(response.data.data);
-            setList([..._xtract, ..._xtract, ..._xtract]);
-        });
-    };
+    // const getInfoList = () => {
+    //     // console.log('---XXXX--->>call start 11');
+    //     Apiconnect.getData('product/getAll?limit=3').then((response) => {
+    //         // console.log(response);
+    //         let _xtract = Apiconnect.decrypt_obj(response.data.data);
+    //         setList([..._xtract, ..._xtract, ..._xtract]);
+    //     });
+    // };
 
-    const getCatList = () => {
-        Apiconnect.getData('cat/getAll').then((response) => {
-            let _xtract = Apiconnect.decrypt_obj(response.data.data);
-            setCatList(_xtract);
-        });
-    };
+    // const getCatList = () => {
+    //     Apiconnect.getData('cat/getAll').then((response) => {
+    //         let _xtract = Apiconnect.decrypt_obj(response.data.data);
+    //         setCatList(_xtract);
+    //     });
+    // };
 
     return (
         <>

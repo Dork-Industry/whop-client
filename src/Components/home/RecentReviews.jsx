@@ -35,7 +35,7 @@ const RecentReviews = () => {
             <div className="ml-2 shrink-0 snap-start first-of-type:ml-0 sm:ml-3 sm:first-of-type:ml-0 lg:ml-5 lg:first-of-type:ml-0 w-[93%] sm:w-[calc(50%-6px)] md:w-[calc(33.333%-8px)] lg:w-[calc(25%-15px)]">
                <a className=" border-whop-stroke block cursor-pointer rounded-[10px] border border-solid p-4 shadow-md transition duration-300 ease-in-out  hover:scale-[102%]  hover:shadow-lg " href="/marketplace/thehaven/">
                   <div className="mb-4 flex items-center gap-2">
-                     <img className="border-whop-stroke border-[0.5px] rounded-full object-cover w-10 h-10"  src="https://img.whop.com/cfhBUc9jbeqYhlOkUCJDDy3E0U6VDo_IcSuLE72L4o8/rs:fill:40:40/el:1/aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXZhdGFycy8xNzY1MTg2OTc1Mzg1NTE4MDgvNTU2YjU5ZDdlZGMxZmJiOTQ4NDQ3YjhhYzBkZjk1YWY" alt="Reviewer avatar" width="40" height="40" loading="lazy" fetchpriority="auto" srcset="https://img.whop.com/cfhBUc9jbeqYhlOkUCJDDy3E0U6VDo_IcSuLE72L4o8/rs:fill:40:40/el:1/aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXZhdGFycy8xNzY1MTg2OTc1Mzg1NTE4MDgvNTU2YjU5ZDdlZGMxZmJiOTQ4NDQ3YjhhYzBkZjk1YWY 1x, https://img.whop.com/7jnKzk6zhmymhvyxP2pV7jOczt7nyzrm0dEK41IiuMU/rs:fill:40:40/el:1/dpr:2/aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXZhdGFycy8xNzY1MTg2OTc1Mzg1NTE4MDgvNTU2YjU5ZDdlZGMxZmJiOTQ4NDQ3YjhhYzBkZjk1YWY 2x"/>
+                     <img className="border-whop-stroke border-[0.5px] rounded-full object-cover w-10 h-10"  src="https://img.whop.com/cfhBUc9jbeqYhlOkUCJDDy3E0U6VDo_IcSuLE72L4o8/rs:fill:40:40/el:1/aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXZhdGFycy8xNzY1MTg2OTc1Mzg1NTE4MDgvNTU2YjU5ZDdlZGMxZmJiOTQ4NDQ3YjhhYzBkZjk1YWY" alt="Reviewer avatar" width="40" height="40" loading="lazy" fetchpriority="auto" srcSet="https://img.whop.com/cfhBUc9jbeqYhlOkUCJDDy3E0U6VDo_IcSuLE72L4o8/rs:fill:40:40/el:1/aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXZhdGFycy8xNzY1MTg2OTc1Mzg1NTE4MDgvNTU2YjU5ZDdlZGMxZmJiOTQ4NDQ3YjhhYzBkZjk1YWY 1x, https://img.whop.com/7jnKzk6zhmymhvyxP2pV7jOczt7nyzrm0dEK41IiuMU/rs:fill:40:40/el:1/dpr:2/aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXZhdGFycy8xNzY1MTg2OTc1Mzg1NTE4MDgvNTU2YjU5ZDdlZGMxZmJiOTQ4NDQ3YjhhYzBkZjk1YWY 2x"/>
                      <div className="min-w-0 flex-1">
                         <div className="flex items-center justify-between gap-2">
                            <div className="subtitle1 overflow-hidden text-ellipsis whitespace-nowrap">chaunceystjohn</div>
@@ -52,9 +52,9 @@ const RecentReviews = () => {
                            <path d="M8.92969 4.03906L12.2812 4.53125C12.5625 4.57812 12.7969 4.76562 12.8906 5.04688C12.9844 5.30469 12.9141 5.60938 12.7031 5.79688L10.2656 8.21094L10.8516 11.6328C10.8984 11.9141 10.7812 12.1953 10.5469 12.3594C10.3125 12.5469 10.0078 12.5469 9.75 12.4297L6.75 10.8125L3.72656 12.4297C3.49219 12.5469 3.16406 12.5469 2.95312 12.3594C2.71875 12.1953 2.60156 11.9141 2.64844 11.6328L3.21094 8.21094L0.773438 5.79688C0.5625 5.60938 0.492188 5.30469 0.585938 5.04688C0.679688 4.76562 0.914062 4.57812 1.19531 4.53125L4.57031 4.03906L6.07031 0.921875C6.1875 0.664062 6.44531 0.5 6.75 0.5C7.03125 0.5 7.28906 0.664062 7.40625 0.921875L8.92969 4.03906Z" fill="url(#paint0_linear_22149_17218)"></path>
                            <defs>
                               <linearGradient id="paint0_linear_22149_17218" x1="-0.890909" y1="9" x2="14.4062" y2="9.66561" gradientUnits="userSpaceOnUse">
-                                 <stop stop-color="#E89236"></stop>
-                                 <stop offset="0.641102" stop-color="#F7CE78"></stop>
-                                 <stop offset="1" stop-color="#E5A53F"></stop>
+                                 <stop stopColor="#E89236"></stop>
+                                 <stop offset="0.641102" stopColor="#F7CE78"></stop>
+                                 <stop offset="1" stopColor="#E5A53F"></stop>
                               </linearGradient>
                            </defs>
                         </svg>
@@ -64,9 +64,9 @@ const RecentReviews = () => {
                            <path d="M8.92969 4.03906L12.2812 4.53125C12.5625 4.57812 12.7969 4.76562 12.8906 5.04688C12.9844 5.30469 12.9141 5.60938 12.7031 5.79688L10.2656 8.21094L10.8516 11.6328C10.8984 11.9141 10.7812 12.1953 10.5469 12.3594C10.3125 12.5469 10.0078 12.5469 9.75 12.4297L6.75 10.8125L3.72656 12.4297C3.49219 12.5469 3.16406 12.5469 2.95312 12.3594C2.71875 12.1953 2.60156 11.9141 2.64844 11.6328L3.21094 8.21094L0.773438 5.79688C0.5625 5.60938 0.492188 5.30469 0.585938 5.04688C0.679688 4.76562 0.914062 4.57812 1.19531 4.53125L4.57031 4.03906L6.07031 0.921875C6.1875 0.664062 6.44531 0.5 6.75 0.5C7.03125 0.5 7.28906 0.664062 7.40625 0.921875L8.92969 4.03906Z" fill="url(#paint0_linear_22149_17218)"></path>
                            <defs>
                               <linearGradient id="paint0_linear_22149_17218" x1="-0.890909" y1="9" x2="14.4062" y2="9.66561" gradientUnits="userSpaceOnUse">
-                                 <stop stop-color="#E89236"></stop>
-                                 <stop offset="0.641102" stop-color="#F7CE78"></stop>
-                                 <stop offset="1" stop-color="#E5A53F"></stop>
+                                 <stop stopColor="#E89236"></stop>
+                                 <stop offset="0.641102" stopColor="#F7CE78"></stop>
+                                 <stop offset="1" stopColor="#E5A53F"></stop>
                               </linearGradient>
                            </defs>
                         </svg>
@@ -76,9 +76,9 @@ const RecentReviews = () => {
                            <path d="M8.92969 4.03906L12.2812 4.53125C12.5625 4.57812 12.7969 4.76562 12.8906 5.04688C12.9844 5.30469 12.9141 5.60938 12.7031 5.79688L10.2656 8.21094L10.8516 11.6328C10.8984 11.9141 10.7812 12.1953 10.5469 12.3594C10.3125 12.5469 10.0078 12.5469 9.75 12.4297L6.75 10.8125L3.72656 12.4297C3.49219 12.5469 3.16406 12.5469 2.95312 12.3594C2.71875 12.1953 2.60156 11.9141 2.64844 11.6328L3.21094 8.21094L0.773438 5.79688C0.5625 5.60938 0.492188 5.30469 0.585938 5.04688C0.679688 4.76562 0.914062 4.57812 1.19531 4.53125L4.57031 4.03906L6.07031 0.921875C6.1875 0.664062 6.44531 0.5 6.75 0.5C7.03125 0.5 7.28906 0.664062 7.40625 0.921875L8.92969 4.03906Z" fill="url(#paint0_linear_22149_17218)"></path>
                            <defs>
                               <linearGradient id="paint0_linear_22149_17218" x1="-0.890909" y1="9" x2="14.4062" y2="9.66561" gradientUnits="userSpaceOnUse">
-                                 <stop stop-color="#E89236"></stop>
-                                 <stop offset="0.641102" stop-color="#F7CE78"></stop>
-                                 <stop offset="1" stop-color="#E5A53F"></stop>
+                                 <stop stopColor="#E89236"></stop>
+                                 <stop offset="0.641102" stopColor="#F7CE78"></stop>
+                                 <stop offset="1" stopColor="#E5A53F"></stop>
                               </linearGradient>
                            </defs>
                         </svg>
@@ -88,9 +88,9 @@ const RecentReviews = () => {
                            <path d="M8.92969 4.03906L12.2812 4.53125C12.5625 4.57812 12.7969 4.76562 12.8906 5.04688C12.9844 5.30469 12.9141 5.60938 12.7031 5.79688L10.2656 8.21094L10.8516 11.6328C10.8984 11.9141 10.7812 12.1953 10.5469 12.3594C10.3125 12.5469 10.0078 12.5469 9.75 12.4297L6.75 10.8125L3.72656 12.4297C3.49219 12.5469 3.16406 12.5469 2.95312 12.3594C2.71875 12.1953 2.60156 11.9141 2.64844 11.6328L3.21094 8.21094L0.773438 5.79688C0.5625 5.60938 0.492188 5.30469 0.585938 5.04688C0.679688 4.76562 0.914062 4.57812 1.19531 4.53125L4.57031 4.03906L6.07031 0.921875C6.1875 0.664062 6.44531 0.5 6.75 0.5C7.03125 0.5 7.28906 0.664062 7.40625 0.921875L8.92969 4.03906Z" fill="url(#paint0_linear_22149_17218)"></path>
                            <defs>
                               <linearGradient id="paint0_linear_22149_17218" x1="-0.890909" y1="9" x2="14.4062" y2="9.66561" gradientUnits="userSpaceOnUse">
-                                 <stop stop-color="#E89236"></stop>
-                                 <stop offset="0.641102" stop-color="#F7CE78"></stop>
-                                 <stop offset="1" stop-color="#E5A53F"></stop>
+                                 <stop stopColor="#E89236"></stop>
+                                 <stop offset="0.641102" stopColor="#F7CE78"></stop>
+                                 <stop offset="1" stopColor="#E5A53F"></stop>
                               </linearGradient>
                            </defs>
                         </svg>
@@ -100,9 +100,9 @@ const RecentReviews = () => {
                            <path d="M8.92969 4.03906L12.2812 4.53125C12.5625 4.57812 12.7969 4.76562 12.8906 5.04688C12.9844 5.30469 12.9141 5.60938 12.7031 5.79688L10.2656 8.21094L10.8516 11.6328C10.8984 11.9141 10.7812 12.1953 10.5469 12.3594C10.3125 12.5469 10.0078 12.5469 9.75 12.4297L6.75 10.8125L3.72656 12.4297C3.49219 12.5469 3.16406 12.5469 2.95312 12.3594C2.71875 12.1953 2.60156 11.9141 2.64844 11.6328L3.21094 8.21094L0.773438 5.79688C0.5625 5.60938 0.492188 5.30469 0.585938 5.04688C0.679688 4.76562 0.914062 4.57812 1.19531 4.53125L4.57031 4.03906L6.07031 0.921875C6.1875 0.664062 6.44531 0.5 6.75 0.5C7.03125 0.5 7.28906 0.664062 7.40625 0.921875L8.92969 4.03906Z" fill="url(#paint0_linear_22149_17218)"></path>
                            <defs>
                               <linearGradient id="paint0_linear_22149_17218" x1="-0.890909" y1="9" x2="14.4062" y2="9.66561" gradientUnits="userSpaceOnUse">
-                                 <stop stop-color="#E89236"></stop>
-                                 <stop offset="0.641102" stop-color="#F7CE78"></stop>
-                                 <stop offset="1" stop-color="#E5A53F"></stop>
+                                 <stop stopColor="#E89236"></stop>
+                                 <stop offset="0.641102" stopColor="#F7CE78"></stop>
+                                 <stop offset="1" stopColor="#E5A53F"></stop>
                               </linearGradient>
                            </defs>
                         </svg>
@@ -113,7 +113,7 @@ const RecentReviews = () => {
                   </div>
                   <div className="bg-whop-stroke my-4 h-[0.5px] rounded-full"></div>
                   <div className="flex items-center gap-2">
-                     <img className="border-whop-stroke border-[0.5px] rounded-[10px] object-cover w-10 h-10"  src="https://img.whop.com/WngCCAsu6k0Sf1GkVfAGmhah2Cr0Ql0l77m2EYGqJTU/rs:fill:40:40/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vdXBsb2Fkcy8yMDI0LTAyLTIxL3VzZXJfNDA2NDBfMTU2NzQzOTktZGU4My00NDE2LTg1MDgtNzJkZDgyZTVlZjdjLnBuZw" alt="Product image" width="40" height="40" loading="lazy" fetchpriority="auto" srcset="https://img.whop.com/WngCCAsu6k0Sf1GkVfAGmhah2Cr0Ql0l77m2EYGqJTU/rs:fill:40:40/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vdXBsb2Fkcy8yMDI0LTAyLTIxL3VzZXJfNDA2NDBfMTU2NzQzOTktZGU4My00NDE2LTg1MDgtNzJkZDgyZTVlZjdjLnBuZw 1x, https://img.whop.com/2F0tEOlxTZjPOAxL4_TdssN8kwM3GFu8q6G6dis1yFg/rs:fill:40:40/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vdXBsb2Fkcy8yMDI0LTAyLTIxL3VzZXJfNDA2NDBfMTU2NzQzOTktZGU4My00NDE2LTg1MDgtNzJkZDgyZTVlZjdjLnBuZw 2x"/>
+                     <img className="border-whop-stroke border-[0.5px] rounded-[10px] object-cover w-10 h-10"  src="https://img.whop.com/WngCCAsu6k0Sf1GkVfAGmhah2Cr0Ql0l77m2EYGqJTU/rs:fill:40:40/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vdXBsb2Fkcy8yMDI0LTAyLTIxL3VzZXJfNDA2NDBfMTU2NzQzOTktZGU4My00NDE2LTg1MDgtNzJkZDgyZTVlZjdjLnBuZw" alt="Product image" width="40" height="40" loading="lazy" fetchpriority="auto" srcSet="https://img.whop.com/WngCCAsu6k0Sf1GkVfAGmhah2Cr0Ql0l77m2EYGqJTU/rs:fill:40:40/el:1/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vdXBsb2Fkcy8yMDI0LTAyLTIxL3VzZXJfNDA2NDBfMTU2NzQzOTktZGU4My00NDE2LTg1MDgtNzJkZDgyZTVlZjdjLnBuZw 1x, https://img.whop.com/2F0tEOlxTZjPOAxL4_TdssN8kwM3GFu8q6G6dis1yFg/rs:fill:40:40/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vdXBsb2Fkcy8yMDI0LTAyLTIxL3VzZXJfNDA2NDBfMTU2NzQzOTktZGU4My00NDE2LTg1MDgtNzJkZDgyZTVlZjdjLnBuZw 2x"/>
                      <div className="min-w-0 flex-1">
                         <div className="flex items-center gap-2">
                            <div className="subtitle1 overflow-hidden text-ellipsis whitespace-nowrap">The Haven</div>

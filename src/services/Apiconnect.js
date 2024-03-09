@@ -5,6 +5,7 @@ import CryptoENC from 'crypto-js/enc-utf8';
 const ENC_KEY = 'd0baramatpuchhnakip@55w0rdky@h@1';
 // const API_URL = 'https://whopapi.huepixel.com/api/';
 const API_URL = 'http://localhost:3000/api/';
+// const API_URL = "https://whop-node.onrender.com/api/";
 const tkn = localStorage.getItem('token');
 
 let AuthStr = '--';

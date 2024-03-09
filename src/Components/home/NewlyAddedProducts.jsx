@@ -12,7 +12,9 @@ const NewlyAddedProducts = () => {
         Apiconnect.getData('product/getAll?limit=3').then((response) => {
             console.log(response);
             let _xtract = Apiconnect.decrypt_obj(response.data.data);
-            setList([..._xtract, ..._xtract, ..._xtract]);
+            // setList([..._xtract, ..._xtract, ..._xtract]);
+            setList([ ..._xtract]);
+
         });
     };
 

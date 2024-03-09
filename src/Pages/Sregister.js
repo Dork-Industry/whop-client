@@ -227,7 +227,7 @@ const Register = () => {
                                         <div className="sign__action d-flex justify-content-between mb-30">
                                             <div className="sign__agree d-flex align-items-center">
                                                 <input className="m-check-input" type="checkbox" id="m-agree" />
-                                                <label className="m-check-label" for="m-agree">
+                                                <label className="m-check-label" htmlFor="m-agree">
                                                     I agree to the <a href="/">Terms & Conditions</a>
                                                 </label>
                                             </div>
@@ -259,7 +259,7 @@ const Register = () => {
                                     <h1 className='text-center text-white'>People like you make over $1M per year</h1>
                                     <p className='text-center mt-4 mx-auto text-shark-gray-300 text-lg'>Join the next generation of internet entrepreneurs building their businesses on Whop’s all-in-one platform.‌‍‌‌‌‍‌‌</p>
                                     <div className='mt-8 sell_heading-1--buttons'>
-                                        <Link className='bg-orange-button outline-brand rounded-md text-xs py-2 px-3 shadow-orange-button-shadow outline-2 outline-offset-2 rounded-md text-off-white'>Start Selling</Link>
+                                        <Link to={"/register"} className='bg-orange-button outline-brand rounded-md text-xs py-2 px-3 shadow-orange-button-shadow outline-2 outline-offset-2 rounded-md text-off-white'>Start Selling</Link>
                                         <Link className='bg-video-button text-off-white py-2 px-3 text-xs'>
                                             <svg className="-my-1" xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
                                                 <mask id="path-1-outside-1_468_98188" maskUnits="userSpaceOnUse" x="0.5" y="0" width="28" height="28" fill="black">

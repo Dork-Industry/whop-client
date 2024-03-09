@@ -19,7 +19,7 @@ const Header = ({basic}) => {
 
     const getCatList = () => {
         Apiconnect.getData('cat/getAll').then((response) => {
-            console.log("response", response)
+            // console.log("response", response)
             let _xtract = Apiconnect.decrypt_obj(response.data.data);
             setCatList(_xtract);
         });
@@ -179,7 +179,8 @@ const Header = ({basic}) => {
                                  
                                     </>
                                     } 
-                                    <div className="text-button4 text-whop-darkGray hidden cursor-pointer whitespace-nowrap sm:block" id="nav-sign-in">{utyp === 'User' ? (
+                                    <div className="text-button4 text-whop-darkGray hidden cursor-pointer whitespace-nowrap sm:block" id="nav-sign-in">
+                                        {utyp === 'User' ? (
                                         <a href="/users/">
                                             <i className=""></i>User Dashboard
                                         </a>
@@ -223,7 +224,7 @@ const Header = ({basic}) => {
                                         <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="magnifying-glass" className="svg-inline--fa fa-magnifying-glass text-whop-darkGray" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                             <path fill="currentColor" d="M368 208A160 160 0 1 0 48 208a160 160 0 1 0 320 0zM337.1 371.1C301.7 399.2 256.8 416 208 416C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208c0 48.8-16.8 93.7-44.9 129.1L505 471c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L337.1 371.1z"></path>
                                         </svg>
-                                        <input className="placeholder:text-whop-gray flex-1 border-none bg-transparent py-2.5 pr-2 text-[18px] outline-none" placeholder="Search Whop" type="search" autocomplete="off" value="" />
+                                        <input className="placeholder:text-whop-gray flex-1 border-none bg-transparent py-2.5 pr-2 text-[18px] outline-none" placeholder="Search Whop" type="search" autoComplete="off" value="" />
                                     </div>
                                     <div className="text2 select-none">Cancel</div>
                                 </div>
@@ -234,9 +235,7 @@ const Header = ({basic}) => {
                         <div className="padded-container px-10 flex gap-8 overflow-x-auto">
                             {CatList?.map((valz, keyz) => {
                                 return (
-
                                     <a key={keyz} className="subtitle3 text-sm font-medium   hover:text-whop-offBlack whitespace-nowrap py-3.5 transition text-whop-offBlack border-whop-offBlack border-b-[3px] pb-[11px]" href={'/category/' + valz.url}>{valz.name}</a>
-
                                 );
                             })}
                         </div>

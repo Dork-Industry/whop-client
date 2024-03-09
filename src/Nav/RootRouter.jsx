@@ -36,19 +36,16 @@ import MyReferrals from '../Pages/MyReferrals.jsx';
 export default function RootRouter() {
     return (
         <>
-       
-      
-                <Routes>
+            <Routes>
                 <Route exact path="/login" element={<Login />} />
-                    <Route exact path="/register" element={<Register />} />
+                <Route exact path="/register" element={<Register />} />
 
-                    <Route element={<TosLayout />}>
+                <Route element={<TosLayout />}>
                     <Route exact path="/tos" element={<Tos />} />
                     <Route exact path="/privacy" element={<Privacy />} />
+                </Route>
 
-                    </Route>
-
-                    <Route element={<MainLayout/>}>   
+                <Route element={<MainLayout />}>
                     <Route exact path="/" element={<Home />}></Route>
                     <Route exact path="/index" element={<Home />}></Route>
                     <Route exact path="/about" element={<About />} />
@@ -63,29 +60,22 @@ export default function RootRouter() {
                     <Route exact path="/cart" element={<Cart />} />
                     <Route exact path="/trancomplete" element={<Trancomplete />} />
                     <Route exact path="/affiliate" element={<Affiliates />} />
-                    <Route exact path="/affiliate/customer" element={<CustomerAffiliates  />} />
-                    <Route exact path="/affiliate/customer/my-referrals" element={<MyReferrals  />} />
+                    <Route exact path="/affiliate/customer" element={<CustomerAffiliates />} />
+                    <Route exact path="/affiliate/customer/my-referrals" element={<MyReferrals />} />
 
-                  
+
                     <Route exact path="/Srthanks" element={<Srthanks />} />
 
                     <Route exact path="/*" element={<P404 />} />
-                    </Route>
-                    <Route element={<SellerLayout/>}>   
-            <Route exact path="/seller_register" element={<Sregister />} />  
-            </Route>
-                </Routes>
-       
-   
-     
-          
-        
-          
-        
+                </Route>
+                <Route element={<SellerLayout />}>
+                    <Route exact path="/seller_register" element={<Sregister />} />
+                </Route>
+            </Routes>
             {/* <Helmet>
                     <script src="/assets/js/backToTop.js"></script>  
                   </Helmet> */}
-            
+
         </>
     );
 }

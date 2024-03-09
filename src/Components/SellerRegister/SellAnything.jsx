@@ -153,8 +153,8 @@ const SellAnything = () => {
                   <feGaussianBlur stdDeviation="10" result="effect1_foregroundBlur_954_14753"></feGaussianBlur>
                </filter>
                <linearGradient id="paint0_linear_954_14753" x1="68.1892" y1="63" x2="-15.8837" y2="63" gradientUnits="userSpaceOnUse">
-                  <stop stop-color="#FFED4C"></stop>
-                  <stop offset="0.66866" stop-color="#FF6A4C"></stop>
+                  <stop stopColor="#FFED4C"></stop>
+                  <stop offset="0.66866" stopColor="#FF6A4C"></stop>
                </linearGradient>
             </defs>
          </svg>
@@ -213,14 +213,14 @@ const SellAnything = () => {
                      <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_954_14703"></feGaussianBlur>
                   </filter>
                   <linearGradient id="paint0_linear_954_14703" x1="12.7097" y1="6" x2="5.45174" y2="5.72985" gradientUnits="userSpaceOnUse">
-                     <stop stop-color="#FFA24C"></stop>
-                     <stop offset="0.484936" stop-color="#FF6A4C"></stop>
-                     <stop offset="0.860711" stop-color="#FF6243" stop-opacity="0"></stop>
+                     <stop stopColor="#FFA24C"></stop>
+                     <stop offset="0.484936" stopColor="#FF6A4C"></stop>
+                     <stop offset="0.860711" stopColor="#FF6243" stop-opacity="0"></stop>
                   </linearGradient>
                   <linearGradient id="paint1_linear_954_14703" x1="12.7097" y1="6" x2="5.45174" y2="5.72985" gradientUnits="userSpaceOnUse">
-                     <stop stop-color="#FFA24C"></stop>
-                     <stop offset="0.484936" stop-color="#FF6A4C"></stop>
-                     <stop offset="0.860711" stop-color="#FF6243" stop-opacity="0"></stop>
+                     <stop stopColor="#FFA24C"></stop>
+                     <stop offset="0.484936" stopColor="#FF6A4C"></stop>
+                     <stop offset="0.860711" stopColor="#FF6243" stop-opacity="0"></stop>
                   </linearGradient>
                </defs>
             </svg>
@@ -236,14 +236,14 @@ const SellAnything = () => {
                      <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_954_14704"></feGaussianBlur>
                   </filter>
                   <linearGradient id="paint0_linear_954_14704" x1="30.6022" y1="6" x2="4.44014" y2="2.4295" gradientUnits="userSpaceOnUse">
-                     <stop stop-color="#FFA24C"></stop>
-                     <stop offset="0.484936" stop-color="#FF6A4C"></stop>
-                     <stop offset="0.860711" stop-color="#FF6243" stop-opacity="0"></stop>
+                     <stop stopColor="#FFA24C"></stop>
+                     <stop offset="0.484936" stopColor="#FF6A4C"></stop>
+                     <stop offset="0.860711" stopColor="#FF6243" stop-opacity="0"></stop>
                   </linearGradient>
                   <linearGradient id="paint1_linear_954_14704" x1="30.6022" y1="6" x2="4.44014" y2="2.4295" gradientUnits="userSpaceOnUse">
-                     <stop stop-color="#FFA24C"></stop>
-                     <stop offset="0.484936" stop-color="#FF6A4C"></stop>
-                     <stop offset="0.860711" stop-color="#FF6243" stop-opacity="0"></stop>
+                     <stop stopColor="#FFA24C"></stop>
+                     <stop offset="0.484936" stopColor="#FF6A4C"></stop>
+                     <stop offset="0.860711" stopColor="#FF6243" stop-opacity="0"></stop>
                   </linearGradient>
                </defs>
             </svg>
@@ -261,14 +261,14 @@ const SellAnything = () => {
                      <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_954_14704"></feGaussianBlur>
                   </filter>
                   <linearGradient id="paint0_linear_954_14704" x1="30.6022" y1="6" x2="4.44014" y2="2.4295" gradientUnits="userSpaceOnUse">
-                     <stop stop-color="#FFA24C"></stop>
-                     <stop offset="0.484936" stop-color="#FF6A4C"></stop>
-                     <stop offset="0.860711" stop-color="#FF6243" stop-opacity="0"></stop>
+                     <stop stopColor="#FFA24C"></stop>
+                     <stop offset="0.484936" stopColor="#FF6A4C"></stop>
+                     <stop offset="0.860711" stopColor="#FF6243" stop-opacity="0"></stop>
                   </linearGradient>
                   <linearGradient id="paint1_linear_954_14704" x1="30.6022" y1="6" x2="4.44014" y2="2.4295" gradientUnits="userSpaceOnUse">
-                     <stop stop-color="#FFA24C"></stop>
-                     <stop offset="0.484936" stop-color="#FF6A4C"></stop>
-                     <stop offset="0.860711" stop-color="#FF6243" stop-opacity="0"></stop>
+                     <stop stopColor="#FFA24C"></stop>
+                     <stop offset="0.484936" stopColor="#FF6A4C"></stop>
+                     <stop offset="0.860711" stopColor="#FF6243" stop-opacity="0"></stop>
                   </linearGradient>
                </defs>
             </svg>
@@ -284,14 +284,14 @@ const SellAnything = () => {
                      <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_954_14704"></feGaussianBlur>
                   </filter>
                   <linearGradient id="paint0_linear_954_14704" x1="30.6022" y1="6" x2="4.44014" y2="2.4295" gradientUnits="userSpaceOnUse">
-                     <stop stop-color="#FFA24C"></stop>
-                     <stop offset="0.484936" stop-color="#FF6A4C"></stop>
-                     <stop offset="0.860711" stop-color="#FF6243" stop-opacity="0"></stop>
+                     <stop stopColor="#FFA24C"></stop>
+                     <stop offset="0.484936" stopColor="#FF6A4C"></stop>
+                     <stop offset="0.860711" stopColor="#FF6243" stop-opacity="0"></stop>
                   </linearGradient>
                   <linearGradient id="paint1_linear_954_14704" x1="30.6022" y1="6" x2="4.44014" y2="2.4295" gradientUnits="userSpaceOnUse">
-                     <stop stop-color="#FFA24C"></stop>
-                     <stop offset="0.484936" stop-color="#FF6A4C"></stop>
-                     <stop offset="0.860711" stop-color="#FF6243" stop-opacity="0"></stop>
+                     <stop stopColor="#FFA24C"></stop>
+                     <stop offset="0.484936" stopColor="#FF6A4C"></stop>
+                     <stop offset="0.860711" stopColor="#FF6243" stop-opacity="0"></stop>
                   </linearGradient>
                </defs>
             </svg>
@@ -309,14 +309,14 @@ const SellAnything = () => {
                      <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_954_14708"></feGaussianBlur>
                   </filter>
                   <linearGradient id="paint0_linear_954_14708" x1="48.4946" y1="6" x2="4.88727" y2="-4.27965" gradientUnits="userSpaceOnUse">
-                     <stop stop-color="#FFA24C"></stop>
-                     <stop offset="0.484936" stop-color="#FF6A4C"></stop>
-                     <stop offset="0.860711" stop-color="#FF6243" stop-opacity="0"></stop>
+                     <stop stopColor="#FFA24C"></stop>
+                     <stop offset="0.484936" stopColor="#FF6A4C"></stop>
+                     <stop offset="0.860711" stopColor="#FF6243" stop-opacity="0"></stop>
                   </linearGradient>
                   <linearGradient id="paint1_linear_954_14708" x1="48.4946" y1="6" x2="4.88727" y2="-4.27965" gradientUnits="userSpaceOnUse">
-                     <stop stop-color="#FFA24C"></stop>
-                     <stop offset="0.484936" stop-color="#FF6A4C"></stop>
-                     <stop offset="0.860711" stop-color="#FF6243" stop-opacity="0"></stop>
+                     <stop stopColor="#FFA24C"></stop>
+                     <stop offset="0.484936" stopColor="#FF6A4C"></stop>
+                     <stop offset="0.860711" stopColor="#FF6243" stop-opacity="0"></stop>
                   </linearGradient>
                </defs>   
             </svg>
@@ -332,14 +332,14 @@ const SellAnything = () => {
                      <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_954_14704"></feGaussianBlur>
                   </filter>
                   <linearGradient id="paint0_linear_954_14704" x1="30.6022" y1="6" x2="4.44014" y2="2.4295" gradientUnits="userSpaceOnUse">
-                     <stop stop-color="#FFA24C"></stop>
-                     <stop offset="0.484936" stop-color="#FF6A4C"></stop>
-                     <stop offset="0.860711" stop-color="#FF6243" stop-opacity="0"></stop>
+                     <stop stopColor="#FFA24C"></stop>
+                     <stop offset="0.484936" stopColor="#FF6A4C"></stop>
+                     <stop offset="0.860711" stopColor="#FF6243" stop-opacity="0"></stop>
                   </linearGradient>
                   <linearGradient id="paint1_linear_954_14704" x1="30.6022" y1="6" x2="4.44014" y2="2.4295" gradientUnits="userSpaceOnUse">
-                     <stop stop-color="#FFA24C"></stop>
-                     <stop offset="0.484936" stop-color="#FF6A4C"></stop>
-                     <stop offset="0.860711" stop-color="#FF6243" stop-opacity="0"></stop>
+                     <stop stopColor="#FFA24C"></stop>
+                     <stop offset="0.484936" stopColor="#FF6A4C"></stop>
+                     <stop offset="0.860711" stopColor="#FF6243" stop-opacity="0"></stop>
                   </linearGradient>
                </defs>
             </svg>
