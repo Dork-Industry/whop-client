@@ -3,15 +3,23 @@ import React, { useState, useEffect } from 'react';
 
 import Apiconnect from '../../services/Apiconnect.js';
 import { useData } from '../../Context/Pagecontxt.js';
+import { Link } from 'react-router-dom';
 
 const Header = ({basic}) => {
+
     const { cartItmCount } = useData();
 
     const user_typ = localStorage.getItem('user_typ');
     const [utyp, setUtyp] = useState('');
     const [utyplink, setUtyplink] = useState('');
     const [CatList, setCatList] = useState([]);
+    const [searchOpen,setSearchOpen] = useState(false)
+    const [searchValue, setSearchValue] = useState('');
 
+    const handleInputChange = (event) => {
+      setSearchValue(event.target.value);
+    };
+    
     useEffect(() => {
         setUtyp(user_typ);
         getCatList();
@@ -211,23 +219,26 @@ const Header = ({basic}) => {
                             <div className="padded-container items-center justify-between py-4 flex">
                                 <a href="/"><img alt="Whop" draggable="false" loading="lazy" width="137" height="28" decoding="async" data-nimg="1" className="pointer-events-none " src="/assets/img/logo/whop.svg" /></a>
                                 <div className="flex flex-nowrap w-fit items-center gap-4 ">
+                                    <button onClick={()=>setSearchOpen(true)}>
                                     <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="magnifying-glass" className="w-5" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                         <path fill="currentColor" d="M368 208A160 160 0 1 0 48 208a160 160 0 1 0 320 0zM337.1 371.1C301.7 399.2 256.8 416 208 416C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208c0 48.8-16.8 93.7-44.9 129.1L505 471c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L337.1 371.1z"></path>
                                     </svg>
-                                    <div className="text-button3 text-nowrap  text-whop-primary cursor-pointer">Sign in</div>
+                                    </button>
+                                    
+                                   <Link to={'/login'}> <div className="text-button3 text-nowrap  text-whop-primary cursor-pointer">Sign in</div></Link>
                                 </div>
                             </div>
-                            <div className=" overflow-hidden h-0">
+                           {searchOpen && <div className=" overflow-hidden ">
                                 <div className="border-whop-stroke flex items-center gap-3 border-0 border-b border-solid p-4">
                                     <div className="bg-whop-hover flex flex-1 items-center gap-2 rounded-md border-none pl-2.5 ">
-                                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="magnifying-glass" className="svg-inline--fa fa-magnifying-glass text-whop-darkGray" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="magnifying-glass" className="w-5 fa-magnifying-glass text-whop-darkGray" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                             <path fill="currentColor" d="M368 208A160 160 0 1 0 48 208a160 160 0 1 0 320 0zM337.1 371.1C301.7 399.2 256.8 416 208 416C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208c0 48.8-16.8 93.7-44.9 129.1L505 471c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L337.1 371.1z"></path>
                                         </svg>
-                                        <input className="placeholder:text-whop-gray flex-1 border-none bg-transparent py-2.5 pr-2 text-[18px] outline-none" placeholder="Search Whop" type="search" autocomplete="off" value="" />
+                                        <input onChange={handleInputChange} className="placeholder:text-whop-gray flex-1 border-none bg-transparent py-2.5 pr-2 text-[18px] outline-none" placeholder="Search Whop" type="search" autocomplete="off" value={searchValue} />
                                     </div>
-                                    <div className="text2 select-none">Cancel</div>
+                                    <button onClick={()=>setSearchOpen(false)} className="text2 select-none">Cancel</button>
                                 </div>
-                            </div>
+                            </div>}
                         </div>
                     </div>
                 { !basic &&   <div className="border-whop-stroke border-0 border-solid sm:border-t">
