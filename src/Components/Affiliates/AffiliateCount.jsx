@@ -4,7 +4,7 @@ import CountUp from 'react-countup';
 
 const AffiliateCount = () => {
   return (
-    <div className="bg-whop-hover flex items-center justify-center gap-16 p-8 [content-visibility:auto] lg:gap-32">
+    <div className="bg-whop-hover flex items-center justify-center overflow-hidden gap-16 p-8 [content-visibility:auto] lg:gap-32">
     <div className="flex flex-col items-center justify-center gap-2">
         <div className="flex items-center justify-center gap-2 text-3xl text-whop-black font-medium" aria-label="$ 269,342,652">
             $ <CountUp start={0} end={5919291} duration={3} />

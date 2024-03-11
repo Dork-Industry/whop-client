@@ -2,7 +2,7 @@ import React from 'react'
 
 const BillingHistory = () => {
   return (
-    <div className="w-full max-w-[1300px] items-center px-5 sm:px-0">
+    <div className="w-full max-w-[1300px] items-center lg:px-5 sm:px-0">
    
     <div className="h-6"></div>
     <h5 className="text-header5 mb-4">Your billing history</h5>

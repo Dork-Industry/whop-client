@@ -76,10 +76,10 @@ const BecomeAnAffiliate = () => {
          </a>
       </div>
    </div>
-   <div className="h-[380px] w-full flex-1 sm:max-w-[509px]">
+   <div className="h-[380px] w-full md:block flex-1 sm:max-w-[509px] hidden ">
                     <div className="flex h-full flex-col gap-2">
                         <div className="flex items-center gap-2">
-                            <div className="header4">Recent activity</div>
+                            <div className="header4">Affiliate activity</div>
                             <div className="flex items-center gap-1">
                                 <div className="relative h-[14px] w-[14px]">
                                     <div className="bg-whop-field-highlight/30 absolute h-[14px] w-[14px] animate-ping rounded-full"></div>

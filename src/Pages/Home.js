@@ -91,7 +91,7 @@ const Home = () => {
     // };
 
     return (
-        <div className='px-5'>
+        <div className='lg:px-5'>
 
             <Banner />
             <div className="bg-whop-hover flex items-center justify-center gap-16 p-8 [content-visibility:auto] lg:gap-32">

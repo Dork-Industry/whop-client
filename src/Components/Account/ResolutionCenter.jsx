@@ -3,7 +3,7 @@ import React from 'react'
 const ResolutionCenter = () => {
   return (
     <div className="flex min-h-screen w-full  flex-row justify-center py-12 sm:min-h-[calc(100vh-115px)]">
-    <div className="w-full max-w-[1300px] items-center px-5 sm:px-0">
+    <div className="w-full max-w-[1300px] items-center lg:px-5 sm:px-0">
       
        <h5 className="text-header5 mb-4 font-semibold">Your resolution center</h5>
        <div className="border-b-whop-stroke flex w-full items-center justify-between pb-3">
