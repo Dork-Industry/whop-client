@@ -33,7 +33,22 @@ const Register = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
 
-        await Apiconnect.postData('users/createuser', infoz).then((response) => {
+        // await Apiconnect.postData('users/createuser', infoz).then((response) => {
+        //     console.log(response);
+        //     setInfoz({
+        //         user_name: '',
+        //         user_mname: '',
+        //         user_lname: '',
+        //         thumbnail: '',
+        //         user_email: '',
+        //         phone: '',
+        //         business_name: '',
+        //         user_password: '',
+        //     });
+        //     toast(response.data.message);
+        //     navigate('/srthanks');
+        // });
+        await Apiconnect.postData('users/createseller', infoz).then((response) => {
             console.log(response);
             setInfoz({
                 user_name: '',
@@ -60,10 +75,21 @@ const Register = () => {
                     <div className="flex flex-col">
                         <div className="flex flex-col px-6">
                             <div className="display2 text-whop-black my-6 text-center" id="auth-title">Create an account</div>
-                            <form action="#" className=''>
+                            <form onSubmit={(e) => onSubmit(e)} className=''>
                                 <div className="h-fit w-full">
                                     <div className="relative flex items-center w-full text-base" >
-                                        <input data-hj-allow="true" id="email" placeholder="Your email" autocomplete="off" spellcheck="false" autocorrect="off" className="block appearance-none pl-3 pr-3 border-whop-stroke-dark shadow-sm focus-within:border-whop-field-highlight focus-within:ring-whop-field-highlight/30 border transition focus-within:outline-none focus-within:ring placeholder:text-whop-dark-gray/[50%] text-whop-black text-text1 bg-whop-background outline-none h-10 rounded-md w-full" type="text" value="" name="email" />
+                                        <input data-hj-allow="true" 
+                                                id="email" 
+                                                placeholder="Your email" 
+                                                autocomplete="off" 
+                                                spellcheck="false" 
+                                                autocorrect="off" 
+                                                className="block appearance-none pl-3 pr-3 border-whop-stroke-dark shadow-sm focus-within:border-whop-field-highlight focus-within:ring-whop-field-highlight/30 border transition focus-within:outline-none focus-within:ring placeholder:text-whop-dark-gray/[50%] text-whop-black text-text1 bg-whop-background outline-none h-10 rounded-md w-full" 
+                                                type="text" 
+                                                name="user_email"
+                                                // value={user_email}
+                                                onChange={(e) => onInputChange(e)} 
+                                        />
                                     </div>
                                 </div>
                                 <button type="submit" className="group/button relative flex shrink-0 items-center justify-center overflow-hidden rounded-md focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring mt-5 w-full bg-whop-primary text-whop-fixed-white text-button4 h-10 px-[15px]">

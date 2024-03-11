@@ -12,8 +12,8 @@ const Dashboard = () => {
     }, []);
     const [List, setList] = useState([]);
 
-    const getInfoList = () => {
-        Apiconnect.getData('order/getAlluser').then((response) => {
+    const getInfoList = async() => {
+        await Apiconnect.getData('order/getAlluser').then((response) => {
             let _xtract = Apiconnect.decrypt_obj(response.data.data);
             setList(_xtract.reverse());
         });

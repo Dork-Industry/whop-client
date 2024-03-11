@@ -15,7 +15,7 @@ export const PageProvider = ({ children }) => {
     useEffect(() => {
         getcart();
         setcartItmCount(cartItems.length);
-    }, [cartItems]);
+    }, []);
 
     const getcart = async () => {
         //console.log('cart alling');
