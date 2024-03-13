@@ -5,7 +5,6 @@ import { Helmet } from 'react-helmet';
 
 import Login from '../Pages/Login';
 import Register from '../Pages/Register';
-import Sregister from '../Pages/Sregister';
 import Srthanks from '../Pages/Srthanks';
 
 import Home from '../Pages/Home';
@@ -33,6 +32,9 @@ import Affiliates from '../Pages/Affiliates.jsx';
 import CustomerAffiliates from '../Pages/CustomerAffiliates.jsx';
 import MyReferrals from '../Pages/MyReferrals.jsx';
 import Account from '../Pages/Account.jsx';
+import Sell from '../Pages/Sell.js';
+import Sregister from '../Pages/Sregister.js';
+import Search from '../Pages/Search.jsx';
 
 export default function RootRouter() {
     return (
@@ -40,6 +42,7 @@ export default function RootRouter() {
             <Routes>
                 <Route exact path="/login" element={<Login />} />
                 <Route exact path="/register" element={<Register />} />
+                <Route exact path="/seller-register" element={<Sregister/>}/>
 
                 <Route element={<TosLayout />}>
                     <Route exact path="/tos" element={<Tos />} />
@@ -66,11 +69,13 @@ export default function RootRouter() {
                     <Route exact path="/account" element={<Account  />} />
 
                     <Route exact path="/Srthanks" element={<Srthanks />} />
-
+                    <Route exact path="/search" element={<Search/>}/>
                     <Route exact path="/*" element={<P404 />} />
                 </Route>
                 <Route element={<SellerLayout />}>
-                    <Route exact path="/seller_register" element={<Sregister />} />
+                    {/* <Route exact path="/seller_register" element={<Sregister />} /> */}
+                    <Route exact path="/sell" element={<Sell />}/>
+                    
                 </Route>
             </Routes>
             {/* <Helmet>

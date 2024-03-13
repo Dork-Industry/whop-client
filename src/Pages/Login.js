@@ -6,7 +6,7 @@ import { GoogleLogin, GoogleOAuthProvider} from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode";
 
 const Login = () => {
-    const CLIENT_ID="354200840303-36evdck26rcpu7jetaqhbft7amo7sjgc.apps.googleusercontent.com"
+    const CLIENT_ID= "354200840303-36evdck26rcpu7jetaqhbft7amo7sjgc.apps.googleusercontent.com";
     const { login } = useContext(AuthContext);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -15,15 +15,13 @@ const Login = () => {
     const [otp, setOtp] = useState(new Array(6).fill(""));
     const otpBoxReference = useRef([]);
 
-    
-
     const verifyloginotp = () => {
         const finalotp = otp.join("");
         var indata = {
             email: email,
             otp: finalotp,
         };
-        Apiconnect.postDataNoauth('users/verifyloginotp', indata).then((response) => {
+        Apiconnect.postData('users/verifyloginotp', indata).then((response) => {
             var resz = response.data;
             if (response.data.accessToken) {
                 localStorage.setItem('token', resz.accessToken);
@@ -119,10 +117,6 @@ const Login = () => {
         if (value && index < 5) {
             otpBoxReference.current[index + 1].focus()
         }
-        // if(index == 5)
-        // {
-        //     verifyloginotp()
-        // }
     }
 
     const handleBackspaceAndEnter = (e, index) => {

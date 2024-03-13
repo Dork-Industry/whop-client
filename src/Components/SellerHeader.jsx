@@ -92,7 +92,7 @@ const SellerHeader = () => {
             </div>
             <div ></div>
             <a className=" justify-center rounded-md shadow-outline-button-shadow py-1.5 px-3.5 text-xs text-off-white font-semibold outline-2 outline-offset-2  focus-visible:outline-2 focus-visible:outline focus-visible:outline-offset-2 transition-all bg-outline-button outline-white hidden lg:block" target="_blank" href="https://whop.com/sell/calendly/"><span className="flex items-center gap-2">Contact sales‌‌‌‍‌​‌‍‍‌‌‌</span></a>
-            <a className=" justify-center rounded-md py-2 px-3 text-xs font-semibold outline-2 outline-offset-2  focus-visible:outline-2 focus-visible:outline focus-visible:outline-offset-2 shadow-orange-button-shadow bg-blend-overlay bg-orange-button  transition-all hover:bg-gradient-button-orange-hover active:bg-gradient-button-orange-active outline-brand hidden lg:block" href="/register"><span className="flex items-center gap-2">Sign up‌‌‌‍‌​‌‍‍‌‌‌</span></a>
+            <a className=" justify-center rounded-md py-2 px-3 text-xs font-semibold outline-2 outline-offset-2  focus-visible:outline-2 focus-visible:outline focus-visible:outline-offset-2 shadow-orange-button-shadow bg-blend-overlay bg-orange-button  transition-all hover:bg-gradient-button-orange-hover active:bg-gradient-button-orange-active outline-brand hidden lg:block" href="/seller-register"><span className="flex items-center gap-2">Sign up‌‌‌‍‌​‌‍‍‌‌‌</span></a>
          </div>
       </div>
    </nav>

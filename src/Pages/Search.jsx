@@ -1,40 +1,50 @@
-import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
-import ProductCard from '../../Components/Category/ProductCard'
-import Apiconnect from '../../services/Apiconnect.js'
-import helper from '../../services/HelperCodebase.js';
-import { Button } from 'react-bootstrap';
-const ProductCategory = () => {
-    const navigate = useNavigate();
-    const param = useParams();
+import React, { useEffect, useState } from "react";
+import { useLocation, useSearchParams } from "react-router-dom";
+import Apiconnect from "../services/Apiconnect.js";
+import ProductCard from "../Components/Category/ProductCard.jsx";
+import { Button } from "react-bootstrap";
 
-    useEffect(() => {
-        getInfoList();
-        getCatList();
-    }, []);
-
-    const [List, setList] = useState([]);
+const Search = () => {
+    const { search } = useLocation();
+    const searchValue = new URLSearchParams(search).get("type");
+    const [searchResult, setSearchResult] = useState([]);
     const [pageItems, setPageItems] = useState([]);
-    const [Maincat, setMaincat] = useState([]);
-    const [CatList, setCatList] = useState([]);
+    const [filteredList, setFilteredList] = useState([]);
     const [currentPage, setcurrentPage] = useState(1);
-    const [itemsPerPage, setitemsPerPage] = useState(10);
-    const [pageNumberLimit, setpageNumberLimit] = useState(5);
     const [maxPageNumberLimit, setmaxPageNumberLimit] = useState(5);
     const [minPageNumberLimit, setminPageNumberLimit] = useState(0);
+    const [itemsPerPage, setitemsPerPage] = useState(10);
+    const [pageNumberLimit, setpageNumberLimit] = useState(5);
     const [pages, setPages] = useState([])
-    const [filterCategories, setFilterCategories] = useState([])
-    const [filteredList, setFilteredList] = useState([]);
 
-    const getInfoList = () => {
-        Apiconnect.getData('product/getAll?limit=10').then((response) => {
-            let _xtract = Apiconnect.decrypt_obj(response.data.data);
-            setList(_xtract);
-            setFilteredList(_xtract);
-        });
-    };
-    
+    const priceList = [
+        { name: 'Free', count: 65 },
+        { name: 'Free Trial', count: 65 },
+        { name: 'Under $25', count: 15 },
+        { name: '$25 - $65', count: 165 },
+        { name: '$65 - $100', count: 335 },
+        { name: 'Above $100', count: 75 },
+    ]
+
+    useEffect(() => {
+        async function getSearchData() {
+            await Apiconnect.getData(`product/search/${searchValue}`).then((response) => {
+                if (response.data.status === 0) {
+                    alert(response.data.message)
+                }
+                else {
+                    let _xtract = Apiconnect.decrypt_obj(response.data.data);
+                    setSearchResult(_xtract);
+                    // console.log("_xtract", _xtract)
+                }
+            });
+        }
+        if (searchValue) {
+            getSearchData();
+        }
+
+    }, [searchValue]);
+
     let indexOfLastItem;
     let indexOfFirstItem;
 
@@ -50,33 +60,9 @@ const ProductCategory = () => {
 
     }, [filteredList, currentPage, itemsPerPage])
 
-    const getCatList = () => {
-        Apiconnect.getData('cat/getAll').then((response) => {
-            let _xtract = Apiconnect.decrypt_obj(response.data.data);
-            console.log("_xtract", _xtract)
-            setCatList(_xtract);
-            var ttx = helper.array_search_multidim('url', param.slug, _xtract);
-            setMaincat(ttx[0]);
-        });
-    };
-
     const handleClick = (event) => {
         setcurrentPage(Number(event.target.id));
     };
-
-    const golink = (ln) => {
-        navigate(ln);
-    };
-
-    const priceList = [
-        { name: 'Free', count: 65 },
-        { name: 'Free Trial', count: 65 },
-        { name: 'Under $25', count: 15 },
-        { name: '$25 - $65', count: 165 },
-        { name: '$65 - $100', count: 335 },
-        { name: 'Above $100', count: 75 },
-    ]
-
 
     const renderPageNumbers = pages && pages.length > 0 && pages.map((number) => {
         if (number < maxPageNumberLimit + 1 && number > minPageNumberLimit) {
@@ -95,6 +81,28 @@ const ProductCategory = () => {
         }
     });
 
+    const filterHandler = (event) => {
+        console.log("event.target.value", event.target.value)
+        // if (event.target.checked) {
+        //     setFilterCategories([...filterCategories, event.target.value])
+        // } else {
+        //     setFilterCategories(
+        //         filterCategories.filter((filterCategory) => filterCategory !== event.target.value)
+        //     )
+        // }
+    }
+
+    useEffect(()=>{
+        // const filteredList = searchResult.filter((item)=>
+        //     filterCategories.length > 0 ?
+        //     filterCategories.some((cat)=>
+        //         item.cat_name.includes(cat)
+        //     ):searchResult
+        // )
+        // setFilteredList(filteredList)
+        setFilteredList(searchResult)
+    },[ searchResult])
+
     const handleNextbtn = () => {
         setcurrentPage(currentPage + 1);
         if (currentPage + 1 > maxPageNumberLimit) {
@@ -111,32 +119,11 @@ const ProductCategory = () => {
         }
     };
 
-    const filterHandler = (event) => {
-        console.log("event.target.value", event.target.value)
-        if (event.target.checked) {
-            setFilterCategories([...filterCategories, event.target.value])
-        } else {
-            setFilterCategories(
-                filterCategories.filter((filterCategory) => filterCategory !== event.target.value)
-            )
-        }
-    }
-
-    useEffect(()=>{
-        const filteredList = List.filter((item)=>
-            filterCategories.length > 0 ?
-            filterCategories.some((cat)=>
-                item.cat_name.includes(cat)
-            ):List
-        )
-        setFilteredList(filteredList)
-    },[filterCategories, List])
-
     return (
         <div className="unpadded-container pb-[60px] md:px-10">
             <div className="border-whop-stroke mb-6 mt-[60px] hidden items-end gap-5 border-0 border-b border-solid pb-2 md:flex md:items-center">
-                <h1 className="font-display text-display2 pb-1.5">{Maincat.name}</h1>
-                <div className="paragraph1 text-whop-dark-gray">{Maincat.info}</div>
+                <h1 className="font-display text-display2 pb-1.5">Search Result</h1>
+                {/* <div className="paragraph1 text-whop-dark-gray">{Maincat.info}</div> */}
             </div>
             <div className="mb-6 flex gap-10 overflow-x-hidden">
                 <div className="hidden w-52 md:block">
@@ -175,29 +162,6 @@ const ProductCategory = () => {
                             </a>
                         </div>
                         <div className="bg-whop-stroke h-[1px] md:hidden"></div>
-                        <div>
-                            <div className="button4 pb-2 md:pl-[14px]">Categories</div>
-                            {CatList.map((valz, keyz) => {
-                                return (
-                                    <div className="d-flex justify-content-between align-items-center">
-                                        <div className="sidebar__check d-flex align-items-center">
-                                            <input
-                                                className="m-check-input"
-                                                type="checkbox"
-                                                id={`m-wp-${keyz}`}
-                                                onChange={filterHandler}
-                                                value={valz.name}
-                                            />
-                                            <label className="m-check-label" htmlFor={`m-wp-${keyz}`}>
-                                                {valz.name}
-                                            </label>
-                                        </div>
-                                        <span>{valz?.count} </span>
-                                    </div>
-                                );
-                            })}
-
-                        </div>
                         <div className="bg-whop-stroke h-[1px]"></div>
                         <div>
                             <div className="button4 pb-2 md:pl-[14px]">Price</div>
@@ -254,12 +218,12 @@ const ProductCategory = () => {
                     <div className="flex items-center justify-between mx-5 mt-1.5 md:mx-0">
                         <div className="flex items-center gap-2">
                             {/* <a className="subtitle flex h-8 w-8 cursor-pointer select-none items-center justify-center rounded-md border-2 transition border-black" href="/categories/reselling/?%3Fhuman_challenge_solution=qlkuwbgdisugbtetwsbdcqk">1</a>
-                            <a className="subtitle flex h-8 w-8 cursor-pointer select-none items-center justify-center rounded-md border-2 transition border-transparent hover:bg-whop-hover hover:border-whop-hover active:border-whop-hover-press active:bg-whop-hover-press" href="/categories/reselling/page/2/?%3Fhuman_challenge_solution=qlkuwbgdisugbtetwsbdcqk">2</a>
-                            <a className="subtitle flex h-8 w-8 cursor-pointer select-none items-center justify-center rounded-md border-2 transition border-transparent hover:bg-whop-hover hover:border-whop-hover active:border-whop-hover-press active:bg-whop-hover-press" href="/categories/reselling/page/3/?%3Fhuman_challenge_solution=qlkuwbgdisugbtetwsbdcqk">3</a>
-                            <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="ellipsis" className="svg-inline--fa fa-ellipsis text-whop-gray" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <path fill="currentColor" d="M432 256a48 48 0 1 1 -96 0 48 48 0 1 1 96 0zm-160 0a48 48 0 1 1 -96 0 48 48 0 1 1 96 0zM64 304a48 48 0 1 1 0-96 48 48 0 1 1 0 96z"></path>
-                            </svg>
-                            <a className="subtitle flex h-8 w-8 cursor-pointer select-none items-center justify-center rounded-md border-2 transition border-transparent hover:bg-whop-hover hover:border-whop-hover active:border-whop-hover-press active:bg-whop-hover-press" href="/categories/reselling/page/31/?%3Fhuman_challenge_solution=qlkuwbgdisugbtetwsbdcqk">31</a> */}
+                        <a className="subtitle flex h-8 w-8 cursor-pointer select-none items-center justify-center rounded-md border-2 transition border-transparent hover:bg-whop-hover hover:border-whop-hover active:border-whop-hover-press active:bg-whop-hover-press" href="/categories/reselling/page/2/?%3Fhuman_challenge_solution=qlkuwbgdisugbtetwsbdcqk">2</a>
+                        <a className="subtitle flex h-8 w-8 cursor-pointer select-none items-center justify-center rounded-md border-2 transition border-transparent hover:bg-whop-hover hover:border-whop-hover active:border-whop-hover-press active:bg-whop-hover-press" href="/categories/reselling/page/3/?%3Fhuman_challenge_solution=qlkuwbgdisugbtetwsbdcqk">3</a>
+                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="ellipsis" className="svg-inline--fa fa-ellipsis text-whop-gray" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path fill="currentColor" d="M432 256a48 48 0 1 1 -96 0 48 48 0 1 1 96 0zm-160 0a48 48 0 1 1 -96 0 48 48 0 1 1 96 0zM64 304a48 48 0 1 1 0-96 48 48 0 1 1 0 96z"></path>
+                        </svg>
+                        <a className="subtitle flex h-8 w-8 cursor-pointer select-none items-center justify-center rounded-md border-2 transition border-transparent hover:bg-whop-hover hover:border-whop-hover active:border-whop-hover-press active:bg-whop-hover-press" href="/categories/reselling/page/31/?%3Fhuman_challenge_solution=qlkuwbgdisugbtetwsbdcqk">31</a> */}
                             {renderPageNumbers}
 
                         </div>
@@ -481,4 +445,4 @@ const ProductCategory = () => {
     )
 }
 
-export default ProductCategory
+export default Search;
