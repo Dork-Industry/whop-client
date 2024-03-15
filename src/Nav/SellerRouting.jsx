@@ -1,20 +1,15 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import { Routes, Route } from 'react-router-dom';
-
 import Sidebar from '../Seller/Sidebar';
 import Topbar from '../Seller/Topbar';
 import Footer from '../Seller/Footer';
 import Dashboard from '../Seller/Dashboard';
-
 import Product from '../Seller/Product';
 import ProductForm from '../Seller/ProductForm';
-
 import Changepass from '../Seller/Changepass';
 import Logout from '../Seller/Logout';
 import Err from '../Seller/Err';
-
 import '../Seller/App.css';
 
 const SellerRouting = () => {

@@ -14,10 +14,14 @@ const Seller = () => {
 
     const getInfoList = () => {
         Apiconnect.getData('product/getAllSeller').then((response) => {
+            console.log("response", response)
             let _xtract = Apiconnect.decrypt_obj(response.data.data);
+            console.log("_xtract", _xtract)
             setList(_xtract.reverse());
         });
     };
+
+    console.log("List", List)
 
     const ondlt = (id) => {
         confirmAlert({

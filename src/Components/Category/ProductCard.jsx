@@ -9,7 +9,6 @@ const ProductCard = ({product}) => {
           <div className="embla w-full">
              <div className="embla__container flex h-full flex-row " >
                 <div className="embla__slide aspect-[2/1] h-full w-full object-cover transition-all duration-200">
-                   {/* <video className="h-full w-full" src="https://img.whop.com/mrnyB4nUs5RJEvIX0IdBTeMQIZ4Zl9rB77f79mLCJ7s/rs:fill:440:220/el:1/dpr:2/aHR0cHM6Ly9hc3NldHMud2hvcC5jb20vaW1hZ2VzL2ltYWdlcy81NDEyNS5vcmlnaW5hbC5naWY.mp4" playsinline="" loop="" muted="" width="440" height="220" ></video> */}
                    <Image src={product?.thumbnail} alt={"product"}/>
                 </div>
              </div>

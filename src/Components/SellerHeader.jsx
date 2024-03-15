@@ -73,9 +73,9 @@ const SellerHeader = () => {
                <nav aria-label="Main" data-orientation="horizontal" dir="ltr" className="NavLinks_NavigationMenuRoot__F1Bcc">
                   <div >
                      <ul data-orientation="horizontal" className="flex gap-4" dir="ltr">
-                        <li><a className="flex items-center justify-between gap-[2px] rounded-md px-2 py-1 text-xs font-medium text-off-white outline-none outline-2 outline-offset-2 backdrop-blur-[2px] transition-colors hover:bg-[rgba(255,_98,_67,_0.1)] hover:text-brand focus-visible:outline-white" href="https://docs.whop.com/" target="_blank" data-radix-collection-item="">Resources‌‌‌‍‌​‌‍‍‌‌‌</a></li>
-                        <li><a className="flex items-center justify-between gap-[2px] rounded-md px-2 py-1 text-xs font-medium text-off-white outline-none outline-2 outline-offset-2 backdrop-blur-[2px] transition-colors hover:bg-[rgba(255,_98,_67,_0.1)] hover:text-brand focus-visible:outline-white" href="https://dev.whop.com/introduction" target="_blank" data-radix-collection-item="">Developers‌‌‌‍‌​‌‍‍‌‌‍‌</a></li>
-                        <li><a className="flex items-center justify-between gap-[2px] rounded-md px-2 py-1 text-xs font-medium text-off-white outline-none outline-2 outline-offset-2 backdrop-blur-[2px] transition-colors hover:bg-[rgba(255,_98,_67,_0.1)] hover:text-brand focus-visible:outline-white" href="https://whop.com/sell/pricing/" target="_blank" data-radix-collection-item="">Pricing‌‌‌‍‌​‌‍‍‌‌‌</a></li>
+                        <li><a className="flex items-center justify-between gap-[2px] rounded-md px-2 py-1 text-xs font-medium text-off-white outline-none outline-2 outline-offset-2 backdrop-blur-[2px] transition-colors hover:bg-[rgba(255,_98,_67,_0.1)] hover:text-brand focus-visible:outline-white" href="/" target="_blank" data-radix-collection-item="">Resources‌‌‌‍‌​‌‍‍‌‌‌</a></li>
+                        <li><a className="flex items-center justify-between gap-[2px] rounded-md px-2 py-1 text-xs font-medium text-off-white outline-none outline-2 outline-offset-2 backdrop-blur-[2px] transition-colors hover:bg-[rgba(255,_98,_67,_0.1)] hover:text-brand focus-visible:outline-white" href="/" target="_blank" data-radix-collection-item="">Developers‌‌‌‍‌​‌‍‍‌‌‍‌</a></li>
+                        <li><a className="flex items-center justify-between gap-[2px] rounded-md px-2 py-1 text-xs font-medium text-off-white outline-none outline-2 outline-offset-2 backdrop-blur-[2px] transition-colors hover:bg-[rgba(255,_98,_67,_0.1)] hover:text-brand focus-visible:outline-white" href="/" target="_blank" data-radix-collection-item="">Pricing‌‌‌‍‌​‌‍‍‌‌‌</a></li>
                      </ul>
                   </div>
                   <div className="NavLinks_ViewportPosition__7wsUL"></div>
@@ -91,7 +91,7 @@ const SellerHeader = () => {
                </button>
             </div>
             <div ></div>
-            <a className=" justify-center rounded-md shadow-outline-button-shadow py-1.5 px-3.5 text-xs text-off-white font-semibold outline-2 outline-offset-2  focus-visible:outline-2 focus-visible:outline focus-visible:outline-offset-2 transition-all bg-outline-button outline-white hidden lg:block" target="_blank" href="https://whop.com/sell/calendly/"><span className="flex items-center gap-2">Contact sales‌‌‌‍‌​‌‍‍‌‌‌</span></a>
+            <a className=" justify-center rounded-md shadow-outline-button-shadow py-1.5 px-3.5 text-xs text-off-white font-semibold outline-2 outline-offset-2  focus-visible:outline-2 focus-visible:outline focus-visible:outline-offset-2 transition-all bg-outline-button outline-white hidden lg:block" target="_blank" href="/"><span className="flex items-center gap-2">Contact sales‌‌‌‍‌​‌‍‍‌‌‌</span></a>
             <a className=" justify-center rounded-md py-2 px-3 text-xs font-semibold outline-2 outline-offset-2  focus-visible:outline-2 focus-visible:outline focus-visible:outline-offset-2 shadow-orange-button-shadow bg-blend-overlay bg-orange-button  transition-all hover:bg-gradient-button-orange-hover active:bg-gradient-button-orange-active outline-brand hidden lg:block" href="/seller-register"><span className="flex items-center gap-2">Sign up‌‌‌‍‌​‌‍‍‌‌‌</span></a>
          </div>
       </div>

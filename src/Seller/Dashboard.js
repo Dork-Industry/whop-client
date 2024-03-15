@@ -117,7 +117,6 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
-
             <div className="row" style={{ display: 'none' }}>
                 <div className="col-md-12">
                     <div className="main-card mb-3 card">
