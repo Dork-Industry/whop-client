@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Footer2 = () => {
     const [isVisible, setIsVisible] = useState(false);
+    const navigate = useNavigate();
 
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -20,6 +22,15 @@ const Footer2 = () => {
         window.removeEventListener('scroll', handleScroll);
       };
     }, []);
+
+    const signin = () => {
+        navigate('/login');
+    } 
+
+    const signup = () => {
+        navigate('/register');
+    } 
+
     return (
         <div className="border-whop-stroke border-t border-solid">
             <div className="padded-container py-8 md:py-12">
@@ -37,13 +48,13 @@ const Footer2 = () => {
                         <div className="flex flex-col justify-between gap-6 sm:flex-row">
                             <img alt="Whop" draggable="false" loading="lazy" width="137" height="28" decoding="async" data-nimg="1" className="pointer-events-none text-transparent" src="/assets/img/logo/whop.svg" />
                             <div className="flex gap-2 font-semibold">
-                                <button type="button" className="group/button relative flex items-center justify-center overflow-hidden rounded-md w-fit focus-visible:border-whop-fieldHighlight focus-visible:ring-whop-fieldHighlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring flex-1 whitespace-nowrap bg-whop-background text-whop-black border-whop-stroke border  text-button4 h-10 px-[15px]">
+                                <button type="button" className="group/button relative flex items-center justify-center overflow-hidden rounded-md w-fit focus-visible:border-whop-fieldHighlight focus-visible:ring-whop-fieldHighlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring flex-1 whitespace-nowrap bg-whop-background text-whop-black border-whop-stroke border  text-button4 h-10 px-[15px]" onClick={signin}>
                                     <div className="absolute inset-0 transition group-hover/button:bg-black/[4%] group-active/button:bg-black/[8%] biz-dark-1:group-hover/button:bg-white/[8%] biz-dark-1:group-active/button:bg-white/[16%] biz-dark-2:group-hover/button:bg-white/[8%] biz-dark-2:group-active/button:bg-white/[16%]"></div>
                                     <div className="z-10 flex items-center justify-center">
                                         <div className="">Sign in</div>
                                     </div>
                                 </button>
-                                <button type="button" className="group/button text-white relative flex items-center justify-center overflow-hidden rounded-md w-fit focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring flex-1 whitespace-nowrap bg-whop-primary text-whop-fixed-white text-button4 h-10 px-[15px]">
+                                <button type="button" className="group/button text-white relative flex items-center justify-center overflow-hidden rounded-md w-fit focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring flex-1 whitespace-nowrap bg-whop-primary text-whop-fixed-white text-button4 h-10 px-[15px]" onClick={signup}>
                                     <div className="absolute inset-0 transition group-hover/button:bg-black/[12%] group-active/button:bg-black/[18%]"></div>
                                     <div className="z-10 flex items-center justify-center">
                                         <div className="">Sign up</div>
@@ -55,12 +66,9 @@ const Footer2 = () => {
                             <div className="min-w-[120px] flex-1">
                                 <div className="button3">About</div>
                                 <div className="subtitle2 text-whop-black mt-4 flex flex-col gap-3 font-medium">
-                                    <a className="w-min whitespace-nowrap hover:underline" target="_blank" href="/">Careers</a>
-                                    <a href="blog/consumer-guide/" className="w-min whitespace-nowrap hover:underline" target="_blank">What’s Whop</a>
                                     <a className="w-min whitespace-nowrap hover:underline" target="_blank" href="/terms/">Terms</a>
                                     <a className="w-min whitespace-nowrap hover:underline" target="_blank" href="/privacy/">Privacy</a>
                                     <a className="w-min whitespace-nowrap hover:underline" target="_blank" href="/sitemap/">Sitemap</a>
-                                    <a className="w-min whitespace-nowrap hover:underline" target="_blank" href="/">Bug Bounty Program</a>
                                 </div>
                             </div>
                             <div className="min-w-[120px] flex-1">
@@ -68,17 +76,16 @@ const Footer2 = () => {
                                 <div className="subtitle2 text-whop-black mt-4 flex flex-col gap-3 font-medium">
                                     <a href="/sell/" className="w-min whitespace-nowrap hover:underline " target="_blank">Sell on Whop</a>
                                     <a className="w-min whitespace-nowrap hover:underline" target="_blank" href="/">Build an App</a>
-                                    <a className="w-min whitespace-nowrap hover:underline" target="_blank" href="/affiliates/">Refer Friends</a>
                                 </div>
                             </div>
-                            <div className="min-w-[120px] flex-1">
+                            {/* <div className="min-w-[120px] flex-1">
                                 <div className="button3">Resources</div>
                                 <div className="subtitle2 text-whop-black mt-4 flex flex-col gap-3 font-medium">
                                     <a className="w-min whitespace-nowrap hover:underline" target="_blank" href="/">Guides</a>
                                     <a href="/blog/" className="w-min whitespace-nowrap hover:underline" target="_blank">Blog</a>
                                     <a className="w-min whitespace-nowrap hover:underline" target="_blank" href="/">Use our API</a>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className="min-w-[240px] flex-1">
                                 <div className="button3">Sell on Whop</div>
                                 <div className="subtitle2 text-whop-black mt-4 flex flex-col gap-3 font-medium">

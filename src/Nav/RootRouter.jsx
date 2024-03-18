@@ -59,7 +59,7 @@ export default function RootRouter() {
                     <Route exact path="/category" element={<ProductCategory />} />
                     <Route exact path="/size" element={<Size />} />
                     <Route exact path="/category/:slug" element={<ProductCategory />} />
-                    <Route exact path="/product" element={<Product />} />
+                    {/* <Route exact path="/product" element={<Product />} /> */}
                     <Route exact path="/product/:id" element={<Product />} />
                     <Route exact path="/cart" element={<Cart />} />
                     <Route exact path="/trancomplete" element={<Trancomplete />} />

@@ -1,32 +1,32 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import Apiconnect from '../../services/Apiconnect.js';
 import ProductCard from '../home/ProductCard.jsx';
 import { Link } from 'react-router-dom';
 const YouMightLike = () => {
-    const [List, setList] = useState([]);
-    useEffect(() => {
-        getInfoList();
-    }, []);
+   const [List, setList] = useState([]);
+   useEffect(() => {
+      getInfoList();
+   }, []);
 
-    const getInfoList = () => {
-        // console.log('---XXXX--->>call start 11');
-        Apiconnect.getData('product/getAll?limit=3').then((response) => {
-            console.log(response);
-            let _xtract = Apiconnect.decrypt_obj(response.data.data);
-            setList([..._xtract, ..._xtract, ..._xtract]);
-        });
-    };
+   const getInfoList = () => {
+      // console.log('---XXXX--->>call start 11');
+      Apiconnect.getData('product/getAll?limit=3').then((response) => {
+         console.log(response);
+         let _xtract = Apiconnect.decrypt_obj(response.data.data);
+         setList([..._xtract]);
+      });
+   };
 
-  return (
-    <div className="[content-visibility:auto] padded-container py-8 md:py-[60px]">
-   <div className="">
-      <div className="flex items-end">
-         <div className="flex-1">
-            <h2 className="text-2xl font-bold">You might also like</h2>
-            <div className="paragraph2 text-whop-dark-gray mt-1 hidden md:block">Popular products with free trials.</div>
-         </div>
-         <div className="flex items-center gap-2">
-            {/* <button type="button" className="group/icon-button relative shrink-0 items-center justify-center overflow-hidden focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring font-sans tracking-[-0.005em] h-10 !w-10 rounded-md bg-whop-white text-whop-black hidden sm:flex">
+   return (
+      <div className="[content-visibility:auto] padded-container py-8 md:py-[60px]">
+         <div className="">
+            <div className="flex items-end">
+               <div className="flex-1">
+                  <h2 className="text-2xl font-bold">You might also like</h2>
+                  <div className="paragraph2 text-whop-dark-gray mt-1 hidden md:block">Popular products with free trials.</div>
+               </div>
+               <div className="flex items-center gap-2">
+                  {/* <button type="button" className="group/icon-button relative shrink-0 items-center justify-center overflow-hidden focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring font-sans tracking-[-0.005em] h-10 !w-10 rounded-md bg-whop-white text-whop-black hidden sm:flex">
                <div className="absolute inset-0 transition group-hover/icon-button:bg-black/[4%] group-active/icon-button:bg-black/[8%] biz-dark-1:group-hover/icon-button:bg-white/[8%] biz-dark-1:group-active/icon-button:bg-white/[16%] biz-dark-2:group-hover/icon-button:bg-white/[8%] biz-dark-2:group-active/icon-button:bg-white/[16%]"></div>
                <div className="flex items-center justify-center">
                   <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-left" className="svg-inline--fa fa-arrow-left fa-fw text-[16px]" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -42,30 +42,29 @@ const YouMightLike = () => {
                   </svg>
                </div>
             </button> */}
-            <Link to={"/charts/?tab=1"}>
-               <button type="button" className="group/button relative flex shrink-0 items-center justify-center overflow-hidden rounded-md w-fit focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring bg-whop-background text-whop-black border-whop-stroke border text-button4 h-10 px-[15px]">
-                  <div className="absolute inset-0 transition group-hover/button:bg-black/[4%] group-active/button:bg-black/[8%] biz-dark-1:group-hover/button:bg-white/[8%] biz-dark-1:group-active/button:bg-white/[16%] biz-dark-2:group-hover/button:bg-white/[8%] biz-dark-2:group-active/button:bg-white/[16%]"></div>
-                  <div className="z-10 flex items-center justify-center">
-                     <div className="">See all</div>
-                     <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-right" className="svg-inline--fa fa-chevron-right fa-fw ml-[7px] text-[12px]" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                        <path fill="currentColor" d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z"></path>
-                     </svg>
-                  </div>
-               </button>
-            </Link>
+                  <Link to={"/charts/?tab=1"}>
+                     <button type="button" className="group/button relative flex shrink-0 items-center justify-center overflow-hidden rounded-md w-fit focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring bg-whop-background text-whop-black border-whop-stroke border text-button4 h-10 px-[15px]">
+                        <div className="absolute inset-0 transition group-hover/button:bg-black/[4%] group-active/button:bg-black/[8%] biz-dark-1:group-hover/button:bg-white/[8%] biz-dark-1:group-active/button:bg-white/[16%] biz-dark-2:group-hover/button:bg-white/[8%] biz-dark-2:group-active/button:bg-white/[16%]"></div>
+                        <div className="z-10 flex items-center justify-center">
+                           <div className="">See all</div>
+                           <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="chevron-right" className="svg-inline--fa fa-chevron-right fa-fw ml-[7px] text-[12px]" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                              <path fill="currentColor" d="M305 239c9.4 9.4 9.4 24.6 0 33.9L113 465c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l175-175L79 81c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L305 239z"></path>
+                           </svg>
+                        </div>
+                     </button>
+                  </Link>
+               </div>
+            </div>
+            <div className="relative mt-6">
+               <div className="-mx-2 -my-5 flex snap-mandatory scroll-p-3 flex-nowrap gap-2 overflow-x-auto px-2 py-5 sm:snap-x">
+                  {List?.map((val, key) => (
+                     <ProductCard val={val} key={key} />
+                  ))}
+               </div>
+            </div>
          </div>
       </div>
-      <div className="relative mt-6">
-      <div className="-mx-2 -my-5 flex snap-mandatory scroll-p-3 flex-nowrap gap-2 overflow-x-auto px-2 py-5 sm:snap-x">
-      {List?.map((val, key) => (
-                <ProductCard val={val} key={key} />        
-                        ))}
-           
-         </div>
-         </div>
-      </div>
-   </div>
-  )
+   )
 }
 
 export default YouMightLike

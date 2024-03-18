@@ -13,7 +13,8 @@ const Logout = () => {
     const getlogout = () => {
         //e.preventDefault();
         localStorage.removeItem('token');
-        localStorage.removeItem('user_typ');
+        // localStorage.removeItem('user_typ');
+        localStorage.removeItem('user');
 
         logout();
         navigate('/login');

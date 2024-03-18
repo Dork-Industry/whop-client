@@ -21,7 +21,7 @@ const Seller = () => {
     const navigate = useNavigate();
     const param = useParams();
     const [actn, setActn] = useState('');
-    const [activePrice, setActivePrice] = useState('')
+    const [activePrice, setActivePrice] = useState('');
     const [infoz, setInfoz] = useState({
         // prod_code: '',
         // cat_id: '',
@@ -35,6 +35,18 @@ const Seller = () => {
         youtubelink:'',
         twitterlink:''
     });
+
+    const [products, setProducts] = useState([]);
+    const [product, setProduct] = useState({
+        product_name:'',
+        product_type:'',
+        product_cat: '',
+        product_link:'',
+        product_desc:'',
+        price_type:'',
+        price:0,
+        expiry:''
+    })
 
     const {
         // prod_code,
@@ -50,6 +62,18 @@ const Seller = () => {
         twitterlink
 
     } = infoz;
+
+    const {
+        product_name,
+        product_type,
+        product_cat,
+        product_link,
+        product_desc,
+        price_type,
+        price,
+        expiry
+    } = product;
+
     const [catList, setCat] = useState([]);
     const imageTypeRegex = /image\/(png|jpg|jpeg)/gm;
     const videoTypeRegex = /video\/(mp4)/gm;
@@ -137,33 +161,55 @@ const Seller = () => {
         // console.log(infoz);
     };
 
+    const onProductInputChange = (e) =>{
+        setProduct({ ...product, [e.target.name]: e.target.value });
+    }
+
     const onSubmit = async (e) => {
         e.preventDefault();
-        console.log("infoz", infoz)
-        // if (param.id > 0) {
-        //     ///console.log('in edit function' +param.id);
-        //     Apiconnect.postData(`product/update/${param.id}`, infoz).then((response) => {
-        //         toast(response.data.message);
-        //         navigate('/seller/product');
-        //     });
-        // } else {
-        //     await Apiconnect.postData('product/create', infoz).then((response) => {
-        //         console.log(response);
-        //         setInfoz({
-        //             prod_code: '',
-        //             cat_id: '',
-        //             seller_id: '',
-        //             name: '',
-        //             prod_tagline: '',
-        //             prod_info: '',
-        //             thumbnail: '',
+        const data ={
+            infoz,
+            "products" : products 
+        }
+        if (param.id > 0) {
+            ///console.log('in edit function' +param.id);
+            Apiconnect.postData(`product/update/${param.id}`, infoz).then((response) => {
+                toast(response.data.message);
+                navigate('/seller/product');
+            });
+        } else {
+            // await Apiconnect.postData('product/create', infoz).then((response) => {
+            //     console.log(response);
+            //     setInfoz({
+            //         prod_code: '',
+            //         cat_id: '',
+            //         seller_id: '',
+            //         name: '',
+            //         prod_tagline: '',
+            //         prod_info: '',
+            //         thumbnail: '',
+            //     });
+            //     toast(response.data.message);
+            //     navigate('/seller/product');
+            // });
+            await Apiconnect.postData('store/create', data).then((response) => {
 
-        //         });
-        //         toast(response.data.message);
-        //         navigate('/seller/product');
-        //     });
-        // }
+            }).catch((err) => {
+                console.log("Err")
+            })
+        }
     };
+
+    const handleAddProduct = async (e) =>{
+        e.preventDefault();
+        setProducts([...products, product])
+        // console.log("product", product)
+        handleCloseProductModal();
+    }
+
+    useEffect(()=>{
+        console.log("products", products)
+    }, [products])
 
     const handleCloseProductModal = () => {
         setShowProductModal(false)
@@ -249,6 +295,12 @@ const Seller = () => {
         const emoji = emojiObject.emoji;
         setChoosenEmoji(emoji);
     };
+
+    const handlePriceSelection = (pricetype) => {
+        // console.log("pricetype", pricetype);
+        setActivePrice(pricetype); 
+        setProduct({ ...product, "price_type": pricetype });
+    }
 
     return (
         <>
@@ -381,7 +433,7 @@ const Seller = () => {
                                     <label >Instagram</label>
                                 </Col>
                                 <Col md={10}>
-                                    <input type={"text"} name={"facebooklink"} value={facebooklink} onChange={(e) => onInputChange(e)} placeholder='https://www.instagram.com/' className='form-control' />
+                                    <input type={"text"} name={"instagramlink"} value={instagramlink} onChange={(e) => onInputChange(e)} placeholder='https://www.instagram.com/' className='form-control' />
                                 </Col>
                             </Row>
                             <Row className='align-items-center mx-3 my-3'>
@@ -389,7 +441,7 @@ const Seller = () => {
                                     <label >Youtube</label>
                                 </Col>
                                 <Col md={10}>
-                                    <input type={"text"} name={"facebooklink"} value={facebooklink} onChange={(e) => onInputChange(e)} placeholder='https://www.youtube.com/' className='form-control' />
+                                    <input type={"text"} name={"youtubelink"} value={youtubelink} onChange={(e) => onInputChange(e)} placeholder='https://www.youtube.com/' className='form-control' />
                                 </Col>
                             </Row>
                             <Row className='align-items-center mx-3 my-3'>
@@ -397,7 +449,7 @@ const Seller = () => {
                                     <label >Twitter</label>
                                 </Col>
                                 <Col md={10}>
-                                    <input type={"text"} name={"facebooklink"} value={facebooklink} onChange={(e) => onInputChange(e)} placeholder='https://www.twitter.com/' className='form-control' />
+                                    <input type={"text"} name={"twitterlink"} value={twitterlink} onChange={(e) => onInputChange(e)} placeholder='https://www.twitter.com/' className='form-control' />
                                 </Col>
                             </Row>
                             {/* <div className="row">
@@ -462,7 +514,7 @@ const Seller = () => {
                 </Modal.Header>
                 <Modal.Body>
                     <Container>
-                        <Form>
+                        <Form onSubmit={(e) => handleAddProduct(e)}>
                             <Row>
                                 <Col md={12}>
                                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -470,6 +522,9 @@ const Seller = () => {
                                         <Form.Control
                                             type="text"
                                             placeholder="Product Name"
+                                            value={product_name}
+                                            name={"product_name"}
+                                            onChange={(e) => {onProductInputChange(e)}}
                                             autoFocus
                                         />
                                     </Form.Group>
@@ -477,7 +532,7 @@ const Seller = () => {
                             </Row>
                             <Row>
                                 <Col md={6}>
-                                    <Form.Select aria-label="Default select example" className="mb-3">
+                                    <Form.Select aria-label="Default select example" onChange={(e) => {onProductInputChange(e)}} className="mb-3" name={"product_type"} value={product_type}>
                                         <option>Product Type</option>
                                         <option value="telegram">Telegram</option>
                                         <option value="whatsapp">Whats App</option>
@@ -486,10 +541,9 @@ const Seller = () => {
                                 </Col>
                                 <Col md={6}>
                                     <Form.Select aria-label="Default select example" className="mb-3"
-                                        name="cat_id"
-                                        // value={cat_id}
-                                        // value={cat_id}
-                                        onChange={(e) => onInputChange(e)}>
+                                        name="product_cat"
+                                        value={product_cat}
+                                        onChange={(e) => onProductInputChange(e)}>
                                         <option>Product category</option>
                                         {catList.map((val, key) => {
                                             return (
@@ -508,6 +562,9 @@ const Seller = () => {
                                         <Form.Control
                                             type="link"
                                             placeholder="Product Link"
+                                            name={"product_link"}
+                                            value={product_link}
+                                            onChange={(e) => onProductInputChange(e)}
                                             autoFocus
                                         />
                                     </Form.Group>
@@ -521,6 +578,9 @@ const Seller = () => {
                                             as="textarea"
                                             placeholder="Product description"
                                             style={{ height: '100px' }}
+                                            name={"product_desc"}
+                                            value={product_desc}
+                                            onChange={(e) => onProductInputChange(e)}
                                         />
                                     </Form.Group>
                                 </Col>
@@ -534,7 +594,7 @@ const Seller = () => {
                             <Row>
                                 <Col md={12}>
                                     <div className='flex flex-col gap-2 md:flex-row'>
-                                        <div className={`product-price-wrapper w-100 p-2 border-2 rounded ${activePrice === 'free' ? 'active' : ''}`} onClick={() => { setActivePrice('free') }}>
+                                        <div className={`product-price-wrapper w-100 p-2 border-2 rounded ${activePrice === 'free' ? 'active' : ''}`} onClick={() => {handlePriceSelection('free')}}>
                                             <div className='product-price'>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked={activePrice === "free"} />
@@ -545,7 +605,7 @@ const Seller = () => {
                                                 <div><p className='mb-0'>allow access for free.</p></div>
                                             </div>
                                         </div>
-                                        <div className={`product-price-wrapper w-100 p-2 border-2 rounded ${activePrice === 'subscription' ? 'active' : ''}`} onClick={() => { setActivePrice('subscription') }}>
+                                        <div className={`product-price-wrapper w-100 p-2 border-2 rounded ${activePrice === 'subscription' ? 'active' : ''}`} onClick={() => { handlePriceSelection('subscription') }}>
                                             <div className='product-price'>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked={activePrice === "subscription"} />
@@ -556,7 +616,7 @@ const Seller = () => {
                                                 {/* <div><p className='mb-0'>allow access for free.</p></div> */}
                                             </div>
                                         </div>
-                                        <div className={`product-price-wrapper w-100 p-2 border-2 rounded ${activePrice === 'onetime' ? 'active' : ''}`} onClick={() => { setActivePrice('onetime') }}>
+                                        <div className={`product-price-wrapper w-100 p-2 border-2 rounded ${activePrice === 'onetime' ? 'active' : ''}`} onClick={() => { handlePriceSelection('onetime') }}>
                                             <div className='product-price'>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked={activePrice === "onetime"} />
@@ -574,8 +634,8 @@ const Seller = () => {
                                 {activePrice === "free" && (
                                     <Col md={12} className='mt-3'>
                                         <p>Access expires.</p>
-                                        <Form.Select aria-label="Default select example" className="mb-3">
-                                            <option value="0">Never</option>
+                                        <Form.Select aria-label="Default select example" className="mb-3" name={"expiry"} value={expiry} onChange={(e) => onProductInputChange(e)}>
+                                            <option value="-1">Never</option>
                                             <option value="1">After 7 days</option>
                                             <option value="2">After 2 weeks</option>
                                             <option value="3">After 1 month</option>
@@ -590,10 +650,10 @@ const Seller = () => {
                                 {activePrice === "subscription" && (
                                     <Col md={12} className='mt-3'>
                                         <Form.Group className="mb-3">
-                                            <Form.Control type="number" placeholder="Rs." />
+                                            <Form.Control type="number" placeholder="Rs." name={"price"} value={price} onChange={(e) => onProductInputChange(e)}/>
                                         </Form.Group>
                                         <Form.Group className="mb-3">
-                                            <Form.Select aria-label="Default select example">
+                                            <Form.Select aria-label="Default select example" name={"expiry"} value={expiry} onChange={(e) => onProductInputChange(e)}>
                                                 <option value="0">Per custom time period</option>
                                                 <option value="1">Per 7 days</option>
                                                 <option value="2">Per 2 weeks</option>
@@ -610,13 +670,13 @@ const Seller = () => {
                                 {activePrice === "onetime" && (
                                     <Col md={12} className='mt-3'>
                                         <Form.Group className="mb-3">
-                                            <Form.Control type="number" placeholder="Rs." />
+                                            <Form.Control type="number" placeholder="Rs." name={"price"} value={price} onChange={(e) => onProductInputChange(e)}/>
                                         </Form.Group>
                                         <Form.Group className="mb-3">
-                                            <Form.Select aria-label="Default select example">
-                                                <option value="0">Never expires</option>
-                                                <option value="1">Expires after cutom time period</option>
-                                                <option value="2">Expires 7 days</option>
+                                            <Form.Select aria-label="Default select example" name={"expiry"} value={expiry} onChange={(e) => onProductInputChange(e)}>
+                                                <option value="-1">Never expires</option>
+                                                <option value="0">Expires after cutom time period</option>
+                                                <option value="1">Expires 7 days</option>
                                                 <option value="2">Expires 2 weeks</option>
                                                 <option value="3">Expires 1 month</option>
                                                 <option value="4">Expires 2 months</option>
@@ -636,8 +696,8 @@ const Seller = () => {
                     <Button variant="secondary" onClick={handleCloseProductModal}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={handleCloseProductModal}>
-                        Save Changes
+                    <Button variant="primary" onClick={handleAddProduct} >
+                        Add Product
                     </Button>
                 </Modal.Footer>
             </Modal>

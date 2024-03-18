@@ -13,6 +13,7 @@ const TrendingProducts = () => {
       Apiconnect.getData('product/getAll?limit=3').then((response) => {
          let _xtract = Apiconnect.decrypt_obj(response.data.data);
          // setList([..._xtract, ..._xtract, ..._xtract]);
+         console.log("Products", _xtract)
          setList([ ..._xtract]);
       });
    };
