@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const SellerDetails = () => {
   return (
@@ -68,9 +69,9 @@ const SellerDetails = () => {
             </svg>
             <div className="text-text3">TikTok</div>
          </div>
-         <a className="text-whop-field-highlight flex cursor-pointer items-center gap-0.5" target="_blank" href="https://tiktok.com/@loungeprofit">
+         <Link className="text-whop-field-highlight flex cursor-pointer items-center gap-0.5" target="_blank" to={"https://tiktok.com/@loungeprofit"}>
             <div className="text-subtitle3">@loungeprofit</div>
-         </a>
+         </Link>
       </div>
       <div className="border-whop-stroke flex justify-between border-b-[0.5px] py-4">
          <div className="text-whop-gray flex items-center gap-1.5">
@@ -79,9 +80,9 @@ const SellerDetails = () => {
             </svg>
             <div className="text-text3">Discord</div>
          </div>
-         <a className="text-whop-field-highlight flex cursor-pointer items-center gap-0.5" target="_blank" href="https://discord.gg/profitlounge">
+         <Link className="text-whop-field-highlight flex cursor-pointer items-center gap-0.5" target="_blank" to={"https://discord.gg/profitlounge"}>
             <div className="text-subtitle3">https://discord.gg/profitlounge</div>
-         </a>
+         </Link>
       </div>
       <div className="border-whop-stroke flex justify-between border-b-[0.5px] py-4">
          <div className="text-whop-gray flex items-center gap-1.5">
@@ -90,9 +91,9 @@ const SellerDetails = () => {
             </svg>
             <div className="text-text3">Twitter</div>
          </div>
-         <a className="text-whop-field-highlight flex cursor-pointer items-center gap-0.5" target="_blank" href="https://twitter.com/profit_lounge">
+         <Link className="text-whop-field-highlight flex cursor-pointer items-center gap-0.5" target="_blank" to={"https://twitter.com/profit_lounge"}>
             <div className="text-subtitle3">@profit_lounge</div>
-         </a>
+         </Link>
       </div>
       <div className="border-whop-stroke flex justify-between border-b-[0.5px] py-4">
          <div className="text-whop-gray flex items-center gap-1.5">
@@ -101,9 +102,9 @@ const SellerDetails = () => {
             </svg>
             <div className="text-text3">Website</div>
          </div>
-         <a className="text-whop-field-highlight flex cursor-pointer items-center gap-0.5" target="_blank" href="https://profitlounge.us">
+         <Link className="text-whop-field-highlight flex cursor-pointer items-center gap-0.5" target="_blank" to={"https://profitlounge.us"}>
             <div className="text-subtitle3">profitlounge.us</div>
-         </a>
+         </Link>
       </div>
       <div className="border-whop-stroke flex justify-between border-b-[0.5px] py-4">
          <div className="text-whop-gray flex items-center gap-1.5">
@@ -112,9 +113,9 @@ const SellerDetails = () => {
             </svg>
             <div className="text-text3">Instagram</div>
          </div>
-         <a className="text-whop-field-highlight flex cursor-pointer items-center gap-0.5" target="_blank" href="https://instagram.com/profit_lounge">
+         <Link className="text-whop-field-highlight flex cursor-pointer items-center gap-0.5" target="_blank" to={"https://instagram.com/profit_lounge"}>
             <div className="text-subtitle3">@profit_lounge</div>
-         </a>
+         </Link>
       </div>
    </div>
 </div> 

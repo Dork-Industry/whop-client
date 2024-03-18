@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const HowItWorks = () => {
   return (
@@ -39,14 +40,14 @@ const HowItWorks = () => {
          </div>
       </div>
    </div>
-   <a href="/affiliates/customer/">
+   <Link to={"/affiliates/customer/"}>
       <button type="button" className="group/button relative flex shrink-0 items-center justify-center overflow-hidden rounded-md focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring mb-[67px] mt-[40px] w-[118px] max-lg:mt-[60px] bg-whop-primary text-whop-fixed-white text-button4 h-10 px-[15px]">
          <div className="absolute inset-0 transition group-hover/button:bg-black/[12%] group-active/button:bg-black/[18%]"></div>
          <div className="z-10 flex items-center justify-center">
             <div className="text-white font-semibold">Get Started</div>
          </div>
       </button>
-   </a>
+   </Link>
 </div> 
  )
 }

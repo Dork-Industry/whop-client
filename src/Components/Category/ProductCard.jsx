@@ -1,9 +1,10 @@
 import React from 'react'
 import { Image } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const ProductCard = ({product}) => {
   return (
-    <a target="_blank" className="hover:bg-whop-hover border-whop-stroke group flex cursor-pointer flex-col items-stretch gap-2 overflow-x-hidden border-0 border-b border-solid p-5 transition md:flex-row md:items-center md:gap-5 md:rounded-lg md:border-b-0 md:p-4" href={`/product/${product?.prod_code}`}>
+    <Link target="_blank" className="hover:bg-whop-hover border-whop-stroke group flex cursor-pointer flex-col items-stretch gap-2 overflow-x-hidden border-0 border-b border-solid p-5 transition md:flex-row md:items-center md:gap-5 md:rounded-lg md:border-b-0 md:p-4" to={`/product/${product?.prod_code}`}>
     <div className="border-whop-stroke aspect-[2/1] w-full overflow-hidden rounded-lg border-[0.5px] border-solid md:h-[110px] md:w-auto lg:h-[149px]">
        <div className="group relative flex aspect-[2/1] overflow-hidden">
           <div className="embla w-full">
@@ -126,7 +127,7 @@ const ProductCard = ({product}) => {
           <div className="whitespace-nowrap">General</div> */}
        </div>
     </div>
- </a>  )
+ </Link>  )
 }
 
 export default ProductCard

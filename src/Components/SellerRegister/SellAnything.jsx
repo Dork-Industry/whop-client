@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const SellAnything = () => {
   return (
@@ -34,10 +35,10 @@ const SellAnything = () => {
       </div>
       <h4 className="pb-3 text-xl font-semibold text-white sm:text-2xl">Sell Whop App Templates</h4>
       <p className="pb-6 text-sm text-shark-gray-300">Whop App Templates are pre-built products you can sell access to in minutes.‌</p>
-      <a className="inline-flex justify-center rounded-md py-2 px-3 text-xs font-semibold outline-2 outline-offset-2  focus-visible:outline-2 focus-visible:outline focus-visible:outline-offset-2 transition-all bg-gray-button text-white outline-white" target="_blank" href="https://whop.com/app-store/"><span className="flex items-center gap-2">View all apps‌</span></a>
+      <Link className="inline-flex justify-center rounded-md py-2 px-3 text-xs font-semibold outline-2 outline-offset-2  focus-visible:outline-2 focus-visible:outline focus-visible:outline-offset-2 transition-all bg-gray-button text-white outline-white" target="_blank" to={"#"}><span className="flex items-center gap-2">View all apps‌</span></Link>
    </div>
    <div className="grid-row flex flex-col gap-4 px-12 pb-6 pt-6 sm:grid sm:grid-cols-[auto,repeat(2,_208px),auto] sm:grid-rows-[repeat(5,_100px)] sm:px-0 sm:pb-0 sm:pt-0 xl:ml-[-105px] xl:mt-[-80px] xl:grid-cols-[repeat(4,208px)] xl:grid-rows-[repeat(5,_100px)]">
-      <a href="https://dash.whop.com/login?action=signup" target="_blank" className="app-card-background rounded-lg border-white/[.05] p-4 outline-none outline-2 outline-offset-2 focus-visible:outline-white row-start-2 xl:ml-[112px] xl:-mr-[112px] col-start-3">
+      <Link to={"/login"} target="_blank" className="app-card-background rounded-lg border-white/[.05] p-4 outline-none outline-2 outline-offset-2 focus-visible:outline-white row-start-2 xl:ml-[112px] xl:-mr-[112px] col-start-3">
          <div className="flex flex-row items-center gap-2 pb-1">
             <div>
                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" width="16" height="16">
@@ -47,8 +48,8 @@ const SellAnything = () => {
             <h5 className="font-semibold text-off-white">Discord​​​​‌‌</h5>
          </div>
          <p className="text-xs leading-5 text-shark-gray-400">Sell access to an exclusive Discord community.</p>
-      </a>
-      <a href="https://dash.whop.com/login?action=signup" target="_blank" className="app-card-background rounded-lg border-white/[.05] p-4 outline-none outline-2 outline-offset-2 focus-visible:outline-white row-start-3 col-start-2">
+      </Link>
+      <Link to={"/login"} target="_blank" className="app-card-background rounded-lg border-white/[.05] p-4 outline-none outline-2 outline-offset-2 focus-visible:outline-white row-start-3 col-start-2">
          <div className="flex flex-row items-center gap-2 pb-1">
             <div>
                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" width="16" height="16">
@@ -58,8 +59,8 @@ const SellAnything = () => {
             <h5 className="font-semibold text-off-white">Telegram​​​​‌‌</h5>
          </div>
          <p className="text-xs leading-5 text-shark-gray-400">Sell access to an exclusive Telegram community.</p>
-      </a>
-      <a href="https://dash.whop.com/login?action=signup" target="_blank" className="app-card-background rounded-lg border-white/[.05] p-4 outline-none outline-2 outline-offset-2 focus-visible:outline-white row-start-3  col-start-3">
+      </Link>
+      <Link to={"/login"} target="_blank" className="app-card-background rounded-lg border-white/[.05] p-4 outline-none outline-2 outline-offset-2 focus-visible:outline-white row-start-3  col-start-3">
          <div className="flex flex-row items-center gap-2 pb-1">
             <div>
                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" width="16" height="16">
@@ -69,8 +70,8 @@ const SellAnything = () => {
             <h5 className="font-semibold text-off-white">TradingView​​​​‌‌</h5>
          </div>
          <p className="text-xs leading-5 text-shark-gray-400">Sell access to your TradingView Indicators.‌</p>
-      </a>
-      <a href="https://dash.whop.com/login?action=signup" target="_blank" className="app-card-background rounded-lg border-white/[.05] p-4 outline-none outline-2 outline-offset-2 focus-visible:outline-white row-start-4 xl:col-start-4 col-start-3 xl:row-start-3 xl:col-span-1">
+      </Link>
+      <Link to={"/login"} target="_blank" className="app-card-background rounded-lg border-white/[.05] p-4 outline-none outline-2 outline-offset-2 focus-visible:outline-white row-start-4 xl:col-start-4 col-start-3 xl:row-start-3 xl:col-span-1">
          <div className="flex flex-row items-center gap-2 pb-1">
             <div>
                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" width="16" height="16">
@@ -80,8 +81,8 @@ const SellAnything = () => {
             <h5 className="font-semibold text-off-white">Course</h5>
          </div>
          <p className="text-xs leading-5 text-shark-gray-400">Sell access to an online course or program.‌</p>
-      </a>
-      <a href="https://dash.whop.com/login?action=signup" target="_blank" className="app-card-background rounded-lg border-white/[.05] p-4 outline-none outline-2 outline-offset-2 focus-visible:outline-white row-start-4 hidden xl:block xl:ml-[112px] xl:-mr-[112px] xl:col-start-3">
+      </Link>
+      <Link to={"/login"} target="_blank" className="app-card-background rounded-lg border-white/[.05] p-4 outline-none outline-2 outline-offset-2 focus-visible:outline-white row-start-4 hidden xl:block xl:ml-[112px] xl:-mr-[112px] xl:col-start-3">
          <div className="flex flex-row items-center gap-2 pb-1">
             <div>
                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" width="16" height="16">
@@ -91,8 +92,8 @@ const SellAnything = () => {
             <h5 className="font-semibold text-off-white">Software app‌</h5>
          </div>
          <p className="text-xs leading-5 text-shark-gray-400">Sell access to software via license key.​​​​‌</p>
-      </a>
-      <a href="https://dash.whop.com/login?action=signup" target="_blank" className="app-card-background rounded-lg border-white/[.05] p-4 outline-none outline-2 outline-offset-2 focus-visible:outline-white row-start-2 xl:ml-[112px] xl:-mr-[112px] col-start-2 ">
+      </Link>
+      <Link to={"/login"} target="_blank" className="app-card-background rounded-lg border-white/[.05] p-4 outline-none outline-2 outline-offset-2 focus-visible:outline-white row-start-2 xl:ml-[112px] xl:-mr-[112px] col-start-2 ">
          <div className="flex flex-row items-center gap-2 pb-1">
             <div>
                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none" width="16" height="16">
@@ -103,8 +104,8 @@ const SellAnything = () => {
             <h5 className="font-semibold text-off-white">Web app​​​​‌‌</h5>
          </div>
          <p className="text-xs leading-5 text-shark-gray-400">Sell access to your web app via OAuth.‌</p>
-      </a>
-      <a href="https://dash.whop.com/login?action=signup" target="_blank" className="app-card-background rounded-lg border-white/[.05] p-4 outline-none outline-2 outline-offset-2 focus-visible:outline-white row-start-4 xl:ml-[112px] xl:-mr-[112px] col-start-2">
+      </Link>
+      <Link to={"/login"} target="_blank" className="app-card-background rounded-lg border-white/[.05] p-4 outline-none outline-2 outline-offset-2 focus-visible:outline-white row-start-4 xl:ml-[112px] xl:-mr-[112px] col-start-2">
          <div className="flex flex-row items-center gap-2 pb-1">
             <div>
                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +116,7 @@ const SellAnything = () => {
             <h5 className="font-semibold text-off-white">Files​​​​‌</h5>
          </div>
          <p className="text-xs leading-5 text-shark-gray-400">Sell access to exclusive files.‌</p>
-      </a>
+      </Link>
       <article aria-hidden="true" className="faded-app-placeholder c app-card-placeholder faded-app-placeholder-mobile row-span-3 row-start-2 mb-[-32px] hidden rounded-lg border border-white/[0.04] sm:block xl:row-span-2 xl:row-start-1 xl:mb-0 xl:mr-[-112px]"></article>
       <article aria-hidden="true" className="app-card-placeholder t faded-app-placeholder-mobile top col-span-2 col-start-2 hidden rounded-lg border border-white/[0.04] sm:block xl:col-span-2 xl:col-start-2 xl:row-span-1 xl:row-start-1 xl:ml-[112px] xl:mr-[-112px]"></article>
       <article aria-hidden="true" className="app-card-placeholder faded-app-placeholder-mobile r row-span-3 row-start-2 mb-[-32px] hidden rounded-lg border border-white/[0.04] sm:block xl:col-start-4 xl:row-span-2 xl:row-start-1 xl:mb-0 xl:ml-[112px] xl:mr-[-112px]"></article>
@@ -136,7 +137,7 @@ const SellAnything = () => {
    </div>
    <h4 className="pb-3 text-xl font-semibold text-white sm:text-2xl">Build apps yourself‌</h4>
    <p className="max-w-lg text-sm text-shark-gray-300">Integrate Whop’s payment, membership, and fulfillment features into your software with just a few lines of code.​​​​‌‌</p>
-   <a className="inline-flex justify-center rounded-md py-2 px-3 text-xs font-semibold outline-2 outline-offset-2  focus-visible:outline-2 focus-visible:outline focus-visible:outline-offset-2 transition-all bg-gray-button text-white outline-white mt-6" target="_blank" href="https://dev.whop.com/introduction"><span className="flex items-center gap-2">Read the docs​​​​‌﻿‍﻿​‍​‍‌‍﻿﻿‌﻿​‍‌‍‍‌‌‍‌﻿‌‍‍‌‌‍﻿‍​‍​‍​﻿‍‍​‍​‍‌﻿​﻿‌‍​‌‌‍﻿‍‌‍‍‌‌﻿‌​‌﻿‍‌​‍﻿‍‌‍‍‌‌‍﻿﻿​‍​‍​‍﻿​​‍​‍‌‍‍​‌﻿​‍‌‍‌‌‌‍‌‍​‍​‍​﻿‍‍​‍​‍​‍﻿﻿‌﻿​﻿‌‍‌‌‌‍﻿​‌‍﻿​​‍﻿﻿‌‍​﻿‌‍﻿‌‌﻿​﻿​‍﻿‌‌﻿​﻿‌﻿‌​‌﻿‌‌‌‍‌​‌‍‍‌‌‍﻿﻿​‍﻿﻿‌‍‍‌‌‍﻿‍‌﻿‌​‌‍‌‌‌‍﻿‍‌﻿‌​​‍﻿﻿‌‍‌‌‌‍‌​‌‍‍‌‌﻿‌​​‍﻿﻿‌‍‍‌‌‍‌​​﻿﻿‌‌‍‌​​﻿​﻿​﻿​‍​﻿‌​​﻿‍​​﻿‌﻿​﻿​‍​﻿‍‌​‍﻿‌​﻿​‍​﻿‌‌​﻿​﻿​﻿‌﻿​‍﻿‌​﻿‌​‌‍​‍‌‍​‌​﻿‌﻿​‍﻿‌‌‍​‌‌‍​﻿‌‍​‍‌‍‌‌​‍﻿‌​﻿​​‌‍‌‍​﻿​﻿​﻿‍​​﻿​‌​﻿‍‌​﻿‍​​﻿​​‌‍​‍​﻿‍​​﻿​‍​﻿‌‌​﻿‍﻿‌﻿‌​‌﻿‍‌‌﻿​​‌‍‌‌​﻿﻿‌‌‍﻿​‌‍​‌‌‍﻿‍‌‍‌​‌‍‍‌‌‍﻿‍‌‍‌﻿‌‌​​‌‍​‌‌‍‌﻿‌‍‌‌​﻿‍﻿‌﻿​​‌‍​‌‌﻿‌​‌‍‍​​﻿﻿‌‌‍​‌‌﻿​​‌‍‍‌‌​​﻿‌‍​‌‌﻿​‍‌‍‌​​‍﻿‍‌‍​‍‌﻿‌‌‌﻿‌​‌﻿‌​‌‍﻿﻿‌‍﻿‍​‍﻿‍‌‍﻿​‌‍​‌‌‍​‍‌‍‌‌‌‍﻿​​‍​‍‌﻿﻿‌</span></a>
+   <Link className="inline-flex justify-center rounded-md py-2 px-3 text-xs font-semibold outline-2 outline-offset-2  focus-visible:outline-2 focus-visible:outline focus-visible:outline-offset-2 transition-all bg-gray-button text-white outline-white mt-6" target="_blank" to={"/introduction"}><span className="flex items-center gap-2">Read the docs​​​​‌﻿‍﻿​‍​‍‌‍﻿﻿‌﻿​‍‌‍‍‌‌‍‌﻿‌‍‍‌‌‍﻿‍​‍​‍​﻿‍‍​‍​‍‌﻿​﻿‌‍​‌‌‍﻿‍‌‍‍‌‌﻿‌​‌﻿‍‌​‍﻿‍‌‍‍‌‌‍﻿﻿​‍​‍​‍﻿​​‍​‍‌‍‍​‌﻿​‍‌‍‌‌‌‍‌‍​‍​‍​﻿‍‍​‍​‍​‍﻿﻿‌﻿​﻿‌‍‌‌‌‍﻿​‌‍﻿​​‍﻿﻿‌‍​﻿‌‍﻿‌‌﻿​﻿​‍﻿‌‌﻿​﻿‌﻿‌​‌﻿‌‌‌‍‌​‌‍‍‌‌‍﻿﻿​‍﻿﻿‌‍‍‌‌‍﻿‍‌﻿‌​‌‍‌‌‌‍﻿‍‌﻿‌​​‍﻿﻿‌‍‌‌‌‍‌​‌‍‍‌‌﻿‌​​‍﻿﻿‌‍‍‌‌‍‌​​﻿﻿‌‌‍‌​​﻿​﻿​﻿​‍​﻿‌​​﻿‍​​﻿‌﻿​﻿​‍​﻿‍‌​‍﻿‌​﻿​‍​﻿‌‌​﻿​﻿​﻿‌﻿​‍﻿‌​﻿‌​‌‍​‍‌‍​‌​﻿‌﻿​‍﻿‌‌‍​‌‌‍​﻿‌‍​‍‌‍‌‌​‍﻿‌​﻿​​‌‍‌‍​﻿​﻿​﻿‍​​﻿​‌​﻿‍‌​﻿‍​​﻿​​‌‍​‍​﻿‍​​﻿​‍​﻿‌‌​﻿‍﻿‌﻿‌​‌﻿‍‌‌﻿​​‌‍‌‌​﻿﻿‌‌‍﻿​‌‍​‌‌‍﻿‍‌‍‌​‌‍‍‌‌‍﻿‍‌‍‌﻿‌‌​​‌‍​‌‌‍‌﻿‌‍‌‌​﻿‍﻿‌﻿​​‌‍​‌‌﻿‌​‌‍‍​​﻿﻿‌‌‍​‌‌﻿​​‌‍‍‌‌​​﻿‌‍​‌‌﻿​‍‌‍‌​​‍﻿‍‌‍​‍‌﻿‌‌‌﻿‌​‌﻿‌​‌‍﻿﻿‌‍﻿‍​‍﻿‍‌‍﻿​‌‍​‌‌‍​‍‌‍‌‌‌‍﻿​​‍​‍‌﻿﻿‌</span></Link>
 </div>
 <div className="relative mt-7 h-[240px] w-full -translate-x-12 sm:mt-0 sm:translate-x-0" aria-hidden="true" aria-label="A circuit with strobes of light beaming from it towards a snippet of code.">
    <div className="checkers relative h-full w-[336px]">

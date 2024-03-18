@@ -9,8 +9,19 @@ export const PageProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
     const [cartItmCount, setcartItmCount] = useState(0);
 
-    const user_typ = localStorage.getItem('user_typ');
-    //const user_id =  localStorage.getItem('user_id');
+    let user_typ;
+    let user_id;
+    const user = localStorage.getItem('user');
+    if(user)
+    {
+        const userData = JSON.parse(user);
+        user_typ = userData.user_typ;
+        user_id = userData.id;
+    }
+    
+    // const user_typ = localStorage.getItem('user_typ');
+    // const user_id =  localStorage.getItem('user_id');
+    
 
     useEffect(() => {
         getcart();
@@ -21,9 +32,18 @@ export const PageProvider = ({ children }) => {
         //console.log('cart alling');
         if (user_typ && user_typ === 'User') {
             await Apiconnect.postData('product/cart').then((response) => {
-                if (response.data.status === 1) {
-                    setCartItems(response.data.data);
-                    setcartItmCount(response.data.data.length);
+                if (response.data.status === 1 ) {
+                    if(user_typ === response.data.utype && user_id === response.data.uid)
+                    {
+                        setCartItems(response.data.data);
+                        setcartItmCount(response.data.data.length);
+                    }
+                    else{
+                        alert("Something went wrong!");
+                        localStorage.clear();
+                        window.location.reload();
+                    }
+                    // console.log("cart", response.data);
                 }
             });
         }

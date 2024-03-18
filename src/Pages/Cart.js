@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 
 import Apiconnect from '../services/Apiconnect.js';
 import { useData } from '../Context/Pagecontxt.js';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Cart = () => {
     const navigate = useNavigate();
@@ -15,7 +15,7 @@ const Cart = () => {
         Apiconnect.postData('product/cart').then((response) => {
             let _xtract = response.data.data;
             setList(_xtract.reverse());
-            console.log(_xtract);
+            // console.log(_xtract);
         });
     };
 
@@ -101,9 +101,9 @@ const Cart = () => {
 
                                                 <br />
 
-                                                <a onClick={(e) => doCheckout(e)} className="btn btn-warning">
+                                                <Link to={"#"} onClick={(e) => doCheckout(e)} className="btn btn-warning">
                                                     Checkout
-                                                </a>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>

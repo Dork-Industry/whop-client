@@ -7,10 +7,10 @@ const SizeAdd = () => {
                 <div className="col-md-6">
                     <div className="card-body cbtop">
                         <h2>Add Size</h2>
-                        <a href="/admin/category" className="btn btn-success midbtn">
+                        <Link to={"/admin/category"} className="btn btn-success midbtn">
                             {' '}
                             <i className="fa fa-arrow-left"></i> Back
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="card-body">

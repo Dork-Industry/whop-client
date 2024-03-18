@@ -47,10 +47,10 @@ const Category = () => {
         <>
             <div className="card-body cbtop">
                 <h2>List Of Category</h2>
-                <a href="/admin/category/add" className="btn btn-success midbtn">
+                <Link to={"/admin/category/add"} className="btn btn-success midbtn">
                     {' '}
                     <i className="fa fa-plus"></i> Add Category
-                </a>
+                </Link>
             </div>
             <div className="card-body">
                 <table className="table   table-hover">

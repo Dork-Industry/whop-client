@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { AuthContext } from '../AuthProvider';
+import { Link } from 'react-router-dom';
 
 const About = () => {
     return (
@@ -96,14 +97,14 @@ const About = () => {
                     <div className="row">
                         <div className="col-xxl-6 offset-xxl-3">
                             <div className="cta__content text-center wow fadeInUp" data-wow-delay=".5s">
-                                <a href="pricing.html" className="m-btn m-btn-border-2 cta__btn active">
+                                <Link to={"/pricing.html"} className="m-btn m-btn-border-2 cta__btn active">
                                     {' '}
                                     <span></span> Join the Community
-                                </a>
-                                <a href="pricing.html" className="m-btn m-btn-border-2 cta__btn">
+                                </Link>
+                                <Link to={"/pricing.html"} className="m-btn m-btn-border-2 cta__btn">
                                     {' '}
                                     <span></span> Contact Us
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

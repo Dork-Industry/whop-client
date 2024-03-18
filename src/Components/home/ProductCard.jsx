@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ProductCard = ({val}) => {
   return (
     <div  className="ml-2 shrink-0 snap-start first-of-type:ml-0 sm:ml-3 sm:first-of-type:ml-0 lg:ml-5 lg:first-of-type:ml-0 w-[93%] sm:w-[calc(50%-6px)] lg:w-[calc(33.333%-13.5px)]">
-    <a target="_blank" className="border-whop-stroke block select-none overflow-hidden rounded-[10px] border bg-white shadow-md transition duration-300 ease-in-out hover:scale-[102%] hover:shadow-lg" href={'/product/' + val.prod_code}>
+    <Link target="_blank" className="border-whop-stroke block select-none overflow-hidden rounded-[10px] border bg-white shadow-md transition duration-300 ease-in-out hover:scale-[102%] hover:shadow-lg" to={'/product/' + val.prod_code}>
        <div className="group relative flex aspect-[2/1] overflow-hidden">
           <div className="embla w-full">
              <div className="embla__container flex h-full flex-row transform translate-x-0 translate-y-0 translate-z-0">
@@ -55,7 +56,7 @@ const ProductCard = ({val}) => {
              </div>
           </div>
        </div>
-    </a>
+    </Link>
  </div> 
   )
 }

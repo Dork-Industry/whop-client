@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Topbar = () => {
     return (
@@ -48,7 +49,8 @@ const Topbar = () => {
                                 <div className="widget-content-wrapper">
                                     <div className="widget-content-left">
                                         <div className="btn-group">
-                                            <a
+                                            <Link
+                                                to={"#"}
                                                 data-toggle="dropdown"
                                                 aria-haspopup="true"
                                                 aria-expanded="false"
@@ -61,7 +63,7 @@ const Topbar = () => {
                                                     alt=""
                                                 />
                                                 <b> HI Lokanath </b> <i className="fa fa-angle-down ml-2 opacity-8"></i>
-                                            </a>
+                                            </Link>
                                             <div
                                                 tabIndex="-1"
                                                 role="menu"
@@ -76,9 +78,9 @@ const Topbar = () => {
                                                 </button>
 
                                                 <div tabIndex="-1" className="dropdown-divider"></div>
-                                                <a href="/" className="dropdown-item">
+                                                <Link to={"/"} className="dropdown-item">
                                                     Log Out
-                                                </a>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>

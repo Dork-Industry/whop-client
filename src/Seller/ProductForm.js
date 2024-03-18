@@ -11,34 +11,44 @@ import { Button, Col, Container, Form, Modal, Row, Table } from 'react-bootstrap
 
 const Seller = () => {
 
-    const user_id = localStorage.getItem('user_id');
+    // const user_id = localStorage.getItem('user_id');
+    let user_id;
+    const user = localStorage.getItem('user');
+    if (user) {
+        const userData = JSON.parse(user);
+        user_id = userData.user_id;
+    }
     const navigate = useNavigate();
     const param = useParams();
     const [actn, setActn] = useState('');
+    const [activePrice, setActivePrice] = useState('')
     const [infoz, setInfoz] = useState({
-        prod_code: '',
-        cat_id: '',
+        // prod_code: '',
+        // cat_id: '',
         seller_id: '',
         name: '',
         prod_tagline: '',
         prod_info: '',
         thumbnail: '',
-        meta_title: '',
-        meta_keyword: '',
-        meta_description: '',
+        facebooklink : '',
+        instagramlink:'',
+        youtubelink:'',
+        twitterlink:''
     });
 
     const {
-        prod_code,
-        cat_id,
+        // prod_code,
+        // cat_id,
         seller_id,
         name,
         prod_tagline,
         prod_info,
         thumbnail,
-        meta_title,
-        meta_keyword,
-        meta_description,
+        facebooklink,
+        instagramlink,
+        youtubelink,
+        twitterlink
+
     } = infoz;
     const [catList, setCat] = useState([]);
     const imageTypeRegex = /image\/(png|jpg|jpeg)/gm;
@@ -74,15 +84,15 @@ const Seller = () => {
             // Call API using Axios
             const formData = new FormData();
             formData.append('image', selectedImage);
-            console.log(formData);
+            // console.log(formData);
 
             Axios.post('https://whopapi.huepixel.com//upload/prodz', formData)
                 .then((response) => {
                     // Handle the API response as needed
                     var vv = response.data;
                     setInfoz({ ...infoz, thumbnail: vv.imageUrl });
-                    console.log(response.data);
-                    console.log(infoz);
+                    // console.log(response.data);
+                    // console.log(infoz);
                 })
                 .catch((error) => {
                     // Handle errors
@@ -109,7 +119,7 @@ const Seller = () => {
     const getinfo = (id) => {
         Apiconnect.getData(`product/get/${id}`).then((response) => {
             var tt = Apiconnect.decrypt_obj(response.data.data);
-            console.log(tt);
+            // console.log(tt);
             setInfoz(tt);
         });
     };
@@ -124,38 +134,35 @@ const Seller = () => {
 
     const onInputChange = (e) => {
         setInfoz({ ...infoz, [e.target.name]: e.target.value });
-        console.log(infoz);
+        // console.log(infoz);
     };
 
     const onSubmit = async (e) => {
         e.preventDefault();
+        console.log("infoz", infoz)
+        // if (param.id > 0) {
+        //     ///console.log('in edit function' +param.id);
+        //     Apiconnect.postData(`product/update/${param.id}`, infoz).then((response) => {
+        //         toast(response.data.message);
+        //         navigate('/seller/product');
+        //     });
+        // } else {
+        //     await Apiconnect.postData('product/create', infoz).then((response) => {
+        //         console.log(response);
+        //         setInfoz({
+        //             prod_code: '',
+        //             cat_id: '',
+        //             seller_id: '',
+        //             name: '',
+        //             prod_tagline: '',
+        //             prod_info: '',
+        //             thumbnail: '',
 
-        if (param.id > 0) {
-            ///console.log('in edit function' +param.id);
-
-            Apiconnect.postData(`product/update/${param.id}`, infoz).then((response) => {
-                toast(response.data.message);
-                navigate('/seller/product');
-            });
-        } else {
-            await Apiconnect.postData('product/create', infoz).then((response) => {
-                console.log(response);
-                setInfoz({
-                    prod_code: '',
-                    cat_id: '',
-                    seller_id: '',
-                    name: '',
-                    prod_tagline: '',
-                    prod_info: '',
-                    thumbnail: '',
-                    meta_title: '',
-                    meta_keyword: '',
-                    meta_description: '',
-                });
-                toast(response.data.message);
-                navigate('/seller/product');
-            });
-        }
+        //         });
+        //         toast(response.data.message);
+        //         navigate('/seller/product');
+        //     });
+        // }
     };
 
     const handleCloseProductModal = () => {
@@ -176,7 +183,7 @@ const Seller = () => {
         const validVideoFiles = [];
         for (let i = 0; i < files.length; i++) {
             const file = files[i]; // OR const file = files.item(i);
-            console.log("file", file)
+            // console.log("file", file)
             if (file.type.match(imageTypeRegex)) {
                 validImageFiles.push(file);
             }
@@ -289,9 +296,9 @@ const Seller = () => {
                                     <input
                                         type="text"
                                         className="form-control"
-                                        name="name"
+                                        name="prod_tagline"
                                         placeholder='Tagline/Slogan'
-                                        value={name}
+                                        value={prod_tagline}
                                         onChange={(e) => onInputChange(e)}
                                         required
                                     />
@@ -344,13 +351,14 @@ const Seller = () => {
                                 <Col md={12}>
                                     {/* <Form.Label>About Store : </Form.Label> */}
                                     <h5>About Store : </h5>
-                                    <Form.Control as="textarea" rows={3} />
+                                    <Form.Control as="textarea" rows={3} name="prod_info" value={prod_info}
+                                        onChange={(e) => onInputChange(e)} required/>
                                 </Col>
                             </Row>
                             <hr />
                             <Row>
                                 <Col md={12}>
-                                    <Button variant="primary" onClick={(e) =>  {setShowFAQModal(true)}}> Add FAQ </Button>
+                                    <Button variant="primary" onClick={(e) => { setShowFAQModal(true) }}> Add FAQ </Button>
                                 </Col>
                             </Row>
                             <hr />
@@ -365,7 +373,7 @@ const Seller = () => {
                                     <label >Facebook</label>
                                 </Col>
                                 <Col md={10}>
-                                    <input type={"text"}  placeholder='https://www.facebook.com/' className='form-control'/>
+                                    <input type={"link"} name={"facebooklink"} value={facebooklink} onChange={(e) => onInputChange(e)} placeholder='https://www.facebook.com/' className='form-control' />
                                 </Col>
                             </Row>
                             <Row className='align-items-center mx-3 my-3'>
@@ -373,7 +381,7 @@ const Seller = () => {
                                     <label >Instagram</label>
                                 </Col>
                                 <Col md={10}>
-                                    <input type={"text"}  placeholder='https://www.instagram.com/' className='form-control'/>
+                                    <input type={"text"} name={"facebooklink"} value={facebooklink} onChange={(e) => onInputChange(e)} placeholder='https://www.instagram.com/' className='form-control' />
                                 </Col>
                             </Row>
                             <Row className='align-items-center mx-3 my-3'>
@@ -381,7 +389,7 @@ const Seller = () => {
                                     <label >Youtube</label>
                                 </Col>
                                 <Col md={10}>
-                                    <input type={"text"}  placeholder='https://www.youtube.com/' className='form-control'/>
+                                    <input type={"text"} name={"facebooklink"} value={facebooklink} onChange={(e) => onInputChange(e)} placeholder='https://www.youtube.com/' className='form-control' />
                                 </Col>
                             </Row>
                             <Row className='align-items-center mx-3 my-3'>
@@ -389,7 +397,7 @@ const Seller = () => {
                                     <label >Twitter</label>
                                 </Col>
                                 <Col md={10}>
-                                    <input type={"text"}  placeholder='https://www.twitter.com/' className='form-control'/>
+                                    <input type={"text"} name={"facebooklink"} value={facebooklink} onChange={(e) => onInputChange(e)} placeholder='https://www.twitter.com/' className='form-control' />
                                 </Col>
                             </Row>
                             {/* <div className="row">
@@ -456,7 +464,7 @@ const Seller = () => {
                     <Container>
                         <Form>
                             <Row>
-                                <Col md={6}>
+                                <Col md={12}>
                                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                         {/* <Form.Label>Email address</Form.Label> */}
                                         <Form.Control
@@ -466,12 +474,30 @@ const Seller = () => {
                                         />
                                     </Form.Group>
                                 </Col>
+                            </Row>
+                            <Row>
                                 <Col md={6}>
-                                    <Form.Select aria-label="Default select example">
+                                    <Form.Select aria-label="Default select example" className="mb-3">
                                         <option>Product Type</option>
                                         <option value="telegram">Telegram</option>
                                         <option value="whatsapp">Whats App</option>
                                         <option value="Discord">Discord</option>
+                                    </Form.Select>
+                                </Col>
+                                <Col md={6}>
+                                    <Form.Select aria-label="Default select example" className="mb-3"
+                                        name="cat_id"
+                                        // value={cat_id}
+                                        // value={cat_id}
+                                        onChange={(e) => onInputChange(e)}>
+                                        <option>Product category</option>
+                                        {catList.map((val, key) => {
+                                            return (
+                                                <option key={key} value={val.id}>
+                                                    {val.name}
+                                                </option>
+                                            );
+                                        })}
                                     </Form.Select>
                                 </Col>
                             </Row>
@@ -498,6 +524,110 @@ const Seller = () => {
                                         />
                                     </Form.Group>
                                 </Col>
+                            </Row>
+                            <Row>
+                                <Col md={12}>
+                                    <h5>Price</h5>
+                                    <p>Set your price, subscription, currency and more.</p>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col md={12}>
+                                    <div className='flex flex-col gap-2 md:flex-row'>
+                                        <div className={`product-price-wrapper w-100 p-2 border-2 rounded ${activePrice === 'free' ? 'active' : ''}`} onClick={() => { setActivePrice('free') }}>
+                                            <div className='product-price'>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked={activePrice === "free"} />
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        Free
+                                                    </label>
+                                                </div>
+                                                <div><p className='mb-0'>allow access for free.</p></div>
+                                            </div>
+                                        </div>
+                                        <div className={`product-price-wrapper w-100 p-2 border-2 rounded ${activePrice === 'subscription' ? 'active' : ''}`} onClick={() => { setActivePrice('subscription') }}>
+                                            <div className='product-price'>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked={activePrice === "subscription"} />
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        Subscription
+                                                    </label>
+                                                </div>
+                                                {/* <div><p className='mb-0'>allow access for free.</p></div> */}
+                                            </div>
+                                        </div>
+                                        <div className={`product-price-wrapper w-100 p-2 border-2 rounded ${activePrice === 'onetime' ? 'active' : ''}`} onClick={() => { setActivePrice('onetime') }}>
+                                            <div className='product-price'>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked={activePrice === "onetime"} />
+                                                    <label class="form-check-label" for="flexRadioDefault1">
+                                                        Single Payment
+                                                    </label>
+                                                </div>
+                                                <div><p className='mb-0'>charge a one-time fee.</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Col>
+                            </Row>
+                            <Row>
+                                {activePrice === "free" && (
+                                    <Col md={12} className='mt-3'>
+                                        <p>Access expires.</p>
+                                        <Form.Select aria-label="Default select example" className="mb-3">
+                                            <option value="0">Never</option>
+                                            <option value="1">After 7 days</option>
+                                            <option value="2">After 2 weeks</option>
+                                            <option value="3">After 1 month</option>
+                                            <option value="4">After 2 months</option>
+                                            <option value="5">After 3 months</option>
+                                            <option value="6">After 6 months</option>
+                                            <option value="7">After 1 year</option>
+                                        </Form.Select>
+                                    </Col>
+                                )}
+
+                                {activePrice === "subscription" && (
+                                    <Col md={12} className='mt-3'>
+                                        <Form.Group className="mb-3">
+                                            <Form.Control type="number" placeholder="Rs." />
+                                        </Form.Group>
+                                        <Form.Group className="mb-3">
+                                            <Form.Select aria-label="Default select example">
+                                                <option value="0">Per custom time period</option>
+                                                <option value="1">Per 7 days</option>
+                                                <option value="2">Per 2 weeks</option>
+                                                <option value="3">Per month</option>
+                                                <option value="4">Per 2 months</option>
+                                                <option value="5">Per 3 months</option>
+                                                <option value="6">Per 6 months</option>
+                                                <option value="7">Per year</option>
+                                            </Form.Select>
+                                        </Form.Group>
+                                    </Col>
+                                )}
+
+                                {activePrice === "onetime" && (
+                                    <Col md={12} className='mt-3'>
+                                        <Form.Group className="mb-3">
+                                            <Form.Control type="number" placeholder="Rs." />
+                                        </Form.Group>
+                                        <Form.Group className="mb-3">
+                                            <Form.Select aria-label="Default select example">
+                                                <option value="0">Never expires</option>
+                                                <option value="1">Expires after cutom time period</option>
+                                                <option value="2">Expires 7 days</option>
+                                                <option value="2">Expires 2 weeks</option>
+                                                <option value="3">Expires 1 month</option>
+                                                <option value="4">Expires 2 months</option>
+                                                <option value="5">Expires 3 months</option>
+                                                <option value="6">Expires 6 months</option>
+                                                <option value="7">Expires 1 year</option>
+                                            </Form.Select>
+                                        </Form.Group>
+                                    </Col>
+                                )}
+
                             </Row>
                         </Form>
                     </Container>
@@ -588,7 +718,7 @@ const Seller = () => {
                                             placeholder="Question"
                                             style={{ height: '100px' }}
                                         />
-                                       
+
                                     </Form.Group>
                                 </Col>
                             </Row>

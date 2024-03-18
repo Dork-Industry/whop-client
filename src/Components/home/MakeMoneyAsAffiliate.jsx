@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const MakeMoneyAsAffiliate = () => {
   return (
@@ -10,7 +11,7 @@ const MakeMoneyAsAffiliate = () => {
       
          <div className="paragraph2 mb-6 mt-2">Promote other products on Whop to earn cash. Our top affiliates make up to $1,000+ per month!</div>
        <div className='w-full flex justify-center md:justify-start'>
-       <a href="/affiliates/" className='bg-whop-black px-4 py-2 text-base font-semibold font-sans text-white rounded-md '>Become an Affiliate </a>
+       <Link to={"/affiliates/"} className='bg-whop-black px-4 py-2 text-base font-semibold font-sans text-white rounded-md '>Become an Affiliate </Link>
 
        </div>
         

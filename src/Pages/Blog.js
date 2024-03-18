@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { AuthContext } from '../AuthProvider';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
     return (
@@ -17,7 +18,7 @@ const Blog = () => {
                                 <nav aria-label="breadcrumb">
                                     <ol className="breadcrumb">
                                         <li className="breadcrumb-item">
-                                            <a href="/">Home</a>
+                                            <Link to={"/"}>Home</Link>
                                         </li>
                                         <li className="breadcrumb-item active" aria-current="page">
                                             Blog
@@ -37,14 +38,14 @@ const Blog = () => {
                             <div className="postbox__wrapper">
                                 <article className="postbox__item format-image fix mb-50 wow fadeInUp" data-wow-delay=".2s">
                                     <div className="postbox__thumb">
-                                        <a href="blog-details.html" className="w-img">
+                                        <Link to={"/blog-details.html"} className="w-img">
                                             <img src="assets/img/blog/blog-1.jpg" alt="" />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="postbox__content">
                                         <div className="postbox__meta d-flex mb-10">
                                             <div className="postbox__tag mr-20">
-                                                <a href="#">marketing</a>
+                                                <Link to={"#"}>marketing</Link>
                                             </div>
                                             <div className="postbox__date">
                                                 <span>
@@ -53,7 +54,7 @@ const Blog = () => {
                                             </div>
                                         </div>
                                         <h3 className="postbox__title mb-15">
-                                            <a href="blog-details.html">Why we decide to build this platform?</a>
+                                            <Link to="blog-details.html">Why we decide to build this platform?</Link>
                                         </h3>
                                         <div className="postbox__text mb-20">
                                             <p>
@@ -66,7 +67,7 @@ const Blog = () => {
                                                 <img src="assets/img/blog/author/blog-author-1.jpg" alt="" />
                                             </div>
                                             <h5>
-                                                Post by <a href="#">Jatin Das</a>{' '}
+                                                Post by <Link to={"#"}>Jatin Das</Link>{' '}
                                             </h5>
                                         </div>
                                     </div>
@@ -74,14 +75,14 @@ const Blog = () => {
 
                                 <article className="postbox__item format-image fix mb-50 wow fadeInUp" data-wow-delay=".2s">
                                     <div className="postbox__thumb">
-                                        <a href="blog-details.html" className="w-img">
+                                        <Link to={"blog-details.html"} className="w-img">
                                             <img src="assets/img/blog/blog-1.jpg" alt="" />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="postbox__content">
                                         <div className="postbox__meta d-flex mb-10">
                                             <div className="postbox__tag mr-20">
-                                                <a href="#">marketing</a>
+                                                <Link to={"#"}>marketing</Link>
                                             </div>
                                             <div className="postbox__date">
                                                 <span>
@@ -90,7 +91,7 @@ const Blog = () => {
                                             </div>
                                         </div>
                                         <h3 className="postbox__title mb-15">
-                                            <a href="blog-details.html">Why we decide to build this platform?</a>
+                                            <Link to={"blog-details.html"}>Why we decide to build this platform?</Link>
                                         </h3>
                                         <div className="postbox__text mb-20">
                                             <p>
@@ -103,7 +104,7 @@ const Blog = () => {
                                                 <img src="assets/img/blog/author/blog-author-1.jpg" alt="" />
                                             </div>
                                             <h5>
-                                                Post by <a href="#">Jatin Das</a>{' '}
+                                                Post by <Link to={"#"}>Jatin Das</Link>{' '}
                                             </h5>
                                         </div>
                                     </div>
@@ -111,14 +112,14 @@ const Blog = () => {
 
                                 <article className="postbox__item format-image fix mb-50 wow fadeInUp" data-wow-delay=".2s">
                                     <div className="postbox__thumb">
-                                        <a href="blog-details.html" className="w-img">
+                                        <Link to={"blog-details.html"} className="w-img">
                                             <img src="assets/img/blog/blog-1.jpg" alt="" />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="postbox__content">
                                         <div className="postbox__meta d-flex mb-10">
                                             <div className="postbox__tag mr-20">
-                                                <a href="#">marketing</a>
+                                                <Link to={"#"}>marketing</Link>
                                             </div>
                                             <div className="postbox__date">
                                                 <span>
@@ -127,7 +128,7 @@ const Blog = () => {
                                             </div>
                                         </div>
                                         <h3 className="postbox__title mb-15">
-                                            <a href="blog-details.html">Why we decide to build this platform?</a>
+                                            <Link to={"blog-details.html"}>Why we decide to build this platform?</Link>
                                         </h3>
                                         <div className="postbox__text mb-20">
                                             <p>
@@ -140,7 +141,7 @@ const Blog = () => {
                                                 <img src="assets/img/blog/author/blog-author-1.jpg" alt="" />
                                             </div>
                                             <h5>
-                                                Post by <a href="#">Jatin Das</a>{' '}
+                                                Post by <Link to={"#"}>Jatin Das</Link>{' '}
                                             </h5>
                                         </div>
                                     </div>
@@ -170,48 +171,48 @@ const Blog = () => {
                                             <div className="rc__post-wrapper">
                                                 <div className="rc__post d-flex align-items-center">
                                                     <div className="rc__thumb mr-15">
-                                                        <a href="blog-details.html">
+                                                        <Link to={"blog-details.html"}>
                                                             <img src="assets/img/blog/sm/blog-sm-1.jpg" alt="" />
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <div className="rc__content">
                                                         <div className="rc__meta">
                                                             <span>October 15, 2021</span>
                                                         </div>
                                                         <h6 className="rc__title">
-                                                            <a href="blog-details.html">Communication Between Teams</a>
+                                                            <Link to={"blog-details.html"}>Communication Between Teams</Link>
                                                         </h6>
                                                     </div>
                                                 </div>
                                                 <div className="rc__post d-flex align-items-center">
                                                     <div className="rc__thumb mr-15">
-                                                        <a href="blog-details.html">
+                                                        <Link to={"blog-details.html"}>
                                                             <img src="assets/img/blog/sm/blog-sm-2.jpg" alt="" />
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <div className="rc__content">
                                                         <div className="rc__meta">
                                                             <span>March 26, 2021</span>
                                                         </div>
                                                         <h6 className="rc__title">
-                                                            <a href="blog-details.html">How to build outside links</a>
+                                                            <Link to={"blog-details.html"}>How to build outside links</Link>
                                                         </h6>
                                                     </div>
                                                 </div>
                                                 <div className="rc__post d-flex align-items-center">
                                                     <div className="rc__thumb mr-15">
-                                                        <a href="blog-details.html">
+                                                        <Link to={"blog-details.html"}>
                                                             <img src="assets/img/blog/sm/blog-sm-3.jpg" alt="" />
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     <div className="rc__content">
                                                         <div className="rc__meta">
                                                             <span>October 15, 2021</span>
                                                         </div>
                                                         <h6 className="rc__title">
-                                                            <a href="blog-details.html">
+                                                            <Link to={"blog-details.html"}>
                                                                 20 creative ways to decorate puja pandel
-                                                            </a>
+                                                            </Link>
                                                         </h6>
                                                     </div>
                                                 </div>
@@ -226,16 +227,16 @@ const Blog = () => {
                                             <div className="sidebar__catagory">
                                                 <ul>
                                                     <li>
-                                                        <a href="/blog">Social (6)</a>
+                                                        <Link to={"/blog"}>Social (6)</Link>
                                                     </li>
                                                     <li>
-                                                        <a href="/blog"> Creative (14)</a>
+                                                        <Link to={"/blog"}> Creative (14)</Link>
                                                     </li>
                                                     <li>
-                                                        <a href="/blog">Odia Literature (12)</a>
+                                                        <Link to={"/blog"}>Odia Literature (12)</Link>
                                                     </li>
                                                     <li>
-                                                        <a href="/blog">Innovative Ideas (10)</a>
+                                                        <Link to={"/blog"}>Innovative Ideas (10)</Link>
                                                     </li>
                                                 </ul>
                                             </div>

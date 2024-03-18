@@ -112,7 +112,7 @@ const Sidebar = () => {
                                 </ul>
                             </li>
 
-                            <li>
+                            {/* <li>
                                 <a href="#">
                                     <i className="metismenu-icon pe-7s-display2"></i>Support Requests
                                     <i className="metismenu-state-icon pe-7s-angle-down caret-left"></i>
@@ -124,7 +124,7 @@ const Sidebar = () => {
                                         </a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> */}
 
                             <li className="app-sidebar__heading">Settings</li>
                             <li>

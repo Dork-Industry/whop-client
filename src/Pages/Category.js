@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Apiconnect from '../services/Apiconnect.js';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import helper from '../services/HelperCodebase.js';
 
@@ -287,7 +287,7 @@ const Category = () => {
                                                     }}
                                                 >
                                                     <h4 style={{ fontSize: 16 }} className="card-title h5 h4-sm">
-                                                        <a href={'/product/' + val.prod_code}>
+                                                        <Link to={'/product/' + val.prod_code}>
                                                             {val.thumbnail && (
                                                                 <img
                                                                     style={{ marginRight: 5 }}
@@ -303,7 +303,7 @@ const Category = () => {
                                                                 style={{ color: '#625bf6' }}
                                                                 className="fa fa-circle-check"
                                                             ></i>
-                                                        </a>{' '}
+                                                        </Link>{' '}
                                                     </h4>
                                                     <p
                                                         style={{ marginBottom: 0, fontSize: 11, color: '#e0a008' }}
@@ -339,39 +339,39 @@ const Category = () => {
                                     >
                                         <ul>
                                             <li>
-                                                <a href="product.html">
+                                                <Link to={"product.html"}>
                                                     <i className="arrow_left"></i>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a href="/">
+                                                <Link to={"/"}>
                                                     <span>1</span>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li className="active">
-                                                <a href="product.html">
+                                                <Link to={"product.html"}>
                                                     <span>2</span>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a href="product.html">
+                                                <Link to={"product.html"}>
                                                     <span>3</span>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a href="product.html">
+                                                <Link to={"product.html"}>
                                                     <i className="fal fa-ellipsis-h"></i>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a href="product.html">
+                                                <Link to={"product.html"}>
                                                     <span>30</span>
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a href="product.html">
+                                                <Link to={"product.html"}>
                                                     <i className="arrow_right"></i>
-                                                </a>
+                                                </Link>
                                             </li>
                                         </ul>
                                     </div>

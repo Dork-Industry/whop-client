@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ConnectedAccount = () => {
   return (
@@ -81,7 +82,7 @@ const ConnectedAccount = () => {
                </div>
                <span className="text-subtitle3 break-words">Twitter</span>
             </div>
-            <a href="https://whop.com/api/v4/auth/twitter?wru=https%3A%2F%2Fwhop.com%2Faccount%2Fconnected-accounts%2F&amp;wa=connect">
+            <Link to={"https://whop.com/api/v4/auth/twitter?wru=https%3A%2F%2Fwhop.com%2Faccount%2Fconnected-accounts%2F&amp;wa=connect"}>
                <button type="button" className="group/button relative flex shrink-0 items-center justify-center overflow-hidden rounded-md w-fit focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring bg-whop-background text-whop-black border-whop-stroke-dark border text-button4 h-10 px-[15px] shadow-sm">
                   <div className="absolute inset-0 transition group-hover/button:bg-black/[4%] group-active/button:bg-black/[8%] biz-dark-1:group-hover/button:bg-white/[8%] biz-dark-1:group-active/button:bg-white/[16%] biz-dark-2:group-hover/button:bg-white/[8%] biz-dark-2:group-active/button:bg-white/[16%]"></div>
                   <div className="z-10 flex items-center justify-center">
@@ -91,7 +92,7 @@ const ConnectedAccount = () => {
                      <div className="">Add account</div>
                   </div>
                </button>
-            </a>
+            </Link>
          </div>
          <div className="border-whop-stroke w-full border-b-[1px]"></div>
          <div className="flex items-center justify-between gap-x-1 px-6 py-4">

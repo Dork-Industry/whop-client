@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Apiconnect from '../services/Apiconnect.js';
 import { useNavigate } from 'react-router-dom';
 
@@ -85,10 +85,10 @@ const Useradd = () => {
                 <div className="col-md-6">
                     <div className="card-body cbtop">
                         <h2>{actn} User</h2>
-                        <a href="/admin/User" className="btn btn-success midbtn">
+                        <Link href={"/admin/User"} className="btn btn-success midbtn">
                             {' '}
                             <i className="fa fa-arrow-left"></i> Back
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="card-body">

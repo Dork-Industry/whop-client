@@ -17,7 +17,13 @@ import '../Users/App.css';
 
 const UserRouting = () => {
     const navigate = useNavigate();
-    const user_typ = localStorage.getItem('user_typ');
+    // const user_typ = localStorage.getItem('user_typ');
+    let user_typ;
+    const user = localStorage.getItem('user');
+    if (user) {
+        const userData = JSON.parse(user);
+        user_typ = userData.user_typ;
+    }
 
     useEffect(() => {
         console.log('--->' + user_typ);

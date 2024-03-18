@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const WhopBlog = () => {
   return (
@@ -25,7 +26,7 @@ const WhopBlog = () => {
                   </svg>
                </div>
             </button>
-            <a target="_blank" href="blog/">
+            <Link target="_blank" to={"blog/"}>
                <button type="button" className="group/button relative flex shrink-0 items-center justify-center overflow-hidden rounded-md w-fit focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring bg-whop-background text-whop-black border-whop-stroke border text-button4 h-10 px-[15px]">
                   <div className="absolute inset-0 transition group-hover/button:bg-black/[4%] group-active/button:bg-black/[8%] biz-dark-1:group-hover/button:bg-white/[8%] biz-dark-1:group-active/button:bg-white/[16%] biz-dark-2:group-hover/button:bg-white/[8%] biz-dark-2:group-active/button:bg-white/[16%]"></div>
                   <div className="z-10 flex items-center justify-center">
@@ -35,7 +36,7 @@ const WhopBlog = () => {
                      </svg>
                   </div>
                </button>
-            </a>
+            </Link>
          </div>
       </div>
       <div className="relative mt-6">
@@ -43,11 +44,11 @@ const WhopBlog = () => {
            
          {[0, 1, 2, 3, 4, 5, 6, 7, 8].map(() => (
             <div className="ml-2 shrink-0 snap-start first-of-type:ml-0 sm:ml-3 sm:first-of-type:ml-0 lg:ml-5 lg:first-of-type:ml-0 w-[93%] sm:w-[calc(50%-6px)] md:w-[calc(33.333%-8px)] lg:w-[calc(25%-15px)]">
-               <a href="skool-vs-mighty-networks/" target="_blank" className="block select-none overflow-hidden transition active:scale-95">
+               <Link to={"skool-vs-mighty-networks/"} target="_blank" className="block select-none overflow-hidden transition active:scale-95">
                   <div className="relative aspect-w-2 aspect-h-1" ><img alt="Company Image" draggable="false" loading="lazy" decoding="async" data-nimg="fill" className="rounded-lg object-cover text-transparent"  sizes="100vw" src='/assets/img/blog/sm/skool.webp' /></div>
                   <div className="text-base font-semibold text-whop-black mb-1 mt-3 overflow-hidden text-ellipsis whitespace-nowrap">Skool vs Mighty Networks: Which Community Platform is Best?</div>
                   <div className="text3 text-whop-dark-gray max-h-[34px] overflow-hidden text-ellipsis [-webkit-box-orient:vertical] [-webkit-line-clamp:2] [display:-webkit-box]">A comprehensive comparison of Mighty Networks and Skool, two platforms for online community creation and course creation.</div>
-               </a>
+               </Link>
             </div>
          ))}
          </div>

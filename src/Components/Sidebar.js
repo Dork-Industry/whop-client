@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../AuthProvider';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
     //   const { logout } = useContext(AuthContext);
@@ -63,135 +63,135 @@ const Sidebar = () => {
                         <ul className="vertical-nav-menu">
                             <li className="app-sidebar__heading"> </li>
                             <li>
-                                <a href="/admin/dashboard" className="mm-active">
+                                <Link to={"/admin/dashboard"} className="mm-active">
                                     <i className="metismenu-icon pe-7s-rocket"></i>
                                     Dashboard
-                                </a>
+                                </Link>
                             </li>
                             <li className="app-sidebar__heading">Biz Updates</li>
 
                             <li>
-                                <a href="#">
+                                <Link to={"#"}>
                                     <i className="metismenu-icon pe-7s-display2"></i>Seller Management
                                     <i className="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                </a>
+                                </Link>
                                 <ul>
                                     <li>
-                                        <a href="/admin/seller">
+                                        <Link to={"/admin/seller"}>
                                             <i className="metismenu-icon"></i>Seller
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="/admin/">
+                                        <Link to={"/admin/"}>
                                             <i className="metismenu-icon"></i>Product Report
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="/admin/">
+                                        <Link to={"/admin/"}>
                                             <i className="metismenu-icon"></i>Payouts
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="/admin/">
+                                        <Link to={"/admin/"}>
                                             <i className="metismenu-icon"></i>Support Tickets
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </li>
 
                             <li>
-                                <a href="#">
+                                <Link to={"#"}>
                                     <i className="metismenu-icon pe-7s-display2"></i>Customer Management
                                     <i className="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                </a>
+                                </Link>
                                 <ul>
                                     <li>
-                                        <a href="/admin/user">
+                                        <Link to={"/admin/user"}>
                                             <i className="metismenu-icon"></i>Customers
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="/admin/">
+                                        <Link to={"/admin/"}>
                                             <i className="metismenu-icon"></i>Booking History
-                                        </a>
+                                        </Link>
                                     </li>
 
                                     <li>
-                                        <a href="/admin/">
+                                        <Link to={"/admin/"}>
                                             <i className="metismenu-icon"></i>Support Tickets
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </li>
 
                             <li>
-                                <a href="#">
+                                <Link to={"#"}>
                                     <i className="metismenu-icon pe-7s-display2"></i>Team Management
                                     <i className="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                </a>
+                                </Link>
                                 <ul>
                                     <li>
-                                        <a href="/admin/team">
+                                        <Link to={"/admin/team"}>
                                             <i className="metismenu-icon"></i>Team List
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="/admin/">
+                                        <Link to={"/admin/"}>
                                             <i className="metismenu-icon"></i>User Role
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </li>
 
                             <li className="app-sidebar__heading">Master Seups</li>
                             <li>
-                                <a href="#">
+                                <Link href={"#"}>
                                     <i className="metismenu-icon pe-7s-diamond"></i>Configs
                                     <i className="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                </a>
+                                </Link>
                                 <ul>
                                     <li>
-                                        <a href="/admin/category">Category</a>
+                                        <Link to={"/admin/category"}>Category</Link>
                                     </li>
                                     <li>
-                                        <a href="/admin/country">Country</a>
+                                        <Link to={"/admin/country"}>Country</Link>
                                     </li>
                                     <li>
-                                        <a href="/admin/state">State</a>
+                                        <Link to={"/admin/state"}>State</Link>
                                     </li>
                                     <li>
-                                        <a href="/admin/city">City</a>
+                                        <Link to={"/admin/city"}>City</Link>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">
+                                <Link to={"#"}>
                                     <i className="metismenu-icon pe-7s-diamond"></i>Seo Setups
                                     <i className="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                                </a>
+                                </Link>
                                 <ul>
                                     <li>
-                                        <a href="/admin/category">On Page Seo</a>
+                                        <Link to={"/admin/category"}>On Page Seo</Link>
                                     </li>
                                     <li>
-                                        <a href="/admin/country">Analytics</a>
+                                        <Link to={"/admin/country"}>Analytics</Link>
                                     </li>
                                     <li>
-                                        <a href="/admin/state">Robots Txt</a>
+                                        <Link to={"/admin/state"}>Robots Txt</Link>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="/admin/settings">
+                                <Link to={"/admin/settings"}>
                                     <i className="metismenu-icon pe-7s-diamond"></i> Site Settings
-                                </a>
+                                </Link>
                             </li>
 
                             <li>
                                 {' '}
-                                <a className="btn btn-warning" style={{ marginTop: 90 }} href="/admin/logout">
+                                <Link className="btn btn-warning" style={{ marginTop: 90 }} to={"/admin/logout"}>
                                     Logout{' '}
-                                </a>{' '}
+                                </Link>{' '}
                             </li>
                         </ul>
                     </div>

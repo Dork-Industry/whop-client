@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Apiconnect from '../../services/Apiconnect'
 import { Image } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     // const recentz = [
@@ -108,7 +109,7 @@ const Banner = () => {
                             <div className="absolute bottom-0 left-0 right-0 z-10 h-14 bg-gradient-to-b from-transparent to-white"></div>
 
                             {recentz.map((rcn, index) => (
-                                <a className="HomeHero_appear__v0PA3 transition-all text-whop-black" href="#">
+                                <Link className="HomeHero_appear__v0PA3 transition-all text-whop-black" to={"#"}>
                                     <div className="border-whop-stroke flex items-center gap-2 rounded-[20px] border border-solid p-2 shadow-md transition duration-300 hover:scale-[101%] hover:shadow-lg">
                                         {/* <img className="border-whop-stroke border-[0.5px] rounded-xl object-cover w-12 h-12" src={rcn.thumb} alt="Event image" width="48" height="48" loading="eager" fetchpriority="high" /> */}
                                         <Image className="border-whop-stroke border-[0.5px] rounded-xl object-cover w-12 h-12" src={rcn.thumbnail} alt="Event image" width="48" height="48" loading="eager" fetchpriority="high" />
@@ -120,7 +121,7 @@ const Banner = () => {
                                             <p className="text3 text-whop-dark-gray mt-1 mb-0 text-ellipsis whitespace-nowrap p-0">{`New ${rcn.user_typ} Loggen in`}</p>
                                         </div>
                                     </div>
-                                </a>
+                                </Link>
                             ))}
 
                         </div>

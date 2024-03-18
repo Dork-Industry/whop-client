@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Apiconnect from '../services/Apiconnect.js';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
@@ -58,10 +58,10 @@ const Category = () => {
                 <div className="col-md-6">
                     <div className="card-body cbtop">
                         <h2>{actn} Category</h2>
-                        <a href="/admin/category" className="btn btn-success midbtn">
+                        <Link to={"/admin/category"} className="btn btn-success midbtn">
                             {' '}
                             <i className="fa fa-arrow-left"></i> Back
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="card-body">

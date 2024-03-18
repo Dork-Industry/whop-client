@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Apiconnect from '../../services/Apiconnect.js';
 import ProductCard from './ProductCard.jsx';
+import { Link } from 'react-router-dom';
 const TrendingProducts = () => {
    const [List, setList] = useState([]);
    useEffect(() => {
@@ -41,7 +42,7 @@ const TrendingProducts = () => {
                   </svg>
                </div>
             </button> */}
-                  <a href="/charts/?tab=1">
+                  <Link to={"/charts/?tab=1"}>
                      <button type="button" className="group/button relative flex shrink-0 items-center justify-center overflow-hidden rounded-md w-fit focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring bg-whop-background text-whop-black border-whop-stroke border text-button4 h-10 px-[15px]">
                         <div className="absolute inset-0 transition group-hover/button:bg-black/[4%] group-active/button:bg-black/[8%] biz-dark-1:group-hover/button:bg-white/[8%] biz-dark-1:group-active/button:bg-white/[16%] biz-dark-2:group-hover/button:bg-white/[8%] biz-dark-2:group-active/button:bg-white/[16%]"></div>
                         <div className="z-10 flex items-center justify-center">
@@ -51,7 +52,7 @@ const TrendingProducts = () => {
                            </svg>
                         </div>
                      </button>
-                  </a>
+                  </Link>
                </div>
             </div>
             <div className="relative mt-6">

@@ -24,10 +24,17 @@ const Login = () => {
         Apiconnect.postData('users/verifyloginotp', indata).then((response) => {
             var resz = response.data;
             if (response.data.accessToken) {
+                const userData = {
+                    user_typ : resz.user_typ,
+                    user_id : resz.id,
+                    user_email : resz.email,
+                    user_name : resz.username
+                }
+                // localStorage.setItem('token', resz.accessToken);
+                // localStorage.setItem('user_typ', resz.user_typ);
+                // localStorage.setItem('user_id', resz.id);
                 localStorage.setItem('token', resz.accessToken);
-                localStorage.setItem('user_typ', resz.user_typ);
-                localStorage.setItem('user_id', resz.id);
-
+                localStorage.setItem('user', JSON.stringify(userData))
                 login(1);
                 // Reset form fields
                 setEmail('');
@@ -72,17 +79,17 @@ const Login = () => {
             loginType : 'google'
         };
 
-
         Apiconnect.postDataNoauth('users/login', indata).then((response) => {
             var resz = response.data;
-            // if (resz.status === "OK") {
-            //     setGetOTP(true);
-            // }
-            // console.warn(resz.status);
             if (response.data.accessToken) {
+                const userData = {
+                    user_typ : resz.user_typ,
+                    user_id : resz.id,
+                    user_email : resz.email,
+                    user_name : resz.username
+                }
                 localStorage.setItem('token', resz.accessToken);
-                localStorage.setItem('user_typ', resz.user_typ);
-                localStorage.setItem('user_id', resz.id);
+                localStorage.setItem('user', JSON.stringify(userData))
 
                 login(1);
                 // Reset form fields
@@ -103,7 +110,6 @@ const Login = () => {
 
     }
     
-
     useEffect(() => {
         if (otp.join("").length === 6) {
             verifyloginotp();

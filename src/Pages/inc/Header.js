@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const Header = ({ basic }) => {
 
     const { cartItmCount } = useData();
-    const user_typ = localStorage.getItem('user_typ');
+    // const user_typ = localStorage.getItem('user_typ');
     const [utyp, setUtyp] = useState('');
     const [utyplink, setUtyplink] = useState('');
     const [CatList, setCatList] = useState([]);
@@ -16,12 +16,18 @@ const Header = ({ basic }) => {
     const [searchValue, setSearchValue] = useState('');
     const [searchResult, setSearchResult] = useState([]);
     const navigate = useNavigate();
+
     const handleInputChange = (event) => {
         setSearchValue(event.target.value);
     };
 
     useEffect(() => {
-        setUtyp(user_typ);
+        const user = localStorage.getItem('user');
+        if (user) {
+            const userData = JSON.parse(user);
+            setUtyp(userData.user_typ);
+        }
+        // setUtyp(user_typ);
         getCatList();
     }, []);
 
@@ -38,7 +44,7 @@ const Header = ({ basic }) => {
         navigate({
             pathname: '/search',
             search: `?type=${searchValue}`,
-          });
+        });
     }
 
     return (
@@ -175,7 +181,7 @@ const Header = ({ basic }) => {
                         <div className="padded-container px-10">
                             <div className="flex items-center justify-between gap-8 py-3.5">
                                 <div className="r flex flex-1 items-center gap-8">
-                                    <a href="/"><img alt="Whop" draggable="false" loading="lazy" width="137" height="28" decoding="async" data-nimg="1" className="pointer-events-none" src="/assets/img/logo/whop.svg" /></a>
+                                    <Link to={"/"}><img alt="Whop" draggable="false" loading="lazy" width="137" height="28" decoding="async" data-nimg="1" className="pointer-events-none" src="/assets/img/logo/whop.svg" /></Link>
                                     {!basic && <div className="hidden flex-1 sm:block ">
                                         <form onSubmit={(e) => searchData(e)}>
                                             <div className="border-whop-stroke relative flex w-full max-w-[500px] items-stretch rounded-md border border-solid outline-2 transition " data-headlessui-state="">
@@ -201,37 +207,37 @@ const Header = ({ basic }) => {
                                 </div>
                                 <div className="flex items-center gap-6 font-semibold">
                                     {!basic && <>
-                                        <a className="text-button4 font-semibold text-whop-darkGray hidden whitespace-nowrap lg:block" href="/affiliate">Become an Affiliate</a>
+                                        <Link className="text-button4 font-semibold text-whop-darkGray hidden whitespace-nowrap lg:block" to={"/affiliate"}>Become an Affiliate</Link>
                                         {/* <a href="/seller_register" className="text-button4 text-whop-darkGray hidden whitespace-nowrap lg:block">Start Selling</a> */}
-                                        <a href="/sell" className="text-button4 text-whop-darkGray hidden whitespace-nowrap lg:block">Start Selling</a>
-                                        <a className="text-button4 text-whop-darkGray hidden whitespace-nowrap lg:block" target="_blank" href="/blog">Blog</a>
+                                        <Link to={"/sell"} className="text-button4 text-whop-darkGray hidden whitespace-nowrap lg:block">Start Selling</Link>
+                                        <Link className="text-button4 text-whop-darkGray hidden whitespace-nowrap lg:block" target="_blank" to={"/blog"}>Blog</Link>
 
                                     </>
                                     }
                                     <div className="text-button4 text-whop-darkGray hidden cursor-pointer whitespace-nowrap sm:block" id="nav-sign-in">
                                         {utyp === 'User' ? (
-                                            <a href="/users/">
+                                            <Link to={"/users/"}>
                                                 <i className=""></i>User Dashboard
-                                            </a>
+                                            </Link>
                                         ) : utyp === 'Seller' ? (
-                                            <a href="/seller/">
+                                            <Link to={"/seller/"}>
                                                 <i className=""></i>Seller Dashboard
-                                            </a>
+                                            </Link>
                                         ) : utyp === 'Admin' ? (
-                                            <a href="/admin/">
+                                            <Link to={"/admin/"}>
                                                 <i className=""></i>Admin Dashboard
-                                            </a>
+                                            </Link>
                                         ) : (
-                                            <a href="/login" className='text-whop-darkGray'>
+                                            <Link to={"/login"} className='text-whop-darkGray'>
                                                 <i className=""></i>Sign in
-                                            </a>
+                                            </Link>
                                         )}</div>
-                                    <a href='/register' className="group/button relative flex shrink-0 items-center justify-center overflow-hidden rounded-md w-fit focus-visible:border-whop-fieldHighlight focus-visible:ring-whop-fieldHighlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring whitespace-nowrap bg-whop-primary text-whop-fixedWhite text-button4 h-10 px-[15px]">
+                                    <Link to={'/register'} className="group/button relative flex shrink-0 items-center justify-center overflow-hidden rounded-md w-fit focus-visible:border-whop-fieldHighlight focus-visible:ring-whop-fieldHighlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring whitespace-nowrap bg-whop-primary text-whop-fixedWhite text-button4 h-10 px-[15px]">
                                         <div className="absolute inset-0 transition group-hover/button:bg-black/[12%] group-active/button:bg-black/[18%]"></div>
                                         <div className="z-10 flex items-center justify-center">
                                             <div className="">Sign up</div>
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -239,7 +245,7 @@ const Header = ({ basic }) => {
                     <div className="sm:hidden ">
                         <div>
                             <div className="padded-container items-center justify-between py-4 flex">
-                                <a href="/"><img alt="Whop" draggable="false" loading="lazy" width="137" height="28" decoding="async" data-nimg="1" className="pointer-events-none " src="/assets/img/logo/whop.svg" /></a>
+                                <Link to={"/"}><img alt="Whop" draggable="false" loading="lazy" width="137" height="28" decoding="async" data-nimg="1" className="pointer-events-none " src="/assets/img/logo/whop.svg" /></Link>
                                 <div className="flex flex-nowrap w-fit items-center gap-4 ">
                                     <button onClick={() => setSearchOpen(true)}>
                                         <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="magnifying-glass" className="w-5" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -267,7 +273,7 @@ const Header = ({ basic }) => {
                         <div className="padded-container px-10 flex gap-8 overflow-x-auto">
                             {CatList?.map((valz, keyz) => {
                                 return (
-                                    <a key={keyz} className="subtitle3 text-sm font-medium   hover:text-whop-offBlack whitespace-nowrap py-3.5 transition text-whop-offBlack border-whop-offBlack border-b-[3px] pb-[11px]" href={'/category/' + valz.url}>{valz.name}</a>
+                                    <Link key={keyz} className="subtitle3 text-sm font-medium   hover:text-whop-offBlack whitespace-nowrap py-3.5 transition text-whop-offBlack border-whop-offBlack border-b-[3px] pb-[11px]" to={'/category/' + valz.url}>{valz.name}</Link>
                                 );
                             })}
                         </div>

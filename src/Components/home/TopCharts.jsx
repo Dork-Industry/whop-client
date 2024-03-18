@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TopChartProductCard from './TopChartProductCard.jsx'
+import { Link } from 'react-router-dom';
 const TopCharts = () => {
     const [activeTab, setActiveTab] = useState('topCharts');
 
@@ -31,7 +32,7 @@ const TopCharts = () => {
         <div className="padded-container py-8 [content-visibility:auto] lg:py-[60px]">
             <div className="mb-5 flex items-center justify-between">
                 <div className="display3">Top Charts</div>
-                <a href="/charts/">
+                <Link to={"/charts/"}>
                     <button type="button" className="group/button relative flex shrink-0 items-center justify-center overflow-hidden rounded-md w-fit focus-visible:border-whop-field-highlight focus-visible:ring-whop-field-highlight/30 outline-none transition focus:outline-none focus-visible:border focus-visible:ring bg-whop-background text-whop-black border-whop-stroke border text-button4 h-10 px-[15px]">
                         <div className="absolute inset-0 transition group-hover/button:bg-black/[4%] group-active/button:bg-black/[8%] biz-dark-1:group-hover/button:bg-white/[8%] biz-dark-1:group-active/button:bg-white/[16%] biz-dark-2:group-hover/button:bg-white/[8%] biz-dark-2:group-active/button:bg-white/[16%]"></div>
                         <div className="z-10 flex items-center justify-center">
@@ -41,7 +42,7 @@ const TopCharts = () => {
                             </svg>
                         </div>
                     </button>
-                </a>
+                </Link>
             </div>
             <div className="">
 

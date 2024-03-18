@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const SellerHeader = () => {
   return (
@@ -6,7 +7,7 @@ const SellerHeader = () => {
    <nav className="bg-gradient-to-b from-header-gradient-start to-header-gradient-end text-off-white sell bg-black">
       <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 relative z-50 flex justify-between py-4">
          <div className="relative z-10 flex items-center gap-16">
-            <a aria-label="Home" className="-mx-3 -my-1 rounded-md px-3 py-1 outline-none outline-2 outline-offset-2 focus-visible:outline-white" href="/sell/">
+            <Link aria-label="Home" className="-mx-3 -my-1 rounded-md px-3 py-1 outline-none outline-2 outline-offset-2 focus-visible:outline-white" to={"/sell/"}>
                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2117 466" aria-hidden="true" className="h-6 w-auto" fill="none">
                   <path fill="white" d="M894 365 817 54h69l52 215h1l75-215h59l75 215h1l52-215h69l-77 311h-71l-78-208h-1l-79 208h-70ZM1291 54h65v103h1c6-11 17-19 31-25 12-6 30-9 46-9 17 0 41 5 59 13 17 10 30 23 39 39s14 35 14 55v135h-65V239c0-18-6-32-17-42a63 63 0 0 0-44-15c-19 0-34 5-46 16a53 53 0 0 0-17 41v126h-66V54ZM1569 247a115 115 0 0 1 39-90 142 142 0 0 1 144-25 120 120 0 0 1 80 115c0 19-3 36-10 51-8 16-17 29-29 39a144 144 0 0 1-185-1c-12-10-22-23-29-38-7-16-10-33-10-51Zm198 0c0-20-6-36-18-48a66 66 0 0 0-49-18c-9 0-18 2-27 5-8 3-15 7-21 13s-10 13-13 21c-4 9-5 17-5 27s1 19 5 27a61 61 0 0 0 35 35 75 75 0 0 0 54 0c8-3 15-8 21-14 6-5 10-12 13-21 3-8 5-17 5-27ZM1856 123h62v34h1c4-9 22-24 35-28 14-4 27-6 41-6a119 119 0 0 1 121 124c0 17-3 34-9 49a120 120 0 0 1-63 66 122 122 0 0 1-88 3l-19-8c-6-3-11-6-15-11h-1v118h-65V123Zm195 124c0-20-7-36-19-48a65 65 0 0 0-48-18c-7 0-14 1-21 4-8 2-15 5-21 10-6 4-11 10-15 16s-6 13-6 21v30c0 10 3 19 9 27s14 14 23 18 20 7 32 7c20 0 36-6 48-19 11-12 18-28 18-48Z"></path>
                   <g clip-path="url(#a)">
@@ -68,14 +69,14 @@ const SellerHeader = () => {
                      </clipPath>
                   </defs>
                </svg>
-            </a>
+            </Link>
             <div className="relative hidden lg:flex lg:gap-8">
                <nav aria-label="Main" data-orientation="horizontal" dir="ltr" className="NavLinks_NavigationMenuRoot__F1Bcc">
                   <div >
                      <ul data-orientation="horizontal" className="flex gap-4" dir="ltr">
-                        <li><a className="flex items-center justify-between gap-[2px] rounded-md px-2 py-1 text-xs font-medium text-off-white outline-none outline-2 outline-offset-2 backdrop-blur-[2px] transition-colors hover:bg-[rgba(255,_98,_67,_0.1)] hover:text-brand focus-visible:outline-white" href="/" target="_blank" data-radix-collection-item="">Resources‌‌‌‍‌​‌‍‍‌‌‌</a></li>
-                        <li><a className="flex items-center justify-between gap-[2px] rounded-md px-2 py-1 text-xs font-medium text-off-white outline-none outline-2 outline-offset-2 backdrop-blur-[2px] transition-colors hover:bg-[rgba(255,_98,_67,_0.1)] hover:text-brand focus-visible:outline-white" href="/" target="_blank" data-radix-collection-item="">Developers‌‌‌‍‌​‌‍‍‌‌‍‌</a></li>
-                        <li><a className="flex items-center justify-between gap-[2px] rounded-md px-2 py-1 text-xs font-medium text-off-white outline-none outline-2 outline-offset-2 backdrop-blur-[2px] transition-colors hover:bg-[rgba(255,_98,_67,_0.1)] hover:text-brand focus-visible:outline-white" href="/" target="_blank" data-radix-collection-item="">Pricing‌‌‌‍‌​‌‍‍‌‌‌</a></li>
+                        <li><Link className="flex items-center justify-between gap-[2px] rounded-md px-2 py-1 text-xs font-medium text-off-white outline-none outline-2 outline-offset-2 backdrop-blur-[2px] transition-colors hover:bg-[rgba(255,_98,_67,_0.1)] hover:text-brand focus-visible:outline-white" to={"/"} target="_blank" data-radix-collection-item="">Resources‌‌‌‍‌​‌‍‍‌‌‌</Link></li>
+                        <li><Link className="flex items-center justify-between gap-[2px] rounded-md px-2 py-1 text-xs font-medium text-off-white outline-none outline-2 outline-offset-2 backdrop-blur-[2px] transition-colors hover:bg-[rgba(255,_98,_67,_0.1)] hover:text-brand focus-visible:outline-white" to={"/"} target="_blank" data-radix-collection-item="">Developers‌‌‌‍‌​‌‍‍‌‌‍‌</Link></li>
+                        <li><Link className="flex items-center justify-between gap-[2px] rounded-md px-2 py-1 text-xs font-medium text-off-white outline-none outline-2 outline-offset-2 backdrop-blur-[2px] transition-colors hover:bg-[rgba(255,_98,_67,_0.1)] hover:text-brand focus-visible:outline-white" to={"/"} target="_blank" data-radix-collection-item="">Pricing‌‌‌‍‌​‌‍‍‌‌‌</Link></li>
                      </ul>
                   </div>
                   <div className="NavLinks_ViewportPosition__7wsUL"></div>
@@ -91,8 +92,8 @@ const SellerHeader = () => {
                </button>
             </div>
             <div ></div>
-            <a className=" justify-center rounded-md shadow-outline-button-shadow py-1.5 px-3.5 text-xs text-off-white font-semibold outline-2 outline-offset-2  focus-visible:outline-2 focus-visible:outline focus-visible:outline-offset-2 transition-all bg-outline-button outline-white hidden lg:block" target="_blank" href="/"><span className="flex items-center gap-2">Contact sales‌‌‌‍‌​‌‍‍‌‌‌</span></a>
-            <a className=" justify-center rounded-md py-2 px-3 text-xs font-semibold outline-2 outline-offset-2  focus-visible:outline-2 focus-visible:outline focus-visible:outline-offset-2 shadow-orange-button-shadow bg-blend-overlay bg-orange-button  transition-all hover:bg-gradient-button-orange-hover active:bg-gradient-button-orange-active outline-brand hidden lg:block" href="/seller-register"><span className="flex items-center gap-2">Sign up‌‌‌‍‌​‌‍‍‌‌‌</span></a>
+            <Link className=" justify-center rounded-md shadow-outline-button-shadow py-1.5 px-3.5 text-xs text-off-white font-semibold outline-2 outline-offset-2  focus-visible:outline-2 focus-visible:outline focus-visible:outline-offset-2 transition-all bg-outline-button outline-white hidden lg:block" target="_blank" to={"/"}><span className="flex items-center gap-2">Contact sales‌‌‌‍‌​‌‍‍‌‌‌</span></Link>
+            <Link className=" justify-center rounded-md py-2 px-3 text-xs font-semibold outline-2 outline-offset-2  focus-visible:outline-2 focus-visible:outline focus-visible:outline-offset-2 shadow-orange-button-shadow bg-blend-overlay bg-orange-button  transition-all hover:bg-gradient-button-orange-hover active:bg-gradient-button-orange-active outline-brand hidden lg:block" to={"/seller-register"}><span className="flex items-center gap-2">Sign up‌‌‌‍‌​‌‍‍‌‌‌</span></Link>
          </div>
       </div>
    </nav>

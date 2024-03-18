@@ -1,11 +1,14 @@
 import React from 'react';
 
 const Topbar = () => {
+    const user = localStorage.getItem('user');
+    const userData = JSON.parse(user);
+
     return (
         <>
             <div className="app-header header-shadow">
                 <div className="app-header__logo">
-                    <h3>CONTROL</h3>
+                    <h3>WHOP</h3>
                     <div className="header__pane ml-auto">
                         <div>
                             <button
@@ -52,7 +55,7 @@ const Topbar = () => {
                                                 data-toggle="dropdown"
                                                 aria-haspopup="true"
                                                 aria-expanded="false"
-                                                className="p-0 btn"
+                                                className="p-0 btn d-flex justify-content-center align-items-center flex-column"
                                             >
                                                 <img
                                                     width="42"
@@ -60,7 +63,8 @@ const Topbar = () => {
                                                     src="/assets/img/testimonial/testi-1.jpg"
                                                     alt=""
                                                 />
-                                                <b> HI Seller </b> <i className="fa fa-angle-down ml-2 opacity-8"></i>
+                                                <p className='mb-0'>{userData.user_email} </p> 
+                                                {/* <i className="fa fa-angle-down ml-2 opacity-8"></i> */}
                                             </a>
                                             <div
                                                 tabIndex="-1"

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const RecentReviews = () => {
   return (
@@ -33,7 +34,7 @@ const RecentReviews = () => {
          {[0, 1, 2, 3, 4, 5, 6, 7, 8].map(() => (
            
             <div className="ml-2 shrink-0 snap-start first-of-type:ml-0 sm:ml-3 sm:first-of-type:ml-0 lg:ml-5 lg:first-of-type:ml-0 w-[93%] sm:w-[calc(50%-6px)] md:w-[calc(33.333%-8px)] lg:w-[calc(25%-15px)]">
-               <a className=" border-whop-stroke block cursor-pointer rounded-[10px] border border-solid p-4 shadow-md transition duration-300 ease-in-out  hover:scale-[102%]  hover:shadow-lg " href="/marketplace/thehaven/">
+               <Link className=" border-whop-stroke block cursor-pointer rounded-[10px] border border-solid p-4 shadow-md transition duration-300 ease-in-out  hover:scale-[102%]  hover:shadow-lg " to={"/marketplace/thehaven/"}>
                   <div className="mb-4 flex items-center gap-2">
                      <img className="border-whop-stroke border-[0.5px] rounded-full object-cover w-10 h-10"  src="https://img.whop.com/cfhBUc9jbeqYhlOkUCJDDy3E0U6VDo_IcSuLE72L4o8/rs:fill:40:40/el:1/aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXZhdGFycy8xNzY1MTg2OTc1Mzg1NTE4MDgvNTU2YjU5ZDdlZGMxZmJiOTQ4NDQ3YjhhYzBkZjk1YWY" alt="Reviewer avatar" width="40" height="40" loading="lazy" fetchpriority="auto" srcSet="https://img.whop.com/cfhBUc9jbeqYhlOkUCJDDy3E0U6VDo_IcSuLE72L4o8/rs:fill:40:40/el:1/aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXZhdGFycy8xNzY1MTg2OTc1Mzg1NTE4MDgvNTU2YjU5ZDdlZGMxZmJiOTQ4NDQ3YjhhYzBkZjk1YWY 1x, https://img.whop.com/7jnKzk6zhmymhvyxP2pV7jOczt7nyzrm0dEK41IiuMU/rs:fill:40:40/el:1/dpr:2/aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20vYXZhdGFycy8xNzY1MTg2OTc1Mzg1NTE4MDgvNTU2YjU5ZDdlZGMxZmJiOTQ4NDQ3YjhhYzBkZjk1YWY 2x"/>
                      <div className="min-w-0 flex-1">
@@ -125,7 +126,7 @@ const RecentReviews = () => {
                      </div>
                      <div className="text-whop-fieldHighlight subtitle3 cursor-pointer hover:underline">View</div>
                   </div>
-               </a>
+               </Link>
             </div>
          ))}
            

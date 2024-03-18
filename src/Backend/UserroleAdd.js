@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const UserroleAdd = () => {
     return (
@@ -7,10 +8,10 @@ const UserroleAdd = () => {
                 <div className="col-md-6">
                     <div className="card-body cbtop">
                         <h2>Add Role</h2>
-                        <a href="/admin/userrole" className="btn btn-success midbtn">
+                        <Link to={"/admin/userrole"} className="btn btn-success midbtn">
                             {' '}
                             <i className="fa fa-arrow-left"></i> Back
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="card-body">
