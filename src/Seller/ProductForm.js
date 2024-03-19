@@ -30,22 +30,22 @@ const Seller = () => {
         prod_tagline: '',
         prod_info: '',
         thumbnail: '',
-        facebooklink : '',
-        instagramlink:'',
-        youtubelink:'',
-        twitterlink:''
+        facebooklink: '',
+        instagramlink: '',
+        youtubelink: '',
+        twitterlink: ''
     });
 
     const [products, setProducts] = useState([]);
     const [product, setProduct] = useState({
-        product_name:'',
-        product_type:'',
+        product_name: '',
+        product_type: '',
         product_cat: '',
-        product_link:'',
-        product_desc:'',
-        price_type:'',
-        price:0,
-        expiry:''
+        product_link: '',
+        product_desc: '',
+        price_type: '',
+        price: 0,
+        expiry: ''
     })
 
     const {
@@ -91,6 +91,28 @@ const Seller = () => {
     const [showFeatureModal, setShowFeatureModal] = useState(false)
     const [showFAQModal, setShowFAQModal] = useState(false)
     const [choosenEmoji, setChoosenEmoji] = useState('');
+    const [features, setFeatures] = useState([]);
+    const [feature, setFeature] = useState({
+        feature_imoji: '',
+        feature_title: '',
+        feature_desc: ''
+    })
+
+    const {
+        feature_desc,
+        feature_title,
+    } = feature;
+
+    const [faqs, setFaqs] = useState([])
+    const [faq, setFaq] = useState({
+        question: '',
+        answer: ''
+    })
+
+    const {
+        question,
+        answer,
+    } = faq;
 
     const handleImageChange = (e) => {
         // Assuming only one file is selected
@@ -161,16 +183,28 @@ const Seller = () => {
         // console.log(infoz);
     };
 
-    const onProductInputChange = (e) =>{
+    const onProductInputChange = (e) => {
         setProduct({ ...product, [e.target.name]: e.target.value });
+    }
+
+    const onFeatureInputChange = (e) => {
+        setFeature({ ...feature, [e.target.name]: e.target.value });
+    }
+
+    const onFaqnputChange = (e) => {
+        setFaq({ ...faq, [e.target.name]: e.target.value })
     }
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        const data ={
+        const data = {
             infoz,
-            "products" : products 
+            "products": products,
+            "features": features,
+            "faqs": faqs
         }
+
+        console.log("data", data);
         if (param.id > 0) {
             ///console.log('in edit function' +param.id);
             Apiconnect.postData(`product/update/${param.id}`, infoz).then((response) => {
@@ -193,23 +227,43 @@ const Seller = () => {
             //     navigate('/seller/product');
             // });
             await Apiconnect.postData('store/create', data).then((response) => {
-
+                if (response.data.status === 1) {
+                    toast(response.data.message);
+                    navigate('/seller/product');
+                }
+                else{
+                    toast(response.data.message);
+                    // navigate('/seller/product');
+                }
             }).catch((err) => {
-                console.log("Err")
+                console.log("Err", err.message)
             })
         }
     };
 
-    const handleAddProduct = async (e) =>{
+    const handleAddProduct = async (e) => {
         e.preventDefault();
         setProducts([...products, product])
         // console.log("product", product)
         handleCloseProductModal();
     }
 
-    useEffect(()=>{
-        console.log("products", products)
-    }, [products])
+    const handleAddFeature = async (e) => {
+        e.preventDefault();
+        setFeatures([...features, feature]);
+        handleCloseFeatureModal();
+    }
+
+    const handleAddFaq = async (e) => {
+        e.preventDefault();
+        setFaqs([...faqs, faq]);
+        handleCloseFAQModal();
+    }
+
+    // useEffect(()=>{
+    //     console.log("products", products)
+    //     console.log("features", features)
+    // }, [products, features])
 
     const handleCloseProductModal = () => {
         setShowProductModal(false)
@@ -293,12 +347,14 @@ const Seller = () => {
 
     const emojiPickerFunction = (emojiObject) => {
         const emoji = emojiObject.emoji;
+        console.log("emoji", emoji, "type", typeof (emoji));
         setChoosenEmoji(emoji);
+        setFeature({ ...feature, "feature_imoji": emoji })
     };
 
     const handlePriceSelection = (pricetype) => {
         // console.log("pricetype", pricetype);
-        setActivePrice(pricetype); 
+        setActivePrice(pricetype);
         setProduct({ ...product, "price_type": pricetype });
     }
 
@@ -404,7 +460,7 @@ const Seller = () => {
                                     {/* <Form.Label>About Store : </Form.Label> */}
                                     <h5>About Store : </h5>
                                     <Form.Control as="textarea" rows={3} name="prod_info" value={prod_info}
-                                        onChange={(e) => onInputChange(e)} required/>
+                                        onChange={(e) => onInputChange(e)} required />
                                 </Col>
                             </Row>
                             <hr />
@@ -524,7 +580,7 @@ const Seller = () => {
                                             placeholder="Product Name"
                                             value={product_name}
                                             name={"product_name"}
-                                            onChange={(e) => {onProductInputChange(e)}}
+                                            onChange={(e) => { onProductInputChange(e) }}
                                             autoFocus
                                         />
                                     </Form.Group>
@@ -532,7 +588,7 @@ const Seller = () => {
                             </Row>
                             <Row>
                                 <Col md={6}>
-                                    <Form.Select aria-label="Default select example" onChange={(e) => {onProductInputChange(e)}} className="mb-3" name={"product_type"} value={product_type}>
+                                    <Form.Select aria-label="Default select example" onChange={(e) => { onProductInputChange(e) }} className="mb-3" name={"product_type"} value={product_type}>
                                         <option>Product Type</option>
                                         <option value="telegram">Telegram</option>
                                         <option value="whatsapp">Whats App</option>
@@ -565,7 +621,6 @@ const Seller = () => {
                                             name={"product_link"}
                                             value={product_link}
                                             onChange={(e) => onProductInputChange(e)}
-                                            autoFocus
                                         />
                                     </Form.Group>
                                 </Col>
@@ -594,7 +649,7 @@ const Seller = () => {
                             <Row>
                                 <Col md={12}>
                                     <div className='flex flex-col gap-2 md:flex-row'>
-                                        <div className={`product-price-wrapper w-100 p-2 border-2 rounded ${activePrice === 'free' ? 'active' : ''}`} onClick={() => {handlePriceSelection('free')}}>
+                                        <div className={`product-price-wrapper w-100 p-2 border-2 rounded ${activePrice === 'free' ? 'active' : ''}`} onClick={() => { handlePriceSelection('free') }}>
                                             <div className='product-price'>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked={activePrice === "free"} />
@@ -650,7 +705,7 @@ const Seller = () => {
                                 {activePrice === "subscription" && (
                                     <Col md={12} className='mt-3'>
                                         <Form.Group className="mb-3">
-                                            <Form.Control type="number" placeholder="Rs." name={"price"} value={price} onChange={(e) => onProductInputChange(e)}/>
+                                            <Form.Control type="number" placeholder="Rs." name={"price"} value={price} onChange={(e) => onProductInputChange(e)} />
                                         </Form.Group>
                                         <Form.Group className="mb-3">
                                             <Form.Select aria-label="Default select example" name={"expiry"} value={expiry} onChange={(e) => onProductInputChange(e)}>
@@ -670,7 +725,7 @@ const Seller = () => {
                                 {activePrice === "onetime" && (
                                     <Col md={12} className='mt-3'>
                                         <Form.Group className="mb-3">
-                                            <Form.Control type="number" placeholder="Rs." name={"price"} value={price} onChange={(e) => onProductInputChange(e)}/>
+                                            <Form.Control type="number" placeholder="Rs." name={"price"} value={price} onChange={(e) => onProductInputChange(e)} />
                                         </Form.Group>
                                         <Form.Group className="mb-3">
                                             <Form.Select aria-label="Default select example" name={"expiry"} value={expiry} onChange={(e) => onProductInputChange(e)}>
@@ -708,7 +763,7 @@ const Seller = () => {
                 </Modal.Header>
                 <Modal.Body>
                     <Container>
-                        <Form>
+                        <Form onSubmit={(e) => handleAddFeature(e)}>
                             <Row>
                                 <Col md={6}>
                                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -720,7 +775,7 @@ const Seller = () => {
                                         /> */}
                                         {/* <div className="emoji-picker"> */}
                                         <EmojiPicker
-                                            onEmojiClick={emojiPickerFunction}
+                                            onEmojiClick={emojiPickerFunction} autoFocus
                                         />
                                         {/* </div> */}
                                     </Form.Group>
@@ -731,7 +786,10 @@ const Seller = () => {
                                         <Form.Control
                                             type="text"
                                             placeholder="Feature Title"
-                                            autoFocus
+                                            // autoFocus
+                                            name={"feature_title"}
+                                            value={feature_title}
+                                            onChange={(e) => onFeatureInputChange(e)}
                                         />
                                     </Form.Group>
                                 </Col>
@@ -745,6 +803,9 @@ const Seller = () => {
                                             as="textarea"
                                             placeholder="Feature description"
                                             style={{ height: '100px' }}
+                                            name={"feature_desc"}
+                                            value={feature_desc}
+                                            onChange={(e) => onFeatureInputChange(e)}
                                         />
                                     </Form.Group>
                                 </Col>
@@ -756,7 +817,7 @@ const Seller = () => {
                     <Button variant="secondary" onClick={handleCloseFeatureModal}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={handleCloseFeatureModal}>
+                    <Button variant="primary" onClick={handleAddFeature}>
                         Save Changes
                     </Button>
                 </Modal.Footer>
@@ -768,7 +829,7 @@ const Seller = () => {
                 </Modal.Header>
                 <Modal.Body>
                     <Container>
-                        <Form>
+                        <Form onSubmit={(e) => { handleAddFaq(e) }}>
                             <Row>
                                 <Col md={12}>
                                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
@@ -777,8 +838,10 @@ const Seller = () => {
                                             as="textarea"
                                             placeholder="Question"
                                             style={{ height: '100px' }}
+                                            name={"question"}
+                                            value={question}
+                                            onChange={(e) => onFaqnputChange(e)}
                                         />
-
                                     </Form.Group>
                                 </Col>
                             </Row>
@@ -791,6 +854,9 @@ const Seller = () => {
                                             as="textarea"
                                             placeholder="Answer"
                                             style={{ height: '100px' }}
+                                            name={"answer"}
+                                            value={answer}
+                                            onChange={(e) => onFaqnputChange(e)}
                                         />
                                     </Form.Group>
                                 </Col>
@@ -802,7 +868,7 @@ const Seller = () => {
                     <Button variant="secondary" onClick={handleCloseFAQModal}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={handleCloseFAQModal}>
+                    <Button variant="primary" onClick={handleAddFaq}>
                         Save Changes
                     </Button>
                 </Modal.Footer>

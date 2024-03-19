@@ -11,21 +11,30 @@ const Product = () => {
    const [productId, setProductId] = useState(id);
    const [product, setProduct] = useState();
    const [storeDetails, setStoreDetails] = useState();
+   const [storeFeatures, setStoreFeatures] = useState();
+   const [storeFaqs, setStoreFaqs] = useState();
 
    useEffect(() => {
-      console.log("h1");
       async function getProduct() {
-         console.log("h2");
          await api.getData(`product/get/${productId}`).then((response) => {
-            let _xtract = api.decrypt_obj(response.data.data);
-            console.log(_xtract);
+            console.log("response", response.data)
+            let _xtract = api.decrypt_obj(response.data.products);
+            // console.log(_xtract);
+            const features = api.decrypt_obj(response.data.features);
+            console.log("features", features);
+            setStoreFeatures(features);
+
+            const faqs = api.decrypt_obj(response.data.faqs);
+            console.log("faqs", faqs);
+            setStoreFaqs(faqs);
+
             const storeData = {
-               store_name : _xtract.store_name,
-               store_info : _xtract.store_info,
-               facebook : _xtract.facebook,
-               instagram : _xtract.instagram,
-               youtube : _xtract.youtube,
-               twitter : _xtract.twitter
+               store_name: _xtract.store_name,
+               store_info: _xtract.store_info,
+               facebook: _xtract.facebook,
+               instagram: _xtract.instagram,
+               youtube: _xtract.youtube,
+               twitter: _xtract.twitter
             }
             setStoreDetails(storeData);
             setProduct(_xtract);
@@ -261,8 +270,8 @@ const Product = () => {
                               <div className="overline3 text-whop-dark-gray uppercase">includes</div>
 
                               {product.prod_type === "discord" && (<div className="flex items-center gap-3">
-                                 <img className="border-whop-stroke border-[0.5px] rounded-[10px] object-cover w-10 h-10" 
-                                 src="/assets/iconz/discord.svg" alt="Discord access icon" width="40" height="40" loading="lazy" fetchpriority="auto"  />
+                                 <img className="border-whop-stroke border-[0.5px] rounded-[10px] object-cover w-10 h-10"
+                                    src="/assets/iconz/discord.svg" alt="Discord access icon" width="40" height="40" loading="lazy" fetchpriority="auto" />
                                  <div>
                                     <p className="text-subtitle3 text-whop-black mb-0">Discord access</p>
                                     <div data-state="closed" className="text-whop-gray focus:outline-none cursor-default inline-block">
@@ -273,9 +282,9 @@ const Product = () => {
 
                               {product.prod_type === "telegram" && (
                                  <div className="flex items-center gap-3">
-                                    <img className="border-whop-stroke border-[0.5px] rounded-[10px] object-cover w-10 h-10" 
-                                 src="/assets/iconz/telegram.svg" alt="Giveaways icon" width="40" height="40" loading="lazy" fetchpriority="auto" 
-                                  />
+                                    <img className="border-whop-stroke border-[0.5px] rounded-[10px] object-cover w-10 h-10"
+                                       src="/assets/iconz/telegram.svg" alt="Giveaways icon" width="40" height="40" loading="lazy" fetchpriority="auto"
+                                    />
                                     <div>
                                        <p className="text-subtitle3 text-whop-black mb-0">Telegram Access</p>
                                        <div data-state="closed" className="text-whop-gray focus:outline-none cursor-default inline-block">
@@ -287,9 +296,9 @@ const Product = () => {
 
                               {product.type === "whatsapp" && (
                                  <div className="flex items-center gap-3">
-                                    <img className="border-whop-stroke border-[0.5px] rounded-[10px] object-cover w-10 h-10" 
-                                       src="/assets/iconz/whatsapp.svg" alt="Merch icon" width="40" height="40" loading="lazy" fetchpriority="auto" 
-                                        />
+                                    <img className="border-whop-stroke border-[0.5px] rounded-[10px] object-cover w-10 h-10"
+                                       src="/assets/iconz/whatsapp.svg" alt="Merch icon" width="40" height="40" loading="lazy" fetchpriority="auto"
+                                    />
                                     <div>
                                        <p className="text-subtitle3 text-whop-black mb-0">Whats App Access</p>
                                        <div data-state="closed" className="text-whop-gray focus:outline-none cursor-default inline-block">
@@ -434,17 +443,22 @@ const Product = () => {
                      <div className="flex-1">
                         <div className="font-display text-display3">Features</div>
                      </div>
-                     <div className="lg:flex-1 lg:basis-[360px]">
-                        <div className="flex flex-col gap-6">
-                           <div className="flex gap-6">
-                              <div className="bg-whop-hover flex h-16 w-16 items-center justify-center rounded-[10px] text-[32px]">🥇</div>
-                              <div className="flex flex-1 flex-col gap-2 overflow-hidden">
-                                 <div className="text-header4">Community</div>
-                                 <div className="text-paragraph2 text-whop-dark-gray">Supportive community full of like-minded individuals that never leaves anyone behind to ensure that you succeed.</div>
+                     {storeFeatures && storeFeatures.length && storeFeatures.map((feature, index) => {
+                        return (
+                           <div className="lg:flex-1 lg:basis-[360px]">
+                              <div className="flex flex-col gap-6">
+                                 <div className="flex gap-6">
+                                    <div className="bg-whop-hover flex h-16 w-16 items-center justify-center rounded-[10px] text-[32px]">{feature?.feature_icon}</div>
+                                    <div className="flex flex-1 flex-col gap-2 overflow-hidden">
+                                       <div className="text-header4">{feature.feature_name}</div>
+                                       <div className="text-paragraph2 text-whop-dark-gray">{feature.feature_details}</div>
+                                    </div>
+                                 </div>
                               </div>
                            </div>
-                        </div>
-                     </div>
+                        )
+                     })}
+
                   </div>
                   <div className="border-t-whop-stroke flex flex-col gap-6 border-t py-10 md:py-16 lg:flex-row lg:gap-6">
                      <div className="flex-1">
@@ -496,8 +510,8 @@ const Product = () => {
                      </div>
                   </div>
                   <CustomerReview />
-                  <Faq />
-                  <SellerDetails storeData={storeDetails}/>
+                  <Faq storeFaqs={storeFaqs} />
+                  <SellerDetails storeData={storeDetails} />
                   <YouMightLike />
                </div>
             </div >

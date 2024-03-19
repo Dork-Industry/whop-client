@@ -3,7 +3,7 @@ import React from 'react';
 const Dashboard = () => {
     return (
         <>
-            <div className="row">
+            {/* <div className="row">
                 <div className="col-md-6 col-lg-3">
                     <div className="card-shadow-danger mb-3 widget-chart widget-chart2 text-left card">
                         <div className="widget-content">
@@ -116,7 +116,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className="row" style={{ display: 'none' }}>
                 <div className="col-md-12">
                     <div className="main-card mb-3 card">

@@ -10,6 +10,7 @@ import RootRouter from './Nav/RootRouter';
 import PrivateRoutes from './Nav/PrivateRoutes';
 
 import { PageProvider } from './Context/Pagecontxt.js';
+import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 
 //import P404 from "./Pages/P404";
 
