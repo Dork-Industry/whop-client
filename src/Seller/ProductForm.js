@@ -373,23 +373,6 @@ const Seller = () => {
                         <Form onSubmit={(e) => onSubmit(e)}>
                             <Row>
                                 <Col md={6} sm={12}>
-                                    {/* <label>Category*</label>
-                                    <select
-                                        className="form-control"
-                                        required
-                                        name="cat_id"
-                                        value={cat_id}
-                                        onChange={(e) => onInputChange(e)}
-                                    >
-                                        <option value="">Select</option>
-                                        {catList.map((val, key) => {
-                                            return (
-                                                <option key={key} value={val.id}>
-                                                    {val.name}
-                                                </option>
-                                            );
-                                        })}
-                                    </select> */}
                                     <input
                                         type="text"
                                         className="form-control"
@@ -454,7 +437,32 @@ const Seller = () => {
                                     <Button variant="primary" onClick={(e) => { setShowFeatureModal(true) }}> Add Features </Button>
                                 </Col>
                             </Row>
+                            <Row>
+                                {products && products.length > 0 && (
+                                    <Col md={6}>
+                                        {products.map((product, index) => {
+                                            return (
+                                                <div>
+                                                    {product.product_name}
+                                                </div>
+                                            )
+                                        })}
+                                    </Col>
+                                )}
+                                {features && features.length > 0 && (
+                                    <Col md={6}>
+                                        {features.map((feature, index) => {
+                                            return (
+                                                <div>
+                                                    {feature.feature_title}
+                                                </div>
+                                            )
+                                        })}
+                                    </Col>
+                                )}
+                            </Row>
                             <hr />
+                            
                             <Row>
                                 <Col md={12}>
                                     {/* <Form.Label>About Store : </Form.Label> */}
